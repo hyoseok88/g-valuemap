@@ -11,29 +11,12 @@ import pandas as pd
 import os
 import ast
 
-[
-    {
-        "StartLine": 14,
-        "EndLine": 19,
-        "TargetContent": "from data_fetcher import (\n    get_kospi200, get_sp500, get_nasdaq100, get_nikkei225, get_eurostoxx50,\n    fetch_stock_data, fetch_single_stock\n)\nfrom valuation import process_dataframe\nfrom visualization import build_treemap, get_summary_stats",
-        "ReplacementContent": "from data_fetcher import (\n    get_kospi200, get_sp500, get_nasdaq100, get_nikkei225, get_eurostoxx50,\n    fetch_stock_data, fetch_single_stock, get_history\n)\nfrom valuation import process_dataframe\nfrom visualization import build_treemap, get_summary_stats, plot_weekly_chart",
-        "AllowMultiple": false
-    },
-    {
-        "StartLine": 307,
-        "EndLine": 317,
-        "TargetContent": "    status_text = st.empty()\n    bar = st.progress(0.0)\n    \n    def update_progress(p, msg):\n        bar.progress(p)\n        status_text.text(f\"{emoji} {msg}\")\n\n    df = _fetch_fresh(market_key, limit, update_progress)\n    \n    bar.empty()\n    status_text.empty()",
-        "ReplacementContent": "    # UX 개선: 텍스트가 포함된 프로그레스 바\n    bar = st.progress(0.0, text=f\"{emoji} 데이터 준비 중...\")\n    \n    def update_progress(p, msg):\n        bar.progress(p, text=f\"{emoji} {msg}\")\n\n    df = _fetch_fresh(market_key, limit, update_progress)\n    \n    bar.empty()",
-        "AllowMultiple": false
-    },
-    {
-        "StartLine": 436,
-        "EndLine": 436,
-        "TargetContent": "    </div>",
-        "ReplacementContent": "    </div>\n    \n    # 주봉 차트 추가 (User Request)\n    st.markdown(\"##### 🕯️ 주봉 차트 (Weekly)\")\n    with st.spinner(\"차트 데이터 로딩 중...\"):\n        hist = get_history(r['ticker_yf'])\n        if not hist.empty:\n            fig = plot_weekly_chart(hist, title=f\"{r['ticker_display']} Weekly\")\n            st.plotly_chart(fig, use_container_width=True)\n        else:\n            st.caption(\"차트 데이터를 불러올 수 없습니다.\")",
-        "AllowMultiple": false
-    }
-]
+from data_fetcher import (
+    get_kospi200, get_sp500, get_nasdaq100, get_nikkei225, get_eurostoxx50,
+    fetch_stock_data, fetch_single_stock, get_history
+)
+from valuation import process_dataframe
+from visualization import build_treemap, get_summary_stats, plot_weekly_chart
 
 
 # ============================================================
@@ -321,17 +304,15 @@ def load_with_progress(market_key: str, label: str, emoji: str, limit: int) -> p
         return cached_df.head(limit)
 
     # 3. Live Fetch
-    status_text = st.empty()
-    bar = st.progress(0.0)
+    # UX 개선: 텍스트가 포함된 프로그레스 바
+    bar = st.progress(0.0, text=f"{emoji} 데이터 준비 중...")
     
     def update_progress(p, msg):
-        bar.progress(p)
-        status_text.text(f"{emoji} {msg}")
+        bar.progress(p, text=f"{emoji} {msg}")
 
     df = _fetch_fresh(market_key, limit, update_progress)
     
     bar.empty()
-    status_text.empty()
     
     return df
 
@@ -452,6 +433,16 @@ def render_search_result(df: pd.DataFrame):
         </div>
     </div>
     """, unsafe_allow_html=True)
+    
+    # 주봉 차트 추가 (User Request)
+    st.markdown("##### 🕯️ 주봉 차트 (Weekly)")
+    with st.spinner("차트 데이터 로딩 중..."):
+        hist = get_history(r['ticker_yf'])
+        if not hist.empty:
+            fig = plot_weekly_chart(hist, title=f"{r['ticker_display']} Weekly")
+            st.plotly_chart(fig, use_container_width=True)
+        else:
+            st.caption("차트 데이터를 불러올 수 없습니다.")
 
 
 def _render_portfolio_proposal(df: pd.DataFrame, label: str):
