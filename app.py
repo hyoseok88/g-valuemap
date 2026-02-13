@@ -506,7 +506,7 @@ def render_tab(market_key: str, label: str, emoji: str):
         dfd = df[avail].copy()
         dfd.columns = [cols_map[c] for c in avail]
         if "P/CF" in dfd.columns:
-            dfd = dfd.sort_values("P/CF", key=lambda x: x.str.replace("x","").str.replace("N/A","999").astype(float))
+            dfd = dfd.sort_values("P/CF", key=lambda x: x.astype(str).str.replace("x","").str.replace("N/A","999").astype(float))
         st.dataframe(dfd, use_container_width=True, hide_index=True)
 
 
@@ -553,7 +553,7 @@ def render_usa_tab():
         dfd = df[avail].copy()
         dfd.columns = [cols_map[c] for c in avail]
         if "P/CF" in dfd.columns:
-            dfd = dfd.sort_values("P/CF", key=lambda x: x.str.replace("x","").str.replace("N/A","999").astype(float))
+            dfd = dfd.sort_values("P/CF", key=lambda x: x.astype(str).str.replace("x","").str.replace("N/A","999").astype(float))
         st.dataframe(dfd, use_container_width=True, hide_index=True)
 
 
@@ -570,7 +570,7 @@ if search_query:
             search_df = process_dataframe(search_df)
             render_search_result(search_df)
         else:
-            st.error(f"❌ '{search_query}' 종목을 찾을 수 없습니다. (티커를 확인해주세요)")
+            st.error(f"❌ '{search_query}' 종목을 찾을 수 없습니다.\n\n한글 종목명이 검색되지 않으면 **'종목 코드(6자리)'**를 입력해보세요. (예: 005930, 035720)")
     st.markdown("---")
 
 
