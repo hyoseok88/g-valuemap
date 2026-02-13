@@ -544,7 +544,7 @@ def render_usa_tab():
 
     use_underval = "저평가" in size_mode
     fig = build_treemap(df, title="🇺🇸 USA (S&P 500 + Nasdaq 100) — P/CF Valuation Map", hide_negative_cf=hide_neg, size_by_undervalue=use_underval)
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, use_container_width=True, config={'scrollZoom': True, 'displayModeBar': True})
 
     with st.expander("📊 미국 상세 데이터", expanded=False):
         cols_map = {
