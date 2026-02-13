@@ -17,7 +17,7 @@ from data_fetcher import (
 )
 from valuation import process_dataframe
 from visualization import build_treemap, get_summary_stats, plot_weekly_chart
-
+from disk_cache import load_cached, save_cache, is_stale, get_cache_age_str
 
 # ============================================================
 # 페이지 설정
@@ -208,9 +208,6 @@ with st.sidebar:
         st.rerun()
 
 
-from disk_cache import load_cached, save_cache, is_stale, get_cache_age_str
-
-
 # ============================================================
 # 데이터 로드 (디스크 캐시 + 실시간 갱신)
 # 접속 시 이전 데이터 즉시 표시 → 만료시 갱신 → 완료 후 rerun
@@ -287,34 +284,45 @@ def load_from_seed(market_key: str) -> pd.DataFrame:
 
 
 def load_with_progress(market_key: str, label: str, emoji: str, limit: int) -> pd.DataFrame:
-    """데이터 로드 (Seed -> Disk Cache -> Live Fetch)."""
+    """데이터 로드 (Disk Cache -> Live Fetch -> Seed 순서)."""
     
-    # 1. Seed Data 우선 확인
-    df_seed = load_from_seed(market_key)
-    if not df_seed.empty:
-        # Seed 데이터가 있으면(로컬 CSV), limit만큼 잘라서 반환
-        # (만약 limit > 200 이라도 seed가 있으면 그냥 seed 최대치 반환)
-        if limit < len(df_seed):
-             return df_seed.head(limit)
-        return df_seed
-
-    # 2. Disk Cache 확인 (Seed 없을 때만)
-    cached_df, cached_ts = load_cached(market_key, limit) # load_cached returns tuple (df, ts)
+    # 1. Disk Cache 확인 (가장 빠름)
+    cached_df, cached_ts = load_cached(market_key, limit)
+    # Check if we should use cache
     if cached_df is not None and not cached_df.empty and len(cached_df) >= limit * 0.5:
-        return cached_df.head(limit)
-
-    # 3. Live Fetch
-    # UX 개선: 텍스트가 포함된 프로그레스 바
-    bar = st.progress(0.0, text=f"{emoji} 데이터 준비 중...")
+        # If cache is valid, check freshness (e.g. 24h)
+        if not is_stale(market_key, limit, hours=24):
+            return cached_df.head(limit)
+    
+    # 2. Live Fetch (User Request: "Auto update")
+    # Cache가 없거나 오래되었으면 실시간 수집 시도
+    status_text = st.empty()
+    bar = st.progress(0.0)
     
     def update_progress(p, msg):
         bar.progress(p, text=f"{emoji} {msg}")
 
-    df = _fetch_fresh(market_key, limit, update_progress)
-    
+    try:
+        df = _fetch_fresh(market_key, limit, update_progress)
+        bar.empty()
+        status_text.empty()
+        if not df.empty:
+            return df
+    except Exception:
+        # Live fetch failed
+        pass
+        
     bar.empty()
-    
-    return df
+    status_text.empty()
+
+    # 3. Fallback to Seed (최후의 수단)
+    df_seed = load_from_seed(market_key)
+    if not df_seed.empty:
+        if limit < len(df_seed):
+             return df_seed.head(limit)
+        return df_seed
+
+    return pd.DataFrame()
 
 
 def render_strong_picks(df: pd.DataFrame):
@@ -482,20 +490,35 @@ def _render_portfolio_proposal(df: pd.DataFrame, label: str):
 
 
 def render_ranking_table(df: pd.DataFrame, label: str):
-    """저평가 순위 테이블 표시."""
+    """저평가 순위 테이블 표시 (종합 점수)."""
     if df.empty or "pcf" not in df.columns:
         return
 
-    st.markdown(f"#### 🏆 {label} 저평가 랭킹 (Top 50)")
-    
-    # 유효 P/CF 필터링 (0 < P/CF)
-    valid_df = df[ (df["pcf"] > 0) ].sort_values("pcf", ascending=True).head(50).copy()
+    st.markdown(f"#### 🏆 {label} 종합 저평가 랭킹 (Top 50)")
+    st.caption("💡 **종합 점수** 기준: P/CF가 낮을수록 좋으며, 매출·현금흐름이 **상승추세(Uptrend)** 인 경우 가산점(20% 할인 효과)을 부여했습니다.")
+
+    # 1. 유효 P/CF 필터링 (0 < P/CF)
+    valid_df = df[ (df["pcf"] > 0) ].copy()
     
     if valid_df.empty:
         st.caption("데이터가 없습니다.")
         return
-        
-    # 순위 컬럼 생성
+
+    # 2. 종합 점수(Score) 계산: 낮을수록 좋음
+    # 기본 점수 = P/CF
+    valid_df['score'] = valid_df['pcf']
+    
+    # 가산점 부여 (매출 상승, CF 상승 시 각각 P/CF를 낮게 평가해줌)
+    mask_rev = valid_df['revenue_trend'].str.contains("Uptrend", na=False)
+    valid_df.loc[mask_rev, 'score'] = valid_df.loc[mask_rev, 'score'] * 0.8
+    
+    mask_cf = valid_df['cf_trend'].str.contains("Uptrend", na=False)
+    valid_df.loc[mask_cf, 'score'] = valid_df.loc[mask_cf, 'score'] * 0.8
+    
+    # 3. 정렬 (점수 오름차순)
+    valid_df = valid_df.sort_values("score", ascending=True).head(50)
+
+    # 4. 순위 표시
     valid_df.reset_index(drop=True, inplace=True)
     valid_df.index = valid_df.index + 1
     
@@ -541,6 +564,22 @@ def render_tab(market_key: str, label: str, emoji: str):
     fig = build_treemap(df, title=f"{emoji} {label} — P/CF Valuation Map", hide_negative_cf=hide_neg, size_by_undervalue=use_underval)
     st.plotly_chart(fig, use_container_width=True, config={'scrollZoom': True, 'displayModeBar': True}, key=f"chart_{market_key}")
     
+    # ➕ 종목 선택형 차트 뷰어 (Added Feature)
+    st.markdown("---")
+    st.markdown(f"#### 📈 {label} 개별 종목 차트 보기")
+    # Ticker list for selectbox
+    ticker_options = df['ticker_display'].tolist()
+    # Unique keys for selectbox
+    selected_ticker = st.selectbox("종목을 선택하세요", ticker_options, key=f"sel_{market_key}")
+    
+    if selected_ticker:
+        # Find row
+        sel_row = df[df['ticker_display'] == selected_ticker]
+        if not sel_row.empty:
+            # Reuse render_search_result to show card + chart!
+            render_search_result(sel_row)
+
+
     # 랭킹 테이블
     render_ranking_table(df, label)
 
@@ -591,6 +630,16 @@ def render_usa_tab():
     use_underval = "저평가" in size_mode
     fig = build_treemap(df, title="🇺🇸 USA (S&P 500 + Nasdaq 100) — P/CF Valuation Map", hide_negative_cf=hide_neg, size_by_undervalue=use_underval)
     st.plotly_chart(fig, use_container_width=True, config={'scrollZoom': True, 'displayModeBar': True}, key="chart_usa")
+    
+    # ➕ 종목 선택형 차트 뷰어 (USA)
+    st.markdown("---")
+    st.markdown(f"#### 📈 미국 개별 종목 차트 보기")
+    ticker_options = df['ticker_display'].tolist()
+    selected_ticker = st.selectbox("종목을 선택하세요", ticker_options, key="sel_usa")
+    if selected_ticker:
+        sel_row = df[df['ticker_display'] == selected_ticker]
+        if not sel_row.empty:
+            render_search_result(sel_row)
 
     # 랭킹 테이블
     render_ranking_table(df, "USA")
