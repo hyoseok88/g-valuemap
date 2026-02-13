@@ -472,6 +472,36 @@ def _render_portfolio_proposal(df: pd.DataFrame, label: str):
                 """, unsafe_allow_html=True)
 
 
+
+def render_ranking_table(df: pd.DataFrame, label: str):
+    """저평가 순위 테이블 표시."""
+    if df.empty or "pcf" not in df.columns:
+        return
+
+    st.markdown(f"#### 🏆 {label} 저평가 랭킹 (Top 50)")
+    
+    # 유효 P/CF 필터링 (0 < P/CF)
+    valid_df = df[ (df["pcf"] > 0) ].sort_values("pcf", ascending=True).head(50).copy()
+    
+    if valid_df.empty:
+        st.caption("데이터가 없습니다.")
+        return
+        
+    # 순위 컬럼 생성
+    valid_df.reset_index(drop=True, inplace=True)
+    valid_df.index = valid_df.index + 1
+    
+    cols_map = {
+        "ticker_display": "티커", "name": "종목명", "sector": "섹터",
+        "pcf_display": "P/CF", "price": "현재가", 
+        "revenue_trend": "매출추세", "cf_trend": "CF추세"
+    }
+    
+    avail = [c for c in cols_map.keys() if c in valid_df.columns]
+    view = valid_df[avail].rename(columns=cols_map)
+    st.dataframe(view, use_container_width=True)
+
+
 def render_tab(market_key: str, label: str, emoji: str):
     """단일 시장 탭 렌더링."""
     df = load_with_progress(market_key, label, emoji, limit)
@@ -599,33 +629,7 @@ tab_kr, tab_us, tab_jp, tab_eu = st.tabs([
 with tab_kr:
     render_tab("Korea", "KOSPI 200", "🇰🇷")
 
-def render_ranking_table(df: pd.DataFrame, label: str):
-    """저평가 순위 테이블 표시."""
-    if df.empty or "pcf" not in df.columns:
-        return
 
-    st.markdown(f"#### 🏆 {label} 저평가 랭킹 (Top 50)")
-    
-    # 유효 P/CF 필터링 (0 < P/CF)
-    valid_df = df[ (df["pcf"] > 0) ].sort_values("pcf", ascending=True).head(50).copy()
-    
-    if valid_df.empty:
-        st.caption("데이터가 없습니다.")
-        return
-        
-    # 순위 컬럼 생성
-    valid_df.reset_index(drop=True, inplace=True)
-    valid_df.index = valid_df.index + 1
-    
-    cols_map = {
-        "ticker_display": "티커", "name": "종목명", "sector": "섹터",
-        "pcf_display": "P/CF", "price": "현재가", 
-        "revenue_trend": "매출추세", "cf_trend": "CF추세"
-    }
-    
-    avail = [c for c in cols_map.keys() if c in valid_df.columns]
-    view = valid_df[avail].rename(columns=cols_map)
-    st.dataframe(view, use_container_width=True)
 
 with tab_us:
     render_usa_tab()
