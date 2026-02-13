@@ -272,6 +272,15 @@ def load_from_seed(market_key: str) -> pd.DataFrame:
         for col in ["revenue_history", "cf_history"]:
              if col in df.columns:
                  df[col] = df[col].apply(lambda x: ast.literal_eval(x) if isinstance(x, str) else {})
+        
+        # 숫자 컬럼 강제 변환 (시각화 오류 방지)
+        for col in ["pcf", "price", "market_cap", "market_cap_b"]:
+            if col in df.columns:
+                # 문자열(12.3x, 1,234) 등 정제 후 변환
+                if df[col].dtype == object or df[col].dtype == str:
+                    df[col] = df[col].astype(str).str.replace(r'[x,]', '', regex=True)
+                df[col] = pd.to_numeric(df[col], errors='coerce')
+                
         return df
     except Exception as e:
         return pd.DataFrame()
@@ -493,6 +502,9 @@ def render_tab(market_key: str, label: str, emoji: str):
     use_underval = "저평가" in size_mode
     fig = build_treemap(df, title=f"{emoji} {label} — P/CF Valuation Map", hide_negative_cf=hide_neg, size_by_undervalue=use_underval)
     st.plotly_chart(fig, use_container_width=True, config={'scrollZoom': True, 'displayModeBar': True}, key=f"chart_{market_key}")
+    
+    # 랭킹 테이블
+    render_ranking_table(df, label)
 
     # 테이블
     with st.expander(f"📊 {label} 상세 데이터", expanded=False):
@@ -542,6 +554,9 @@ def render_usa_tab():
     fig = build_treemap(df, title="🇺🇸 USA (S&P 500 + Nasdaq 100) — P/CF Valuation Map", hide_negative_cf=hide_neg, size_by_undervalue=use_underval)
     st.plotly_chart(fig, use_container_width=True, config={'scrollZoom': True, 'displayModeBar': True}, key="chart_usa")
 
+    # 랭킹 테이블
+    render_ranking_table(df, "USA")
+
     with st.expander("📊 미국 상세 데이터", expanded=False):
         cols_map = {
             "ticker_display": "티커", "name": "종목명", "sector": "섹터",
@@ -583,6 +598,34 @@ tab_kr, tab_us, tab_jp, tab_eu = st.tabs([
 
 with tab_kr:
     render_tab("Korea", "KOSPI 200", "🇰🇷")
+
+def render_ranking_table(df: pd.DataFrame, label: str):
+    """저평가 순위 테이블 표시."""
+    if df.empty or "pcf" not in df.columns:
+        return
+
+    st.markdown(f"#### 🏆 {label} 저평가 랭킹 (Top 50)")
+    
+    # 유효 P/CF 필터링 (0 < P/CF)
+    valid_df = df[ (df["pcf"] > 0) ].sort_values("pcf", ascending=True).head(50).copy()
+    
+    if valid_df.empty:
+        st.caption("데이터가 없습니다.")
+        return
+        
+    # 순위 컬럼 생성
+    valid_df.reset_index(drop=True, inplace=True)
+    valid_df.index = valid_df.index + 1
+    
+    cols_map = {
+        "ticker_display": "티커", "name": "종목명", "sector": "섹터",
+        "pcf_display": "P/CF", "price": "현재가", 
+        "revenue_trend": "매출추세", "cf_trend": "CF추세"
+    }
+    
+    avail = [c for c in cols_map.keys() if c in valid_df.columns]
+    view = valid_df[avail].rename(columns=cols_map)
+    st.dataframe(view, use_container_width=True)
 
 with tab_us:
     render_usa_tab()
