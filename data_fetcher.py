@@ -273,25 +273,25 @@ def fetch_stock_data(stock_list: list[dict], progress_callback=None) -> pd.DataF
         chunk_tkrs = tickers[i : i + batch_size]
         chunk_meta = stock_list[i : i + batch_size]
         
-        # Max workers reduced to avoid rate limiting
-        with ThreadPoolExecutor(max_workers=2) as executor:
-            futures = {executor.submit(_fetch_one, item): item for item in chunk_meta}
-            for future in futures:
-                res = future.result()
-                if res:
-                    results.append(res)
+    # Max workers increased for performance (User Request)
+    with ThreadPoolExecutor(max_workers=5) as executor:
+        futures = {executor.submit(_fetch_one, item): item for item in chunk_meta}
+        for future in futures:
+            res = future.result()
+            if res:
+                results.append(res)
+    
+    processed = min(i + batch_size, total)
+    if progress_callback:
+        elapsed = time.time() - start_time_all
+        avg_time = elapsed / processed if processed > 0 else 0
+        remain = (total - processed) * avg_time
+        eta_str = f"{remain:.0f}초" if remain > 60 else f"{remain:.1f}초"
         
-        processed = min(i + batch_size, total)
-        if progress_callback:
-            elapsed = time.time() - start_time_all
-            avg_time = elapsed / processed if processed > 0 else 0
-            remain = (total - processed) * avg_time
-            eta_str = f"{remain:.0f}초" if remain > 60 else f"{remain:.1f}초"
-            
-            current_name = chunk_meta[-1]['name']
-            progress_callback(processed / total, f"({processed}/{total}) {current_name} 등 수집 중... (남은 시간: 약 {eta_str})")
-        
-        time.sleep(1.0) # 0.5 -> 1.0 Increased sleep 
+        current_name = chunk_meta[-1]['name']
+        progress_callback(processed / total, f"({processed}/{total}) {current_name} 등 수집 중... (남은 시간: 약 {eta_str})")
+    
+    time.sleep(0.5) # Reduced sleep as we want speed
 
     return pd.DataFrame(results)
 
@@ -300,44 +300,72 @@ def _fetch_one(meta: dict) -> dict:
     ticker = meta["ticker_yf"]
     try:
         t = yf.Ticker(ticker)
-        info = t.info
+        # Fast Info First for Price/Mcap (Speed)
+        fi = t.fast_info
+        price = fi.last_price if hasattr(fi, "last_price") else 0
+        mcap = fi.market_cap if hasattr(fi, "market_cap") else 0
+        currency = fi.currency if hasattr(fi, "currency") else "USD"
+
+        # Fallback to info if fast_info missing
+        if not price or not mcap:
+             info = t.info
+             if not price: price = info.get("currentPrice") or info.get("regularMarketPrice") or 0
+             if not mcap: mcap = info.get("marketCap") or 0
+             if not currency: currency = info.get("currency", "USD")
+        else:
+             info = {} # Load info only if needed for sector/financials? 
+                       # Wait, we need info for sector and simple financials.
+                       # Triggering t.info is slow.
+                       # But we need 'sector'.
+             info = t.info
+
         
-        # 가격
-        price = info.get("currentPrice") or info.get("regularMarketPrice") or info.get("previousClose")
-        if not price:
-             fi = t.fast_info
-             price = fi.last_price if hasattr(fi, "last_price") else 0
-        
-        mcap = info.get("marketCap")
-        if not mcap:
-            fi = t.fast_info
-            mcap = fi.market_cap if hasattr(fi, "market_cap") else 0
+        # 현금흐름 (OCF) & 감가상각비 (Depreciation)
+        ocf = info.get("operatingCashFlow") # 1st attempt
+        depreciation = None
+        net_income = info.get("netIncomeToCommon")
+
+        # Robust Extraction from CashFlow DataFrame
+        # If OCF missing OR for Depreciation extraction
+        cf_df = None
+        try:
+             cf_df = t.cash_flow
+        except:
+             pass
+
+        if cf_df is not None and not cf_df.empty:
+            # 1. OCF Extraction (Enhanced)
+            if ocf is None:
+                possible_names = [
+                    "Operating Cash Flow", 
+                    "Total Cash From Operating Activities", 
+                    "Cash Flow From Continuing Operating Activities",
+                    "Cash Flow From Operating Activities"
+                ]
+                for name in possible_names:
+                    if name in cf_df.index:
+                        val = cf_df.loc[name].iloc[0] # Most recent
+                        if pd.notna(val):
+                            ocf = val
+                            break
             
-        currency = info.get("currency", "USD")
-        
-        # 현금흐름
-        ocf = info.get("operatingCashFlow")
-        fcf = info.get("freeCashFlow")
-        
-        # OCF Fallback (상세 모드 아니어도 OCF 없으면 시도)
-        if (ocf is None):
-            try:
-                cf_df = t.cash_flow
-                if not cf_df.empty:
-                    # 행 이름이 조금씩 다를 수 있음
-                    for row_name in ["Total Cash From Operating Activities", "Operating Cash Flow"]:
-                         if row_name in cf_df.index:
-                             val = cf_df.loc[row_name].iloc[0]
-                             if val:
-                                 ocf = val
-                                 break
-            except Exception:
-                pass
-        
-        
-        # 성장성 지표 (Trend 대체용)
-        rev_growth = info.get("revenueGrowth", 0) # YoY
-        earn_growth = info.get("earningsGrowth", 0) # YoY
+            # 2. Depreciation Extraction (For FFO Proxy)
+            dep_names = [
+                "Depreciation",
+                "Depreciation And Amortization",
+                "Depreciation & Amortization",
+                "D&A"
+            ]
+            for name in dep_names:
+                if name in cf_df.index:
+                    val = cf_df.loc[name].iloc[0]
+                    if pd.notna(val):
+                        depreciation = val
+                        break
+
+        # 성장성 지표
+        rev_growth = info.get("revenueGrowth", 0)
+        earn_growth = info.get("earningsGrowth", 0)
 
         return {
             "ticker_yf": ticker,
@@ -349,17 +377,27 @@ def _fetch_one(meta: dict) -> dict:
             "currency": currency,
             "market_cap": mcap,
             "ocf": ocf,
-            "fcf": fcf,
-            "revenue_growth": rev_growth, # For rapid trend check
-            "earnings_growth": earn_growth, # Proxy for CF trend
-            # 호환성 유지
+            "fcf": info.get("freeCashFlow"), # Not critical
+            "revenue_growth": rev_growth,
+            "earnings_growth": earn_growth,
             "revenue_history": {},
             "cf_history": {},
             "ttm_ocf": ocf,
-            "ttm_net_income": info.get("netIncomeToCommon"),
-            "ttm_depreciation": None, 
-            "ttm_ffo_proxy": None
+            "ttm_net_income": net_income,
+            "ttm_depreciation": depreciation, 
+            "ttm_ffo_proxy": None # Calculated in valuation.py
         }
 
     except Exception:
         return None
+
+
+def get_history(ticker: str, period: str = "2y") -> pd.DataFrame:
+    """주가 기록 가져오기 (주봉 차트용)."""
+    try:
+        t = yf.Ticker(ticker)
+        # Auto adjust for splits
+        hist = t.history(period=period, auto_adjust=True)
+        return hist
+    except Exception:
+        return pd.DataFrame()

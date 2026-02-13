@@ -60,9 +60,9 @@ def build_treemap(
         return fig
 
     # ---- 색상 값 준비 ----
-    df_valid = df_show[df_show["pcf"].notna()].copy()
-    df_na = df_show[df_show["pcf"].isna()].copy()
-
+    # ---- 색상 값 준비 ----
+    df_valid = df_show.copy()
+    
     all_labels = []
     all_parents = []
     all_values = []
@@ -70,43 +70,64 @@ def build_treemap(
     all_hovers = []
 
     # ---- 고정 P/CF 구간 색상 매핑 ----
-    # ≤10: 저평가(Green), 10~15: 중립(Blue), 15~20: 약간 고평가(Orange), 20+: 고평가(Red)
     PCF_MIN = 0
-    PCF_MAX = 30  # colorbar 표시 범위
-
-    if not df_valid.empty:
-        for _, r in df_valid.iterrows():
-            pcf = r["pcf"]
-            # 밸류에이션 등급 라벨
-            if pcf <= 10:
-                grade = "🟢저평가"
-            elif pcf <= 15:
-                grade = "🔵중립"
-            elif pcf <= 20:
-                grade = "🟠약간고평가"
-            else:
-                grade = "🔴고평가"
+    PCF_MAX = 30 
+    
+    # 색상 추출을 위한 Valid Value 수집
+    valid_indices = []
+    valid_norms = []
+    
+    from plotly.colors import sample_colorscale
+    
+    for idx, r in df_valid.iterrows():
+        pcf = r["pcf"]
+        
+        # 1. PCF 상태별 라벨/색상/값 결정
+        if pd.isna(pcf) or pcf <= 0:
+            # N/A 또는 음수 (적자/데이터없음) -> 회색
+            grade = "음수/N/A"
+            color = GREY_COLOR
+            # 크기: 저평가모드면 작게(1000), 아니면 시총
+            val = r["market_cap"] if not size_by_undervalue else 1000
+            
+            all_labels.append(f"<b>{r['ticker_display']}</b><br>N/A")
+            all_parents.append("")
+            all_values.append(val)
+            all_colors.append(color)
+            all_hovers.append(_make_hover(r, is_na=True))
+            
+        else:
+            # Valid Positive PCF
+            if pcf <= 10: grade = "🟢저평가"
+            elif pcf <= 15: grade = "🔵중립"
+            elif pcf <= 20: grade = "🟠약간고평가"
+            else: grade = "🔴고평가"
+            
             all_labels.append(f"<b>{r['ticker_display']}</b><br>{r['pcf_display']} {grade}")
             all_parents.append("")
-            # 크기 결정: 시총 vs 저평가순
-            if size_by_undervalue and pd.notna(pcf) and pcf > 0:
+            
+            # 크기: 시총 vs 저평가
+            if size_by_undervalue:
                 all_values.append(1.0 / pcf * 1e6)
             else:
                 all_values.append(r["market_cap"])
-            # 고정 구간 정규화 (0~30 → 0~1)
+            
+            all_hovers.append(_make_hover(r))
+            
+            # 색상 계산을 위해 인덱스 저장 (나중에 한꺼번에 변환)
             norm = (pcf - PCF_MIN) / (PCF_MAX - PCF_MIN)
             norm = max(0, min(1, norm))
-            all_colors.append(_interpolate_color(norm))
-            all_hovers.append(_make_hover(r))
+            valid_norms.append(norm)
+            # Placeholder for color (will be filled later)
+            all_colors.append(None) 
+            valid_indices.append(len(all_colors) - 1)
 
-    # 음수 CF (hide_negative_cf=False일 때만)
-    if not df_na.empty:
-        for _, r in df_na.iterrows():
-            all_labels.append(f"<b>{r['ticker_display']}</b><br>N/A")
-            all_parents.append("")
-            all_values.append(r["market_cap"] if not size_by_undervalue else 1000)
-            all_colors.append(GREY_COLOR)
-            all_hovers.append(_make_hover(r, is_na=True))
+    # 2. Valid Norms -> Colors 변환 (Batch)
+    if valid_norms:
+        # CUSTOM_COLORSCALE 포맷에 맞는 샘플링
+        sampled_colors = sample_colorscale(CUSTOM_COLORSCALE, valid_norms)
+        for i, idx in enumerate(valid_indices):
+            all_colors[idx] = sampled_colors[i]
 
     # ---- 단일 Treemap ----
     fig = go.Figure(go.Treemap(
@@ -162,46 +183,13 @@ def build_treemap(
     return fig
 
 
-def _interpolate_color(t: float) -> str:
-    """
-    0~1 값을 고정 P/CF 구간 기반 색상으로 변환.
-    0~0.33 (P/CF 0~10): Green (저평가)
-    0.33~0.50 (P/CF 10~15): Blue (중립)
-    0.50~0.67 (P/CF 15~20): Orange (약간 고평가)
-    0.67~1.0 (P/CF 20~30): Red (고평가)
-    """
-    # 고정 구간에 맞춘 색상 그라데이션
-    colors = [
-        (0.00, (26, 150, 65)),     # 진한 녹색 (P/CF ~0)
-        (0.17, (102, 189, 99)),    # 밝은 녹색 (P/CF ~5)
-        (0.33, (166, 217, 106)),   # 연녹색 (P/CF 10 경계)
-        (0.40, (116, 169, 207)),   # 연파랑
-        (0.50, (33, 102, 172)),    # 진파랑 (P/CF 15 중립)
-        (0.57, (153, 112, 171)),   # 보라
-        (0.67, (230, 160, 60)),    # 오렌지 (P/CF 20 경계)
-        (0.80, (215, 48, 39)),     # 빨강
-        (1.00, (165, 0, 38)),      # 진빨강 (P/CF 30+)
-    ]
-    t = max(0, min(1, t))
-    for i in range(len(colors) - 1):
-        t0, c0 = colors[i]
-        t1, c1 = colors[i + 1]
-        if t0 <= t <= t1:
-            f = (t - t0) / (t1 - t0) if t1 > t0 else 0
-            r = int(c0[0] + f * (c1[0] - c0[0]))
-            g = int(c0[1] + f * (c1[1] - c0[1]))
-            b = int(c0[2] + f * (c1[2] - c0[2]))
-            return f"rgb({r},{g},{b})"
-    return f"rgb({colors[-1][1][0]},{colors[-1][1][1]},{colors[-1][1][2]})"
-
-
 def _make_hover(r, is_na=False) -> str:
     """호버 툴팁 생성."""
     price_str = _format_price(r.get("price", 0), r.get("currency", ""))
     mcap_str = _format_market_cap(r.get("market_cap", 0))
 
     if is_na:
-        pcf_line = "⚠️ P/CF: N/A (음수 현금흐름)"
+        pcf_line = "⚠️ P/CF: N/A 또는 음수 (적자/데이터부족)"
     else:
         pcf_line = f"📈 P/CF: {r.get('pcf_display', 'N/A')} ({r.get('cf_method', 'OCF')})"
 
@@ -238,13 +226,91 @@ def _format_market_cap(mc) -> str:
 
 def get_summary_stats(df: pd.DataFrame) -> dict:
     total = len(df)
-    valid = int(df["pcf"].notna().sum())
-    neg = total - valid
-    med = df["pcf"].median() if valid > 0 else None
-    avg = df["pcf"].mean() if valid > 0 else None
+    # Valid: P/CF > 0
+    valid_count = len(df[ (df["pcf"].notna()) & (df["pcf"] > 0) ])
+    # Negative/Null
+    neg = total - valid_count
+    
+    # Stats for Valid only
+    valid_df = df[ (df["pcf"].notna()) & (df["pcf"] > 0) ]
+    med = valid_df["pcf"].median() if not valid_df.empty else None
+    avg = valid_df["pcf"].mean() if not valid_df.empty else None
+    
     return {
-        "total": total, "valid": valid, "negative_cf": neg,
+        "total": total, "valid": valid_count, "negative_cf": neg,
         "negative_cf_pct": f"{neg/total*100:.1f}%" if total else "0%",
         "median_pcf": f"{med:.1f}x" if med else "N/A",
         "mean_pcf": f"{avg:.1f}x" if avg else "N/A",
     }
+
+
+def plot_weekly_chart(hist: pd.DataFrame, title: str = "") -> go.Figure:
+    """
+    주가 데이터를 주봉(Weekly)으로 변환하여 캔들차트 그리기.
+    Args:
+        hist: Daily OHLC DataFrame (Index=Date, Columns=[Open, High, Low, Close, Volume])
+    """
+    if hist.empty:
+        return go.Figure()
+
+    # 1. 주봉 리샘플링 (금요일 기준)
+    # yfinance history returns index as timezone-aware datetime usually.
+    # We need to ensure logic handles it.
+    
+    # Resample logic
+    ohlc_dict = {
+        'Open': 'first',
+        'High': 'max',
+        'Low': 'min',
+        'Close': 'last',
+        'Volume': 'sum'
+    }
+    # Ensure columns exist
+    avail_cols = {k: v for k, v in ohlc_dict.items() if k in hist.columns}
+    
+    if not avail_cols:
+        return go.Figure()
+        
+    df_weekly = hist.resample('W-FRI').agg(avail_cols).dropna()
+
+    if df_weekly.empty:
+        return go.Figure()
+
+    # 2. 캔들차트 생성
+    fig = go.Figure(data=[go.Candlestick(
+        x=df_weekly.index,
+        open=df_weekly['Open'],
+        high=df_weekly['High'],
+        low=df_weekly['Low'],
+        close=df_weekly['Close'],
+        increasing_line_color='#26a69a', # Green
+        decreasing_line_color='#ef5350' # Red
+    )])
+
+    # 3. 레이아웃 설정
+    fig.update_layout(
+        title=dict(
+            text=title,
+            y=0.9,
+            x=0.5,
+            xanchor='center',
+            yanchor='top',
+            font=dict(size=15, color="#ccc")
+        ),
+        height=400,
+        margin=dict(t=30, b=10, l=10, r=10),
+        paper_bgcolor="#1a1a2e",
+        plot_bgcolor="#1a1a2e",
+        font=dict(color="#ccc"),
+        xaxis_rangeslider_visible=False, # Slider off for cleaner view
+        xaxis=dict(
+            showgrid=True, gridcolor='rgba(128,128,128,0.2)',
+            title=""
+        ),
+        yaxis=dict(
+            showgrid=True, gridcolor='rgba(128,128,128,0.2)',
+            title=""
+        )
+    )
+
+    return fig

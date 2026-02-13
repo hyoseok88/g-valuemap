@@ -1,264 +1,264 @@
 ticker_yf,ticker_display,name,market,sector,price,currency,market_cap,ocf,fcf,revenue_growth,earnings_growth,revenue_history,cf_history,ttm_ocf,ttm_net_income,ttm_depreciation,ttm_ffo_proxy,pcf,cf_method,revenue_trend,cf_trend,pcf_display,market_cap_b,pcf_color
-MMM,MMM,3M,USA,Industrials,174.61,USD,91967086592,,,0.02,-0.199,{},{},,3249999872,,,,OCF,Flat ➡,Downtrend ↘,N/A,91.967086592,
-AOS,AOS,A. O. Smith,USA,Industrials,79.62,USD,11010643968,,,0.0,0.191,{},{},,546200000,,,,OCF,Flat ➡,Uptrend ↗,N/A,11.010643968,
-ABT,ABT,Abbott Laboratories,USA,Healthcare,111.47,USD,194008973312,,,0.044,-0.808,{},{},,6524000256,,,,OCF,Flat ➡,Downtrend ↘,N/A,194.008973312,
-ABBV,ABBV,AbbVie,USA,Healthcare,227.5,USD,402080006144,,,0.1,0.0,{},{},,4225999872,,,,OCF,Uptrend ↗,Flat ➡,N/A,402.080006144,
-ACN,ACN,Accenture,USA,Technology,222.05,USD,137701834752,,,0.06,-0.016,{},{},,7611100160,,,,OCF,Uptrend ↗,Flat ➡,N/A,137.701834752,
-ADBE,ADBE,Adobe Inc.,USA,Technology,262.5,USD,109882499072,,,0.105,0.172,{},{},,7129999872,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,109.882499072,
-AMD,AMD,Advanced Micro Devices,USA,Technology,205.94,USD,335766814720,,,0.341,2.171,{},{},,4268999936,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,335.76681472,
-AES,AES,AES Corporation,USA,Utilities,16.2,USD,11536360448,,,0.019,0.253,{},{},,1079000064,,,,OCF,Flat ➡,Uptrend ↗,N/A,11.536360448,
-AFL,AFL,Aflac,USA,Financial Services,115.88,USD,60734320640,,,-0.099,-0.229,{},{},,3646000128,,,,OCF,Downtrend ↘,Downtrend ↘,N/A,60.73432064,
-A,A,Agilent Technologies,USA,Healthcare,124.88,USD,35403337728,,,0.094,0.245,{},{},,1303000064,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,35.403337728,
-APD,APD,Air Products,USA,Basic Materials,291.5,USD,64904224768,,,0.058,0.097,{},{},,-325700000,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,64.904224768,
-ABNB,ABNB,Airbnb,USA,Consumer Cyclical,115.96,USD,70994845696,,,0.097,0.038,{},{},,2631000064,,,,OCF,Uptrend ↗,Flat ➡,N/A,70.994845696,
-AKAM,AKAM,Akamai Technologies,USA,Technology,104.61,USD,15049742336,,,0.05,1.553,{},{},,506864000,,,,OCF,Flat ➡,Uptrend ↗,N/A,15.049742336,
-ALB,ALB,Albemarle Corporation,USA,Basic Materials,158.93,USD,18729457664,,,-0.035,0.0,{},{},,-187907008,,,,OCF,Flat ➡,Flat ➡,N/A,18.729457664,
-ARE,ARE,Alexandria Real Estate Equities,USA,Real Estate,50.4,USD,8734339072,,,-0.052,0.0,{},{},,-1437986944,,,,OCF,Downtrend ↘,Flat ➡,N/A,8.734339072,
-ALGN,ALGN,Align Technology,USA,Healthcare,183.86,USD,13327343616,,,0.053,0.359,{},{},,410351008,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,13.327343616,
-ALLE,ALLE,Allegion,USA,Industrials,178.2,USD,15330893824,,,0.107,0.095,{},{},,640400000,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,15.330893824,
-LNT,LNT,Alliant Energy,USA,Utilities,69.68,USD,17911500800,,,0.119,-0.052,{},{},,818000000,,,,OCF,Uptrend ↗,Downtrend ↘,N/A,17.9115008,
-ALL,ALL,Allstate,USA,Financial Services,206.56,USD,54052974592,,,0.051,1.032,{},{},,10165000192,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,54.052974592,
-GOOGL,GOOGL,Alphabet Inc. (Class A),USA,Communication Services,309.0,USD,3737973161984,,,0.18,0.311,{},{},,132169998336,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,3737.973161984,
-GOOG,GOOG,Alphabet Inc. (Class C),USA,Communication Services,309.37,USD,3742449008640,,,0.18,0.311,{},{},,132169998336,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,3742.44900864,
-MO,MO,Altria,USA,Consumer Defensive,67.01,USD,112487792640,,,-0.005,-0.631,{},{},,6946999808,,,,OCF,Flat ➡,Downtrend ↘,N/A,112.48779264,
-AMZN,AMZN,Amazon,USA,Consumer Cyclical,199.6,USD,2142690213888,,,0.136,0.05,{},{},,77669998592,,,,OCF,Uptrend ↗,Flat ➡,N/A,2142.690213888,
-AMCR,AMCR,Amcor,USA,Consumer Cyclical,49.74,USD,22982154240,,,0.681,-0.321,{},{},,596000000,,,,OCF,Uptrend ↗,Downtrend ↘,N/A,22.98215424,
-AEE,AEE,Ameren,USA,Utilities,109.34,USD,30221574144,,,0.248,0.382,{},{},,1411000064,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,30.221574144,
-AEP,AEP,American Electric Power,USA,Utilities,126.43,USD,67673628672,,,0.109,0.006,{},{},,3662099968,,,,OCF,Uptrend ↗,Flat ➡,N/A,67.673628672,
-AXP,AXP,American Express,USA,Financial Services,342.88,USD,236193464320,,,0.106,0.166,{},{},,10700999680,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,236.19346432,
-AIG,AIG,American International Group,USA,Financial Services,78.8,USD,42518593536,,,-0.068,-0.056,{},{},,3096000000,,,,OCF,Downtrend ↘,Downtrend ↘,N/A,42.518593536,
-AMT,AMT,American Tower,USA,Real Estate,188.19,USD,88120197120,,,0.077,0.0,{},{},,2938400000,,,,OCF,Uptrend ↗,Flat ➡,N/A,88.12019712,
-AWK,AWK,American Water Works,USA,Utilities,128.37,USD,25054892032,,,0.097,0.081,{},{},,1112000000,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,25.054892032,
-AMP,AMP,Ameriprise Financial,USA,Financial Services,467.3,USD,43414839296,,,0.086,-0.011,{},{},,3625999872,,,,OCF,Uptrend ↗,Flat ➡,N/A,43.414839296,
-AME,AME,Ametek,USA,Industrials,228.69,USD,52816859136,,,0.134,0.036,{},{},,1480141952,,,,OCF,Uptrend ↗,Flat ➡,N/A,52.816859136,
-AMGN,AMGN,Amgen,USA,Healthcare,366.2,USD,197381799936,,,0.086,1.116,{},{},,7711000064,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,197.381799936,
-APH,APH,Amphenol,USA,Technology,143.73,USD,176675061760,,,0.491,0.578,{},{},,4270299904,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,176.67506176,
-ADI,ADI,Analog Devices,USA,Technology,331.36,USD,162251784192,,,0.259,0.661,{},{},,2267342080,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,162.251784192,
-AON,AON,Aon plc,USA,Financial Services,314.49,USD,67594989568,,,0.037,1.382,{},{},,3695000064,,,,OCF,Flat ➡,Uptrend ↗,N/A,67.594989568,
-APA,APA,APA Corporation,USA,Energy,26.92,USD,9631611904,,,-0.164,0.0,{},{},,1508999936,,,,OCF,Downtrend ↘,Flat ➡,N/A,9.631611904,
-APO,APO,Apollo Global Management,USA,Financial Services,125.37,USD,72767578112,,,0.877,-0.558,{},{},,3395000064,,,,OCF,Uptrend ↗,Downtrend ↘,N/A,72.767578112,
-AAPL,AAPL,Apple Inc.,USA,Technology,261.73,USD,3846888226816,,,0.157,0.183,{},{},,117776998400,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,3846.888226816,
-AMAT,AMAT,Applied Materials,USA,Technology,328.39,USD,260650205184,,,-0.035,0.133,{},{},,6998000128,,,,OCF,Flat ➡,Uptrend ↗,N/A,260.650205184,
-APP,APP,AppLovin,USA,Communication Services,366.91,USD,123999076352,,,0.682,0.959,{},{},,2916342016,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,123.999076352,
-APTV,APTV,Aptiv,USA,Consumer Cyclical,83.0,USD,17934589952,,,0.05,-0.434,{},{},,165000000,,,,OCF,Flat ➡,Downtrend ↘,N/A,17.934589952,
-ACGL,ACGL,Arch Capital Group,USA,Financial Services,99.85,USD,36208201728,,,0.085,0.387,{},{},,4359000064,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,36.208201728,
-ADM,ADM,Archer Daniels Midland,USA,Consumer Defensive,69.5,USD,33399597056,,,-0.137,-0.197,{},{},,1078000000,,,,OCF,Downtrend ↘,Downtrend ↘,N/A,33.399597056,
-ARES,ARES,Ares Management,USA,Financial Services,133.94,USD,43882041344,,,0.195,-0.887,{},{},,426112000,,,,OCF,Uptrend ↗,Downtrend ↘,N/A,43.882041344,
-ANET,ANET,Arista Networks,USA,Technology,135.12,USD,170154606592,,,0.275,0.155,{},{},,3356553984,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,170.154606592,
-AJG,AJG,Arthur J. Gallagher & Co.,USA,Financial Services,204.79,USD,52626112512,,,0.367,-0.482,{},{},,1494000000,,,,OCF,Uptrend ↗,Downtrend ↘,N/A,52.626112512,
-AIZ,AIZ,Assurant,USA,Financial Services,214.48,USD,10822491136,,,0.079,0.159,{},{},,872700032,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,10.822491136,
-T,T,AT&T,USA,Communication Services,28.8,USD,204176146432,,,0.036,-0.056,{},{},,21888999424,,,,OCF,Flat ➡,Downtrend ↘,N/A,204.176146432,
-ATO,ATO,Atmos Energy,USA,Utilities,177.77,USD,29410080768,,,0.142,0.094,{},{},,1249393024,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,29.410080768,
-ADSK,ADSK,Autodesk,USA,Technology,223.49,USD,47603372032,,,0.18,0.26,{},{},,1111000064,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,47.603372032,
-ADP,ADP,Automatic Data Processing,USA,Technology,209.96,USD,84918059008,,,0.062,0.115,{},{},,4235300096,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,84.918059008,
-AZO,AZO,AutoZone,USA,Consumer Cyclical,3788.71,USD,63016341504,,,0.082,-0.046,{},{},,2464136960,,,,OCF,Uptrend ↗,Flat ➡,N/A,63.016341504,
-AVB,AVB,AvalonBay Communities,USA,Real Estate,175.26,USD,24815929344,,,0.03,-0.408,{},{},,1051300992,,,,OCF,Flat ➡,Downtrend ↘,N/A,24.815929344,
-AVY,AVY,Avery Dennison,USA,Consumer Cyclical,195.55,USD,15115114496,,,0.039,-0.006,{},{},,688000000,,,,OCF,Flat ➡,Flat ➡,N/A,15.115114496,
-AXON,AXON,Axon Enterprise,USA,Industrials,435.81,USD,34619555840,,,0.306,0.0,{},{},,257095008,,,,OCF,Uptrend ↗,Flat ➡,N/A,34.61955584,
-BKR,BKR,Baker Hughes,USA,Energy,61.39,USD,60667838464,,,0.003,-0.256,{},{},,2588000000,,,,OCF,Flat ➡,Downtrend ↘,N/A,60.667838464,
-BALL,BALL,Ball Corporation,USA,Consumer Cyclical,66.72,USD,18157774848,,,0.162,0.0,{},{},,912000000,,,,OCF,Uptrend ↗,Flat ➡,N/A,18.157774848,
-BAC,BAC,Bank of America,USA,Financial Services,52.52,USD,383527092224,,,0.132,0.209,{},{},,29055000576,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,383.527092224,
-BAX,BAX,Baxter International,USA,Healthcare,18.71,USD,9617983488,,,0.05,0.0,{},{},,-344000000,,,,OCF,Flat ➡,Flat ➡,N/A,9.617983488,
-BDX,BDX,Becton Dickinson,USA,Healthcare,177.81,USD,64419692544,,,0.016,0.286,{},{},,1756999936,,,,OCF,Flat ➡,Uptrend ↗,N/A,64.419692544,
-BRK-B,BRK-B,Berkshire Hathaway,USA,Financial Services,500.01,USD,1078689005568,,,0.021,0.172,{},{},,67463000064,,,,OCF,Flat ➡,Uptrend ↗,N/A,1078.689005568,
-BBY,BBY,Best Buy,USA,Consumer Cyclical,64.87,USD,13629270016,,,0.024,-0.476,{},{},,645000000,,,,OCF,Flat ➡,Downtrend ↘,N/A,13.629270016,
-TECH,TECH,Bio-Techne,USA,Healthcare,59.54,USD,9315229696,,,-0.004,0.091,{},{},,81060000,,,,OCF,Flat ➡,Uptrend ↗,N/A,9.315229696,
-BIIB,BIIB,Biogen,USA,Healthcare,195.5,USD,28691292160,,,-0.071,0.0,{},{},,1292899968,,,,OCF,Downtrend ↘,Flat ➡,N/A,28.69129216,
-BLK,BLK,BlackRock,USA,Financial Services,1055.63,USD,163781951488,,,0.234,-0.327,{},{},,5552999936,,,,OCF,Uptrend ↗,Downtrend ↘,N/A,163.781951488,
-BX,BX,Blackstone Inc.,USA,Financial Services,129.77,USD,159570214912,,,0.506,0.425,{},{},,3019214080,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,159.570214912,
-XYZ,XYZ,"Block, Inc.",USA,Technology,49.09,USD,29924478976,,,0.023,0.644,{},{},,3135894016,,,,OCF,Flat ➡,Uptrend ↗,N/A,29.924478976,
-BK,BK,BNY Mellon,USA,Financial Services,114.91,USD,80132390912,,,0.078,0.308,{},{},,5305999872,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,80.132390912,
-BA,BA,Boeing,USA,Industrials,239.35,USD,187972829184,,,0.571,0.0,{},{},,1888999936,,,,OCF,Uptrend ↗,Flat ➡,N/A,187.972829184,
-BKNG,BKNG,Booking Holdings,USA,Consumer Cyclical,4159.1,USD,134795960320,,,0.127,0.135,{},{},,5043999744,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,134.79596032,
-BSX,BSX,Boston Scientific,USA,Healthcare,74.12,USD,109921427456,,,0.159,0.185,{},{},,2897999872,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,109.921427456,
-BMY,BMY,Bristol Myers Squibb,USA,Healthcare,59.86,USD,121903316992,,,0.013,13.936,{},{},,7054000128,,,,OCF,Flat ➡,Uptrend ↗,N/A,121.903316992,
-AVGO,AVGO,Broadcom,USA,Technology,331.17,USD,1570167586816,,,0.164,1.881,{},{},,23125999616,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,1570.167586816,
-BR,BR,Broadridge Financial Solutions,USA,Technology,170.47,USD,19902152704,,,0.078,1.017,{},{},,1067299968,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,19.902152704,
-BRO,BRO,Brown & Brown,USA,Financial Services,69.53,USD,23738988544,,,0.361,-0.193,{},{},,1054000000,,,,OCF,Uptrend ↗,Downtrend ↘,N/A,23.738988544,
-BF-B,BF-B,Brown–Forman,USA,Consumer Defensive,30.67,USD,14206633984,,,-0.054,-0.139,{},{},,810000000,,,,OCF,Downtrend ↘,Downtrend ↘,N/A,14.206633984,
-BLDR,BLDR,Builders FirstSource,USA,Industrials,120.57,USD,13332701184,,,-0.069,-0.549,{},{},,593963008,,,,OCF,Downtrend ↘,Downtrend ↘,N/A,13.332701184,
-BG,BG,Bunge Global,USA,Consumer Defensive,121.74,USD,23539773440,,,0.755,-0.888,{},{},,819000000,,,,OCF,Uptrend ↗,Downtrend ↘,N/A,23.53977344,
-BXP,BXP,"BXP, Inc.",USA,Real Estate,59.07,USD,10453982208,,,0.083,0.0,{},{},,276800000,,,,OCF,Uptrend ↗,Flat ➡,N/A,10.453982208,
-CHRW,CHRW,C.H. Robinson,USA,Industrials,167.78,USD,19821056000,,,-0.065,-0.086,{},{},,587081024,,,,OCF,Downtrend ↘,Downtrend ↘,N/A,19.821056,
-CDNS,CDNS,Cadence Design Systems,USA,Technology,288.33,USD,78567030784,,,0.101,0.207,{},{},,1060961984,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,78.567030784,
-CPT,CPT,Camden Property Trust,USA,Real Estate,107.48,USD,11457625088,,,0.022,2.874,{},{},,384462016,,,,OCF,Flat ➡,Uptrend ↗,N/A,11.457625088,
-CPB,CPB,Campbell's Company (The),USA,Consumer Defensive,29.02,USD,8651855872,,,-0.034,-0.097,{},{},,578000000,,,,OCF,Flat ➡,Downtrend ↘,N/A,8.651855872,
-COF,COF,Capital One,USA,Financial Services,206.89,USD,131526934528,,,0.516,0.222,{},{},,1816000000,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,131.526934528,
-CAH,CAH,Cardinal Health,USA,Healthcare,215.06,USD,50607063040,,,0.188,0.194,{},{},,1662000000,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,50.60706304,
-CCL,CCL,Carnival,USA,Consumer Cyclical,32.6,USD,45063532544,,,0.066,0.358,{},{},,2760000000,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,45.063532544,
-CARR,CARR,Carrier Global,USA,Industrials,64.89,USD,54237908992,,,-0.06,-0.978,{},{},,1455000064,,,,OCF,Downtrend ↘,Downtrend ↘,N/A,54.237908992,
-CVNA,CVNA,Carvana,USA,Consumer Cyclical,344.14,USD,74610737152,,,0.545,0.609,{},{},,629000000,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,74.610737152,
-CAT,CAT,Caterpillar Inc.,USA,Industrials,758.29,USD,355242868736,,,0.18,-0.115,{},{},,8883999744,,,,OCF,Uptrend ↗,Downtrend ↘,N/A,355.242868736,
-CBOE,CBOE,Cboe Global Markets,USA,Financial Services,270.6,USD,28316805120,,,0.087,0.604,{},{},,1094800000,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,28.31680512,
-CBRE,CBRE,CBRE Group,USA,Real Estate,136.28,USD,40555970560,,,0.135,0.658,{},{},,1228000000,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,40.55597056,
-CDW,CDW,CDW Corporation,USA,Technology,126.83,USD,16622434304,,,0.063,0.087,{},{},,1066600000,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,16.622434304,
-COR,COR,Cencora,USA,Healthcare,351.06,USD,68291944448,,,0.055,0.148,{},{},,1625216000,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,68.291944448,
-CNC,CNC,Centene Corporation,USA,Healthcare,39.18,USD,19267039232,,,0.231,0.0,{},{},,-6673999872,,,,OCF,Uptrend ↗,Flat ➡,N/A,19.267039232,
-CNP,CNP,CenterPoint Energy,USA,Utilities,41.66,USD,27198492672,,,0.071,0.506,{},{},,1036000000,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,27.198492672,
-CF,CF,CF Industries,USA,Basic Materials,94.16,USD,15251374080,,,0.211,0.416,{},{},,1379000064,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,15.25137408,
-CRL,CRL,Charles River Laboratories,USA,Healthcare,158.74,USD,7812464128,,,-0.005,-0.173,{},{},,-83482000,,,,OCF,Flat ➡,Downtrend ↘,N/A,7.812464128,
-SCHW,SCHW,Charles Schwab Corporation,USA,Financial Services,95.08,USD,172591054848,,,0.189,0.418,{},{},,8416999936,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,172.591054848,
-CHTR,CHTR,Charter Communications,USA,Communication Services,238.08,USD,30809782272,,,-0.023,0.024,{},{},,4986999808,,,,OCF,Flat ➡,Flat ➡,N/A,30.809782272,
-CVX,CVX,Chevron Corporation,USA,Energy,182.4,USD,364682084352,,,-0.06,-0.238,{},{},,12298999808,,,,OCF,Downtrend ↘,Downtrend ↘,N/A,364.682084352,
-CMG,CMG,Chipotle Mexican Grill,USA,Consumer Cyclical,35.84,USD,47390445568,,,0.049,0.04,{},{},,1535761024,,,,OCF,Flat ➡,Flat ➡,N/A,47.390445568,
-CB,CB,Chubb Limited,USA,Financial Services,332.51,USD,130859597824,,,0.08,0.28,{},{},,10309999616,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,130.859597824,
-CHD,CHD,Church & Dwight,USA,Consumer Defensive,100.0,USD,24360869888,,,0.039,-0.21,{},{},,736800000,,,,OCF,Flat ➡,Downtrend ↘,N/A,24.360869888,
-CIEN,CIEN,Ciena,USA,Technology,292.96,USD,41323737088,,,0.203,-0.493,{},{},,123338000,,,,OCF,Uptrend ↗,Downtrend ↘,N/A,41.323737088,
-CI,CI,Cigna,USA,Healthcare,287.61,USD,76828057600,,,0.104,-0.112,{},{},,5957000192,,,,OCF,Uptrend ↗,Downtrend ↘,N/A,76.8280576,
-CINF,CINF,Cincinnati Financial,USA,Financial Services,165.11,USD,25760217088,,,0.218,0.674,{},{},,2392999936,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,25.760217088,
-CTAS,CTAS,Cintas,USA,Industrials,196.1,USD,78806056960,,,0.093,0.11,{},{},,1891880960,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,78.80605696,
-CSCO,CSCO,Cisco,USA,Technology,75.0,USD,296332099584,,,0.075,0.06,{},{},,10328999936,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,296.332099584,
-C,C,Citigroup,USA,Financial Services,111.15,USD,198876938240,,,0.037,-0.108,{},{},,13024000000,,,,OCF,Flat ➡,Downtrend ↘,N/A,198.87693824,
-CFG,CFG,Citizens Financial Group,USA,Financial Services,64.78,USD,27822114816,,,0.107,0.359,{},{},,1688000000,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,27.822114816,
-CLX,CLX,Clorox,USA,Consumer Defensive,124.64,USD,15203634176,,,-0.008,-0.162,{},{},,755000000,,,,OCF,Flat ➡,Downtrend ↘,N/A,15.203634176,
-CME,CME,CME Group,USA,Financial Services,301.64,USD,108443328512,,,0.083,0.35,{},{},,4020999936,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,108.443328512,
-CMS,CMS,CMS Energy,USA,Utilities,74.73,USD,22898835456,,,0.123,0.066,{},{},,1061000000,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,22.898835456,
-KO,KO,Coca-Cola Company (The),USA,Consumer Defensive,79.0,USD,339827097600,,,0.024,0.036,{},{},,13107000320,,,,OCF,Flat ➡,Flat ➡,N/A,339.8270976,
-CTSH,CTSH,Cognizant,USA,Technology,65.83,USD,31772616704,,,0.049,0.216,{},{},,2230000128,,,,OCF,Flat ➡,Uptrend ↗,N/A,31.772616704,
-COIN,COIN,Coinbase,USA,Financial Services,141.09,USD,38045990912,,,0.589,4.306,{},{},,3217709056,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,38.045990912,
-CL,CL,Colgate-Palmolive,USA,Consumer Defensive,96.17,USD,77726588928,,,0.058,0.0,{},{},,2132000000,,,,OCF,Uptrend ↗,Flat ➡,N/A,77.726588928,
-CMCSA,CMCSA,Comcast,USA,Communication Services,31.82,USD,115948724224,,,0.012,-0.525,{},{},,19997999104,,,,OCF,Flat ➡,Downtrend ↘,N/A,115.948724224,
-FIX,FIX,Comfort Systems USA,USA,Industrials,1300.02,USD,45866594304,,,0.352,1.017,{},{},,837622016,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,45.866594304,
-CAG,CAG,Conagra Brands,USA,Consumer Defensive,19.94,USD,9538688000,,,-0.068,0.0,{},{},,-98000000,,,,OCF,Downtrend ↘,Flat ➡,N/A,9.538688,
-COP,COP,ConocoPhillips,USA,Energy,110.83,USD,136954658816,,,-0.068,-0.385,{},{},,7987999744,,,,OCF,Downtrend ↘,Downtrend ↘,N/A,136.954658816,
-ED,ED,Consolidated Edison,USA,Utilities,111.72,USD,40323727360,,,0.107,0.124,{},{},,2036000000,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,40.32372736,
-STZ,STZ,Constellation Brands,USA,Consumer Defensive,162.36,USD,28265881600,,,-0.098,-0.15,{},{},,1109600000,,,,OCF,Downtrend ↘,Downtrend ↘,N/A,28.2658816,
-CEG,CEG,Constellation Energy,USA,Utilities,276.12,USD,100035534848,,,0.003,-0.223,{},{},,2739000064,,,,OCF,Flat ➡,Downtrend ↘,N/A,100.035534848,
-COO,COO,Cooper Companies (The),USA,Healthcare,81.7,USD,16242689024,,,0.046,-0.282,{},{},,374900000,,,,OCF,Flat ➡,Downtrend ↘,N/A,16.242689024,
-CPRT,CPRT,Copart,USA,Industrials,36.72,USD,35545608192,,,0.007,0.108,{},{},,1594077056,,,,OCF,Flat ➡,Uptrend ↗,N/A,35.545608192,
-GLW,GLW,Corning Inc.,USA,Technology,131.5,USD,112742891520,,,0.204,0.764,{},{},,1596000000,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,112.74289152,
-CPAY,CPAY,Corpay,USA,Technology,321.32,USD,22689814528,,,0.207,0.09,{},{},,1069825984,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,22.689814528,
-CTVA,CTVA,Corteva,USA,Basic Materials,74.11,USD,50078494720,,,-0.017,0.0,{},{},,1192999936,,,,OCF,Flat ➡,Flat ➡,N/A,50.07849472,
-CSGP,CSGP,CoStar Group,USA,Real Estate,45.03,USD,19084738560,,,0.204,0.0,{},{},,20300000,,,,OCF,Uptrend ↗,Flat ➡,N/A,19.08473856,
-COST,COST,Costco,USA,Consumer Defensive,998.86,USD,443451572224,,,0.083,0.114,{},{},,8302000128,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,443.451572224,
-CTRA,CTRA,Coterra,USA,Energy,30.78,USD,23435200512,,,0.349,0.235,{},{},,1646000000,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,23.435200512,
-CRH,CRH,CRH plc,USA,Basic Materials,122.85,USD,82079973376,,,0.053,0.122,{},{},,3407000064,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,82.079973376,
-CRWD,CRWD,CrowdStrike,USA,Technology,411.54,USD,103748591616,,,0.222,0.0,{},{},,-314160992,,,,OCF,Uptrend ↗,Flat ➡,N/A,103.748591616,
-CCI,CCI,Crown Castle,USA,Real Estate,87.81,USD,38239412224,,,-0.35,0.0,{},{},,1103000064,,,,OCF,Downtrend ↘,Flat ➡,N/A,38.239412224,
-CSX,CSX,CSX Corporation,USA,Industrials,40.7,USD,75876073472,,,-0.009,0.012,{},{},,2888999936,,,,OCF,Flat ➡,Flat ➡,N/A,75.876073472,
-CMI,CMI,Cummins,USA,Industrials,588.79,USD,81350434816,,,0.011,0.414,{},{},,2843000064,,,,OCF,Flat ➡,Uptrend ↗,N/A,81.350434816,
-CVS,CVS,CVS Health,USA,Healthcare,77.93,USD,99143409664,,,0.084,0.753,{},{},,1768000000,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,99.143409664,
-DHR,DHR,Danaher Corporation,USA,Healthcare,214.94,USD,151941087232,,,0.046,0.125,{},{},,3600000000,,,,OCF,Flat ➡,Uptrend ↗,N/A,151.941087232,
-DRI,DRI,Darden Restaurants,USA,Consumer Cyclical,212.86,USD,24758546432,,,0.073,0.118,{},{},,1123000064,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,24.758546432,
-DDOG,DDOG,Datadog,USA,Technology,126.13,USD,44230098944,,,0.292,-0.03,{},{},,107741000,,,,OCF,Uptrend ↗,Flat ➡,N/A,44.230098944,
-DVA,DVA,DaVita,USA,Healthcare,149.97,USD,10025345024,,,0.099,0.065,{},{},,721803008,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,10.025345024,
-DECK,DECK,Deckers Brands,USA,Consumer Cyclical,116.02,USD,16909315072,,,0.071,0.11,{},{},,1039910976,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,16.909315072,
-DE,DE,Deere & Company,USA,Industrials,598.11,USD,162132344832,,,0.126,-0.137,{},{},,5026999808,,,,OCF,Uptrend ↗,Downtrend ↘,N/A,162.132344832,
-DELL,DELL,Dell Technologies,USA,Technology,112.82,USD,75611987968,,,0.108,0.39,{},{},,5209999872,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,75.611987968,
-DAL,DAL,Delta Air Lines,USA,Industrials,69.5,USD,45392584704,,,0.029,0.444,{},{},,5005000192,,,,OCF,Flat ➡,Uptrend ↗,N/A,45.392584704,
-DVN,DVN,Devon Energy,USA,Energy,43.96,USD,27576107008,,,0.071,-0.162,{},{},,2719000064,,,,OCF,Uptrend ↗,Downtrend ↘,N/A,27.576107008,
-DXCM,DXCM,Dexcom,USA,Healthcare,65.08,USD,25521465344,,,0.216,1.099,{},{},,720700032,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,25.521465344,
-FANG,FANG,Diamondback Energy,USA,Energy,167.42,USD,47970115584,,,0.42,0.1,{},{},,4177999872,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,47.970115584,
-DLR,DLR,Digital Realty,USA,Real Estate,180.31,USD,63065223168,,,0.171,-0.532,{},{},,1267864960,,,,OCF,Uptrend ↗,Downtrend ↘,N/A,63.065223168,
-DG,DG,Dollar General,USA,Consumer Defensive,148.56,USD,32700858368,,,0.046,0.438,{},{},,1277228032,,,,OCF,Flat ➡,Uptrend ↗,N/A,32.700858368,
-DLTR,DLTR,Dollar Tree,USA,Consumer Defensive,128.43,USD,26195589120,,,0.094,0.106,{},{},,1113799936,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,26.19558912,
-D,D,Dominion Energy,USA,Utilities,65.12,USD,55606833152,,,0.149,0.062,{},{},,2609999872,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,55.606833152,
-DPZ,DPZ,Domino's,USA,Consumer Cyclical,381.78,USD,12961018880,,,0.031,0.301,{},{},,589505024,,,,OCF,Flat ➡,Uptrend ↗,N/A,12.96101888,
-DASH,DASH,DoorDash,USA,Consumer Cyclical,161.14,USD,69451104256,,,0.273,0.459,{},{},,863000000,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,69.451104256,
-DOV,DOV,Dover Corporation,USA,Industrials,230.57,USD,31623417856,,,0.088,-0.801,{},{},,1097428992,,,,OCF,Uptrend ↗,Downtrend ↘,N/A,31.623417856,
-DOW,DOW,Dow Inc.,USA,Basic Materials,32.65,USD,23427489792,,,-0.091,0.0,{},{},,-2633999872,,,,OCF,Downtrend ↘,Flat ➡,N/A,23.427489792,
-DHI,DHI,D. R. Horton,USA,Consumer Cyclical,164.59,USD,47912075264,,,-0.095,-0.222,{},{},,3335099904,,,,OCF,Downtrend ↘,Downtrend ↘,N/A,47.912075264,
-DTE,DTE,DTE Energy,USA,Utilities,140.91,USD,29264613376,,,0.214,-0.124,{},{},,1382000000,,,,OCF,Uptrend ↗,Downtrend ↘,N/A,29.264613376,
-DUK,DUK,Duke Energy,USA,Utilities,126.11,USD,98070863872,,,0.144,-0.014,{},{},,4911000064,,,,OCF,Uptrend ↗,Flat ➡,N/A,98.070863872,
-DD,DD,DuPont,USA,Basic Materials,49.43,USD,20709951488,,,-0.452,0.0,{},{},,57000000,,,,OCF,Downtrend ↘,Flat ➡,N/A,20.709951488,
-ETN,ETN,Eaton Corporation,USA,Industrials,390.33,USD,151955456000,,,0.131,0.188,{},{},,4087000064,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,151.955456,
-EBAY,EBAY,eBay Inc.,USA,Consumer Cyclical,79.41,USD,36290371584,,,0.095,0.054,{},{},,2151000064,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,36.290371584,
-ECL,ECL,Ecolab,USA,Basic Materials,300.69,USD,85283168256,,,0.178,0.0,{},{},,2075600000,,,,OCF,Uptrend ↗,Flat ➡,N/A,85.283168256,
-EIX,EIX,Edison International,USA,Utilities,69.08,USD,26584334336,,,0.106,0.636,{},{},,2951000064,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,26.584334336,
-EW,EW,Edwards Lifesciences,USA,Healthcare,76.44,USD,44877926400,,,0.133,-0.761,{},{},,1060099968,,,,OCF,Uptrend ↗,Downtrend ↘,N/A,44.8779264,
-EA,EA,Electronic Arts,USA,Communication Services,200.46,USD,50165862400,,,0.01,-0.685,{},{},,680000000,,,,OCF,Flat ➡,Downtrend ↘,N/A,50.1658624,
-ELV,ELV,Elevance Health,USA,Healthcare,336.04,USD,74165600256,,,0.095,0.363,{},{},,5662000128,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,74.165600256,
-EME,EME,Emcor,USA,Industrials,782.93,USD,35048538112,,,0.164,0.133,{},{},,1130370944,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,35.048538112,
-EMR,EMR,Emerson Electric,USA,Industrials,144.98,USD,81522556928,,,0.041,0.049,{},{},,2304999936,,,,OCF,Flat ➡,Flat ➡,N/A,81.522556928,
-ETR,ETR,Entergy,USA,Utilities,101.96,USD,45535019008,,,0.125,0.02,{},{},,1808936960,,,,OCF,Uptrend ↗,Flat ➡,N/A,45.535019008,
-EOG,EOG,EOG Resources,USA,Energy,117.85,USD,64345321472,,,-0.024,-0.085,{},{},,5529999872,,,,OCF,Flat ➡,Downtrend ↘,N/A,64.345321472,
-EPAM,EPAM,EPAM Systems,USA,Technology,163.12,USD,9085280256,,,0.194,-0.194,{},{},,371623008,,,,OCF,Uptrend ↗,Downtrend ↘,N/A,9.085280256,
-EQT,EQT,EQT Corporation,USA,Energy,57.18,USD,35684372480,,,0.514,0.0,{},{},,1780542976,,,,OCF,Uptrend ↗,Flat ➡,N/A,35.68437248,
-EFX,EFX,Equifax,USA,Industrials,188.18,USD,23032109056,,,0.092,0.03,{},{},,660300032,,,,OCF,Uptrend ↗,Flat ➡,N/A,23.032109056,
-EQIX,EQIX,Equinix,USA,Real Estate,957.87,USD,94115446784,,,0.066,0.229,{},{},,1071000000,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,94.115446784,
-EQR,EQR,Equity Residential,USA,Real Estate,63.05,USD,24814075904,,,0.02,-0.088,{},{},,1118667008,,,,OCF,Flat ➡,Downtrend ↘,N/A,24.814075904,
-ERIE,ERIE,Erie Indemnity,USA,Financial Services,282.94,USD,14794895360,,,0.067,0.144,{},{},,647984000,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,14.79489536,
-ESS,ESS,Essex Property Trust,USA,Real Estate,251.36,USD,17370597376,,,0.024,-0.687,{},{},,669665984,,,,OCF,Flat ➡,Downtrend ↘,N/A,17.370597376,
-EL,EL,Estée Lauder Companies (The),USA,Consumer Defensive,106.42,USD,38494990336,,,0.056,0.0,{},{},,-178000000,,,,OCF,Uptrend ↗,Flat ➡,N/A,38.494990336,
-EG,EG,Everest Group,USA,Financial Services,336.12,USD,14109664256,,,-0.03,0.0,{},{},,1591000064,,,,OCF,Flat ➡,Flat ➡,N/A,14.109664256,
-EVRG,EVRG,Evergy,USA,Utilities,80.69,USD,18575980544,,,-0.001,0.005,{},{},,849500032,,,,OCF,Flat ➡,Flat ➡,N/A,18.575980544,
-ES,ES,Eversource Energy,USA,Utilities,70.32,USD,26383300608,,,0.051,0.0,{},{},,1343586048,,,,OCF,Uptrend ↗,Flat ➡,N/A,26.383300608,
-EXC,EXC,Exelon,USA,Utilities,47.55,USD,48024895488,,,0.09,0.229,{},{},,2820999936,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,48.024895488,
-EXE,EXE,Expand Energy,USA,Energy,103.44,USD,24636274688,,,3.193,0.0,{},{},,867000000,,,,OCF,Uptrend ↗,Flat ➡,N/A,24.636274688,
-EXPE,EXPE,Expedia Group,USA,Consumer Cyclical,227.24,USD,28113129472,,,0.087,0.454,{},{},,1388000000,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,28.113129472,
-EXPD,EXPD,Expeditors International,USA,Industrials,140.56,USD,19076595712,,,-0.035,0.006,{},{},,845502976,,,,OCF,Flat ➡,Flat ➡,N/A,19.076595712,
-EXR,EXR,Extra Space Storage,USA,Real Estate,144.34,USD,31985952768,,,0.034,-0.142,{},{},,947441984,,,,OCF,Flat ➡,Downtrend ↘,N/A,31.985952768,
-XOM,XOM,ExxonMobil,USA,Energy,149.93,USD,632279597056,,,-0.013,-0.11,{},{},,28843999232,,,,OCF,Flat ➡,Downtrend ↘,N/A,632.279597056,
-FFIV,FFIV,"F5, Inc.",USA,Technology,262.02,USD,14885641216,,,0.073,0.099,{},{},,705988992,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,14.885641216,
-FDS,FDS,FactSet,USA,Financial Services,201.95,USD,7556956160,,,0.068,0.044,{},{},,599598016,,,,OCF,Uptrend ↗,Flat ➡,N/A,7.55695616,
-FICO,FICO,Fair Isaac,USA,Technology,1337.64,USD,31731675136,,,0.164,0.077,{},{},,657790976,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,31.731675136,
-FAST,FAST,Fastenal,USA,Industrials,45.54,USD,52288081920,,,0.111,0.093,{},{},,1258400000,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,52.28808192,
-FRT,FRT,Federal Realty Investment Trust,USA,Real Estate,104.75,USD,9092219904,,,0.06,-0.011,{},{},,337579008,,,,OCF,Uptrend ↗,Flat ➡,N/A,9.092219904,
-FDX,FDX,FedEx,USA,Industrials,369.46,USD,87176101888,,,0.139,-0.133,{},{},,4330999808,,,,OCF,Uptrend ↗,Downtrend ↘,N/A,87.176101888,
-FIS,FIS,Fidelity National Information Services,USA,Technology,46.95,USD,24525674496,,,0.057,0.22,{},{},,177000000,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,24.525674496,
-FITB,FITB,Fifth Third Bancorp,USA,Financial Services,53.16,USD,47846576128,,,0.115,0.208,{},{},,2376000000,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,47.846576128,
-FSLR,FSLR,First Solar,USA,Technology,220.45,USD,23656079360,,,0.797,0.457,{},{},,1400461952,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,23.65607936,
-FE,FE,FirstEnergy,USA,Utilities,48.84,USD,28213184512,,,0.112,0.045,{},{},,1330000000,,,,OCF,Uptrend ↗,Flat ➡,N/A,28.213184512,
-ALNY,ALNY,Alnylam Pharmaceuticals,USA,Healthcare,308.48,USD,40754470912,,,1.493,0.0,{},{},,43565000,,,,OCF,Uptrend ↗,Flat ➡,N/A,40.754470912,
-ARM,ARM,Arm Holdings,USA,Technology,122.19,USD,129765613568,,,0.263,-0.123,{},{},,801000000,,,,OCF,Uptrend ↗,Downtrend ↘,N/A,129.765613568,
-ASML,ASML,ASML Holding,USA,Technology,1406.87,USD,546073313280,,,0.049,0.072,{},{},,9609400320,,,,OCF,Flat ➡,Uptrend ↗,N/A,546.07331328,
-TEAM,TEAM,Atlassian,USA,Technology,86.48,USD,22808588288,,,0.233,0.0,{},{},,-189224992,,,,OCF,Uptrend ↗,Flat ➡,N/A,22.808588288,
-CCEP,CCEP,Coca-Cola Europacific Partners,USA,Consumer Defensive,99.05,USD,44429922304,,,0.045,0.15,{},{},,1534000000,,,,OCF,Flat ➡,Uptrend ↗,N/A,44.429922304,
-FER,FER,Ferrovial,USA,Industrials,72.97,USD,52123099136,,,0.047,0.316,{},{},,3347000064,,,,OCF,Flat ➡,Uptrend ↗,N/A,52.123099136,
-FTNT,FTNT,Fortinet,USA,Technology,84.26,USD,64565579776,,,0.148,0.001,{},{},,1853400064,,,,OCF,Uptrend ↗,Flat ➡,N/A,64.565579776,
-GEHC,GEHC,GE HealthCare,USA,Healthcare,78.65,USD,35844718592,,,0.071,-0.177,{},{},,2084000000,,,,OCF,Uptrend ↗,Downtrend ↘,N/A,35.844718592,
-GILD,GILD,Gilead Sciences,USA,Healthcare,151.81,USD,188396191744,,,0.047,0.235,{},{},,8510000128,,,,OCF,Flat ➡,Uptrend ↗,N/A,188.396191744,
-HON,HON,Honeywell,USA,Industrials,239.83,USD,161614168064,,,-0.033,-0.764,{},{},,4834999808,,,,OCF,Flat ➡,Downtrend ↘,N/A,161.614168064,
-IDXX,IDXX,Idexx Laboratories,USA,Healthcare,617.2,USD,49378897920,,,0.143,0.176,{},{},,1059464000,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,49.37889792,
-INSM,INSM,Insmed Incorporated,USA,Healthcare,146.17,USD,31174182912,,,0.524,0.0,{},{},,-1183837952,,,,OCF,Uptrend ↗,Flat ➡,N/A,31.174182912,
-INTC,INTC,Intel,USA,Technology,46.48,USD,232175894528,,,-0.041,0.0,{},{},,-267000000,,,,OCF,Flat ➡,Flat ➡,N/A,232.175894528,
-INTU,INTU,Intuit,USA,Technology,397.96,USD,110792065024,,,0.41,-0.185,{},{},,4118000128,,,,OCF,Uptrend ↗,Downtrend ↘,N/A,110.792065024,
-ISRG,ISRG,Intuitive Surgical,USA,Healthcare,478.6,USD,169965338624,,,0.188,0.166,{},{},,2856000000,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,169.965338624,
-KDP,KDP,Keurig Dr Pepper,USA,Consumer Defensive,29.91,USD,40635224064,,,0.107,0.083,{},{},,1582000000,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,40.635224064,
-KLAC,KLAC,KLA Corporation,USA,Technology,1450.85,USD,190630559744,,,0.072,0.409,{},{},,4557986816,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,190.630559744,
-KHC,KHC,Kraft Heinz,USA,Consumer Defensive,24.32,USD,28788551680,,,-0.034,-0.692,{},{},,-5846000128,,,,OCF,Flat ➡,Downtrend ↘,N/A,28.78855168,
-LRCX,LRCX,Lam Research,USA,Technology,231.29,USD,290507161600,,,0.221,0.37,{},{},,6213408768,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,290.5071616,
-LIN,LIN,Linde plc,USA,Basic Materials,472.86,USD,221728555008,,,0.058,-0.095,{},{},,6897999872,,,,OCF,Uptrend ↗,Downtrend ↘,N/A,221.728555008,
-MAR,MAR,Marriott International,USA,Consumer Cyclical,355.08,USD,94090715136,,,0.042,0.016,{},{},,2600999936,,,,OCF,Flat ➡,Flat ➡,N/A,94.090715136,
-MRVL,MRVL,Marvell Technology,USA,Technology,78.23,USD,66346864640,,,0.368,0.0,{},{},,2474200064,,,,OCF,Uptrend ↗,Flat ➡,N/A,66.34686464,
-MELI,MELI,Mercado Libre,USA,Consumer Cyclical,2007.0,USD,101749252096,,,0.395,0.061,{},{},,2076999936,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,101.749252096,
-META,META,Meta Platforms,USA,Communication Services,649.81,USD,1643730436096,,,0.238,0.107,{},{},,60458000384,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,1643.730436096,
-MCHP,MCHP,Microchip Technology,USA,Technology,78.92,USD,42706411520,,,0.156,0.0,{},{},,-154400000,,,,OCF,Uptrend ↗,Flat ➡,N/A,42.70641152,
-MU,MU,Micron Technology,USA,Technology,413.97,USD,465927077888,,,0.567,1.754,{},{},,11909000192,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,465.927077888,
-MSFT,MSFT,Microsoft,USA,Technology,401.84,USD,2986626777088,,,0.167,0.598,{},{},,119262003200,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,2986.626777088,
-MSTR,MSTR,MicroStrategy,USA,Technology,123.0,USD,40868954112,,,0.019,0.0,{},{},,-4229519872,,,,OCF,Flat ➡,Flat ➡,N/A,40.868954112,
-MDLZ,MDLZ,Mondelez International,USA,Consumer Defensive,61.86,USD,79821578240,,,0.093,-0.604,{},{},,2451000064,,,,OCF,Uptrend ↗,Downtrend ↘,N/A,79.82157824,
-MPWR,MPWR,Monolithic Power Systems,USA,Technology,1155.93,USD,56304197632,,,0.208,-0.884,{},{},,615926976,,,,OCF,Uptrend ↗,Downtrend ↘,N/A,56.304197632,
-MNST,MNST,Monster Beverage,USA,Consumer Defensive,81.17,USD,79304810496,,,0.168,0.395,{},{},,1726952960,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,79.304810496,
-NFLX,NFLX,"Netflix, Inc.",USA,Communication Services,75.86,USD,321789755392,,,0.176,0.327,{},{},,10981200896,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,321.789755392,
-NVDA,NVDA,Nvidia,USA,Technology,186.94,USD,4551428538368,,,0.625,0.667,{},{},,99198001152,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,4551.428538368,
-NXPI,NXPI,NXP Semiconductors,USA,Technology,242.19,USD,61059633152,,,0.072,-0.068,{},{},,2020999936,,,,OCF,Uptrend ↗,Downtrend ↘,N/A,61.059633152,
-ORLY,ORLY,O'Reilly Automotive,USA,Consumer Cyclical,95.21,USD,80367149056,,,0.078,0.12,{},{},,2538209024,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,80.367149056,
-ODFL,ODFL,Old Dominion Freight Line,USA,Industrials,185.51,USD,38988292096,,,-0.057,-0.112,{},{},,1023702976,,,,OCF,Downtrend ↘,Downtrend ↘,N/A,38.988292096,
-PCAR,PCAR,Paccar,USA,Industrials,124.84,USD,65590935552,,,-0.137,-0.359,{},{},,2375800064,,,,OCF,Downtrend ↘,Downtrend ↘,N/A,65.590935552,
-PLTR,PLTR,Palantir Technologies,USA,Technology,129.13,USD,307773145088,,,0.7,6.812,{},{},,1625032960,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,307.773145088,
-PANW,PANW,Palo Alto Networks,USA,Technology,162.81,USD,113478565888,,,0.157,-0.041,{},{},,1116899968,,,,OCF,Uptrend ↗,Flat ➡,N/A,113.478565888,
-PAYX,PAYX,Paychex,USA,Technology,92.47,USD,33193721856,,,0.183,-0.035,{},{},,1595699968,,,,OCF,Uptrend ↗,Flat ➡,N/A,33.193721856,
-PYPL,PYPL,PayPal,USA,Financial Services,39.08,USD,36565278720,,,0.037,0.394,{},{},,5232999936,,,,OCF,Flat ➡,Uptrend ↗,N/A,36.56527872,
-PDD,PDD,PDD Holdings,USA,Consumer Cyclical,100.22,USD,142276968448,,,0.09,0.165,{},{},,102270107648,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,142.276968448,
-PEP,PEP,PepsiCo,USA,Consumer Defensive,167.2,USD,228619272192,,,0.056,0.675,{},{},,8240000000,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,228.619272192,
-QCOM,QCOM,Qualcomm,USA,Technology,138.47,USD,147892207616,,,0.05,-0.018,{},{},,5365000192,,,,OCF,Flat ➡,Flat ➡,N/A,147.892207616,
-REGN,REGN,Regeneron Pharmaceuticals,USA,Healthcare,783.65,USD,82847326208,,,0.025,-0.026,{},{},,4504900096,,,,OCF,Flat ➡,Flat ➡,N/A,82.847326208,
-ROP,ROP,Roper Technologies,USA,Technology,319.82,USD,34424602624,,,0.097,-0.074,{},{},,1536300032,,,,OCF,Uptrend ↗,Downtrend ↘,N/A,34.424602624,
-ROST,ROST,Ross Stores,USA,Consumer Cyclical,194.85,USD,63370342400,,,0.104,0.068,{},{},,2085963008,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,63.3703424,
-STX,STX,Seagate Technology,USA,Technology,431.17,USD,94026571776,,,0.215,0.677,{},{},,1970000000,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,94.026571776,
-SHOP,SHOP,Shopify,USA,Technology,110.66,USD,144420569088,,,0.306,-0.423,{},{},,1231000064,,,,OCF,Uptrend ↗,Downtrend ↘,N/A,144.420569088,
-SBUX,SBUX,Starbucks,USA,Consumer Cyclical,96.76,USD,110238670848,,,0.055,-0.625,{},{},,1368899968,,,,OCF,Uptrend ↗,Downtrend ↘,N/A,110.238670848,
-SNPS,SNPS,Synopsys,USA,Technology,423.35,USD,80994566144,,,0.378,-0.665,{},{},,1336120064,,,,OCF,Uptrend ↗,Downtrend ↘,N/A,80.994566144,
-TMUS,TMUS,T-Mobile US,USA,Communication Services,214.68,USD,240120987648,,,0.113,-0.267,{},{},,11870000128,,,,OCF,Uptrend ↗,Downtrend ↘,N/A,240.120987648,
-TTWO,TTWO,Take-Two Interactive,USA,Communication Services,190.36,USD,35249999872,,,0.249,0.0,{},{},,-3964900096,,,,OCF,Uptrend ↗,Flat ➡,N/A,35.249999872,
-TSLA,TSLA,"Tesla, Inc.",USA,Consumer Cyclical,417.07,USD,1565026811904,,,-0.031,-0.606,{},{},,3793999872,,,,OCF,Flat ➡,Downtrend ↘,N/A,1565.026811904,
-TXN,TXN,Texas Instruments,USA,Technology,223.0,USD,202622943232,,,0.104,-0.032,{},{},,4973000192,,,,OCF,Uptrend ↗,Flat ➡,N/A,202.622943232,
-TRI,TRI,Thomson Reuters,USA,Industrials,85.89,USD,38221049856,,,0.052,-0.426,{},{},,1479000064,,,,OCF,Uptrend ↗,Downtrend ↘,N/A,38.221049856,
-VRSK,VRSK,Verisk Analytics,USA,Industrials,179.0,USD,25008979968,,,0.059,0.045,{},{},,914700032,,,,OCF,Uptrend ↗,Flat ➡,N/A,25.008979968,
-VRTX,VRTX,Vertex Pharmaceuticals,USA,Healthcare,465.02,USD,119226777600,,,0.11,0.047,{},{},,3675099904,,,,OCF,Uptrend ↗,Flat ➡,N/A,119.2267776,
-WMT,WMT,Walmart,USA,Consumer Defensive,133.64,USD,1065491824640,,,0.058,0.352,{},{},,22909999104,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,1065.49182464,
-WBD,WBD,Warner Bros. Discovery,USA,Communication Services,28.11,USD,69698371584,,,-0.06,0.0,{},{},,489000000,,,,OCF,Downtrend ↘,Flat ➡,N/A,69.698371584,
-WDC,WDC,Western Digital,USA,Technology,284.1,USD,97133592576,,,0.0,0.0,{},{},,3945999872,,,,OCF,Flat ➡,Flat ➡,N/A,97.133592576,
-WDAY,WDAY,"Workday, Inc.",USA,Technology,144.04,USD,38458679296,,,0.126,0.306,{},{},,642000000,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,38.458679296,
-XEL,XEL,Xcel Energy,USA,Utilities,78.98,USD,46719811584,,,0.141,0.177,{},{},,2018000000,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,46.719811584,
+MMM,MMM,3M,USA,Industrials,174.61,USD,91967086592,2306000000.0,,0.02,-0.199,{},{},2306000000.0,3249999872,,,39.88165073373808,OCF,Flat ➡,Downtrend ↘,39.9x,91.967086592,39.88165073373808
+AOS,AOS,A. O. Smith,USA,Industrials,79.62,USD,11010643968,616800000.0,,0.0,0.191,{},{},616800000.0,546200000,,,17.85123859922179,OCF,Flat ➡,Uptrend ↗,17.9x,11.010643968,17.85123859922179
+ABT,ABT,Abbott Laboratories,USA,Healthcare,111.47,USD,194008973312,8558000000.0,,0.044,-0.808,{},{},8558000000.0,6524000256,,,22.6698963907455,OCF,Flat ➡,Downtrend ↘,22.7x,194.008973312,22.6698963907455
+ABBV,ABBV,AbbVie,USA,Healthcare,227.5,USD,402080006144,18806000000.0,,0.1,0.0,{},{},18806000000.0,4225999872,,,21.380410833989153,OCF,Uptrend ↗,Flat ➡,21.4x,402.080006144,21.380410833989153
+ACN,ACN,Accenture,USA,Technology,222.05,USD,137701834752,11474399000.0,,0.06,-0.016,{},{},11474399000.0,7611100160,,,12.000788429267624,OCF,Uptrend ↗,Flat ➡,12.0x,137.701834752,12.000788429267624
+ADBE,ADBE,Adobe Inc.,USA,Technology,262.5,USD,109882499072,10031000000.0,,0.105,0.172,{},{},10031000000.0,7129999872,,,10.954291603229986,OCF,Uptrend ↗,Uptrend ↗,11.0x,109.882499072,10.954291603229986
+AMD,AMD,Advanced Micro Devices,USA,Technology,205.94,USD,335766814720,7709000000.0,,0.341,2.171,{},{},7709000000.0,4268999936,,,43.555171192113114,OCF,Uptrend ↗,Uptrend ↗,43.6x,335.76681472,43.555171192113114
+AES,AES,AES Corporation,USA,Utilities,16.2,USD,11536360448,2752000000.0,,0.019,0.253,{},{},2752000000.0,1079000064,,,4.191991441860465,OCF,Flat ➡,Uptrend ↗,4.2x,11.536360448,4.191991441860465
+AFL,AFL,Aflac,USA,Financial Services,115.88,USD,60734320640,2707000000.0,,-0.099,-0.229,{},{},2707000000.0,3646000128,,,22.436025356483192,OCF,Downtrend ↘,Downtrend ↘,22.4x,60.73432064,22.436025356483192
+A,A,Agilent Technologies,USA,Healthcare,124.88,USD,35403337728,1559000000.0,,0.094,0.245,{},{},1559000000.0,1303000064,,,22.709004315586913,OCF,Uptrend ↗,Uptrend ↗,22.7x,35.403337728,22.709004315586913
+APD,APD,Air Products,USA,Basic Materials,291.5,USD,64904224768,3256800000.0,,0.058,0.097,{},{},3256800000.0,-325700000,,,19.928833446327683,OCF,Uptrend ↗,Uptrend ↗,19.9x,64.904224768,19.928833446327683
+ABNB,ABNB,Airbnb,USA,Consumer Cyclical,115.96,USD,70994845696,4518000000.0,,0.097,0.038,{},{},4518000000.0,2631000064,,,15.713777267817619,OCF,Uptrend ↗,Flat ➡,15.7x,70.994845696,15.713777267817619
+AKAM,AKAM,Akamai Technologies,USA,Technology,104.61,USD,15049742336,1519171000.0,,0.05,1.553,{},{},1519171000.0,506864000,,,9.906549253507341,OCF,Flat ➡,Uptrend ↗,9.9x,15.049742336,9.906549253507341
+ALB,ALB,Albemarle Corporation,USA,Basic Materials,158.93,USD,18729457664,702068000.0,,-0.035,0.0,{},{},702068000.0,-187907008,,,26.677554971883065,OCF,Flat ➡,Flat ➡,26.7x,18.729457664,26.677554971883065
+ARE,ARE,Alexandria Real Estate Equities,USA,Real Estate,50.4,USD,8734339072,1414046000.0,,-0.052,0.0,{},{},1414046000.0,-1437986944,,,6.176842246999037,OCF,Downtrend ↘,Flat ➡,6.2x,8.734339072,6.176842246999037
+ALGN,ALGN,Align Technology,USA,Healthcare,183.86,USD,13327343616,738231000.0,,0.053,0.359,{},{},738231000.0,410351008,,,18.053080426045508,OCF,Uptrend ↗,Uptrend ↗,18.1x,13.327343616,18.053080426045508
+ALLE,ALLE,Allegion,USA,Industrials,178.2,USD,15330893824,675000000.0,,0.107,0.095,{},{},675000000.0,640400000,,,22.712435294814814,OCF,Uptrend ↗,Uptrend ↗,22.7x,15.330893824,22.712435294814814
+LNT,LNT,Alliant Energy,USA,Utilities,69.68,USD,17911500800,1167000000.0,,0.119,-0.052,{},{},1167000000.0,818000000,,,15.348329734361611,OCF,Uptrend ↗,Downtrend ↘,15.3x,17.9115008,15.348329734361611
+ALL,ALL,Allstate,USA,Financial Services,206.56,USD,54052974592,8931000000.0,,0.051,1.032,{},{},8931000000.0,10165000192,,,6.052286932258426,OCF,Uptrend ↗,Uptrend ↗,6.1x,54.052974592,6.052286932258426
+GOOGL,GOOGL,Alphabet Inc. (Class A),USA,Communication Services,309.0,USD,3737973161984,164713000000.0,,0.18,0.311,{},{},164713000000.0,132169998336,,,22.693856356110324,OCF,Uptrend ↗,Uptrend ↗,22.7x,3737.973161984,22.693856356110324
+GOOG,GOOG,Alphabet Inc. (Class C),USA,Communication Services,309.37,USD,3742449008640,164713000000.0,,0.18,0.311,{},{},164713000000.0,132169998336,,,22.721029965090793,OCF,Uptrend ↗,Uptrend ↗,22.7x,3742.44900864,22.721029965090793
+MO,MO,Altria,USA,Consumer Defensive,67.01,USD,112487792640,8753000000.0,,-0.005,-0.631,{},{},8753000000.0,6946999808,,,12.85134155603793,OCF,Flat ➡,Downtrend ↘,12.9x,112.48779264,12.85134155603793
+AMZN,AMZN,Amazon,USA,Consumer Cyclical,199.6,USD,2142690213888,139514000000.0,,0.136,0.05,{},{},139514000000.0,77669998592,,,15.358245150221483,OCF,Uptrend ↗,Flat ➡,15.4x,2142.690213888,15.358245150221483
+AMCR,AMCR,Amcor,USA,Consumer Cyclical,49.74,USD,22982154240,1390000000.0,,0.681,-0.321,{},{},1390000000.0,596000000,,,16.533923913669064,OCF,Uptrend ↗,Downtrend ↘,16.5x,22.98215424,16.533923913669064
+AEE,AEE,Ameren,USA,Utilities,109.34,USD,30221574144,2763000000.0,,0.248,0.382,{},{},2763000000.0,1411000064,,,10.93795662106406,OCF,Uptrend ↗,Uptrend ↗,10.9x,30.221574144,10.93795662106406
+AEP,AEP,American Electric Power,USA,Utilities,126.43,USD,67673628672,6804300000.0,,0.109,0.006,{},{},6804300000.0,3662099968,,,9.945715014329174,OCF,Uptrend ↗,Flat ➡,9.9x,67.673628672,9.945715014329174
+AXP,AXP,American Express,USA,Financial Services,342.88,USD,236193464320,18428000000.0,,0.106,0.166,{},{},18428000000.0,10700999680,,,12.81709704362926,OCF,Uptrend ↗,Uptrend ↗,12.8x,236.19346432,12.81709704362926
+AIG,AIG,American International Group,USA,Financial Services,78.8,USD,42518593536,3273000000.0,,-0.068,-0.056,{},{},3273000000.0,3096000000,,,12.990709910174152,OCF,Downtrend ↘,Downtrend ↘,13.0x,42.518593536,12.990709910174152
+AMT,AMT,American Tower,USA,Real Estate,188.19,USD,88120197120,5290500000.0,,0.077,0.0,{},{},5290500000.0,2938400000,,,16.65630793308761,OCF,Uptrend ↗,Flat ➡,16.7x,88.12019712,16.65630793308761
+AWK,AWK,American Water Works,USA,Utilities,128.37,USD,25054892032,2045000000.0,,0.097,0.081,{},{},2045000000.0,1112000000,,,12.251780944743276,OCF,Uptrend ↗,Uptrend ↗,12.3x,25.054892032,12.251780944743276
+AMP,AMP,Ameriprise Financial,USA,Financial Services,467.3,USD,43414839296,6595000000.0,,0.086,-0.011,{},{},6595000000.0,3625999872,,,6.58299306990144,OCF,Uptrend ↗,Flat ➡,6.6x,43.414839296,6.58299306990144
+AME,AME,Ametek,USA,Industrials,228.69,USD,52816859136,1828848000.0,,0.134,0.036,{},{},1828848000.0,1480141952,,,28.879851762420934,OCF,Uptrend ↗,Flat ➡,28.9x,52.816859136,28.879851762420934
+AMGN,AMGN,Amgen,USA,Healthcare,366.2,USD,197381799936,11490000000.0,,0.086,1.116,{},{},11490000000.0,7711000064,,,17.178572666318537,OCF,Uptrend ↗,Uptrend ↗,17.2x,197.381799936,17.178572666318537
+APH,APH,Amphenol,USA,Technology,143.73,USD,176675061760,2814700000.0,,0.491,0.578,{},{},2814700000.0,4270299904,,,62.768700664369206,OCF,Uptrend ↗,Uptrend ↗,62.8x,176.67506176,62.768700664369206
+ADI,ADI,Analog Devices,USA,Technology,331.36,USD,162251784192,4812202000.0,,0.259,0.661,{},{},4812202000.0,2267342080,,,33.71674426634626,OCF,Uptrend ↗,Uptrend ↗,33.7x,162.251784192,33.71674426634626
+AON,AON,Aon plc,USA,Financial Services,314.49,USD,67594989568,3035000000.0,,0.037,1.382,{},{},3035000000.0,3695000064,,,22.27182522833608,OCF,Flat ➡,Uptrend ↗,22.3x,67.594989568,22.27182522833608
+APA,APA,APA Corporation,USA,Energy,26.92,USD,9631611904,3620000000.0,,-0.164,0.0,{},{},3620000000.0,1508999936,,,2.6606662718232044,OCF,Downtrend ↘,Flat ➡,2.7x,9.631611904,2.6606662718232044
+APO,APO,Apollo Global Management,USA,Financial Services,125.37,USD,72767578112,3253000000.0,,0.877,-0.558,{},{},3253000000.0,3395000064,,,22.369375380264373,OCF,Uptrend ↗,Downtrend ↘,22.4x,72.767578112,22.369375380264373
+AAPL,AAPL,Apple Inc.,USA,Technology,261.73,USD,3846888226816,111482000000.0,,0.157,0.183,{},{},111482000000.0,117776998400,,,34.506810308534114,OCF,Uptrend ↗,Uptrend ↗,34.5x,3846.888226816,34.506810308534114
+AMAT,AMAT,Applied Materials,USA,Technology,328.39,USD,260650205184,7958000000.0,,-0.035,0.133,{},{},7958000000.0,6998000128,,,32.7532301060568,OCF,Flat ➡,Uptrend ↗,32.8x,260.650205184,32.7532301060568
+APP,APP,AppLovin,USA,Communication Services,366.91,USD,123999076352,2099011000.0,,0.682,0.959,{},{},2099011000.0,2916342016,,,59.07500072748547,OCF,Uptrend ↗,Uptrend ↗,59.1x,123.999076352,59.07500072748547
+APTV,APTV,Aptiv,USA,Consumer Cyclical,83.0,USD,17934589952,2185000000.0,,0.05,-0.434,{},{},2185000000.0,165000000,,,8.208050321281464,OCF,Flat ➡,Downtrend ↘,8.2x,17.934589952,8.208050321281464
+ACGL,ACGL,Arch Capital Group,USA,Financial Services,99.85,USD,36208201728,6673000000.0,,0.085,0.387,{},{},6673000000.0,4359000064,,,5.426075487486887,OCF,Uptrend ↗,Uptrend ↗,5.4x,36.208201728,5.426075487486887
+ADM,ADM,Archer Daniels Midland,USA,Consumer Defensive,69.5,USD,33399597056,2790000000.0,,-0.137,-0.197,{},{},2790000000.0,1078000000,,,11.971181740501793,OCF,Downtrend ↘,Downtrend ↘,12.0x,33.399597056,11.971181740501793
+ARES,ARES,Ares Management,USA,Financial Services,133.94,USD,43882041344,2791154000.0,,0.195,-0.887,{},{},2791154000.0,426112000,,,15.72182736746163,OCF,Uptrend ↗,Downtrend ↘,15.7x,43.882041344,15.72182736746163
+ANET,ANET,Arista Networks,USA,Technology,135.12,USD,170154606592,3708235000.0,,0.275,0.155,{},{},3708235000.0,3356553984,,,45.885605036358264,OCF,Uptrend ↗,Uptrend ↗,45.9x,170.154606592,45.885605036358264
+AJG,AJG,Arthur J. Gallagher & Co.,USA,Financial Services,204.79,USD,52626112512,2582900000.0,,0.367,-0.482,{},{},2582900000.0,1494000000,,,20.374816102830152,OCF,Uptrend ↗,Downtrend ↘,20.4x,52.626112512,20.374816102830152
+AIZ,AIZ,Assurant,USA,Financial Services,214.48,USD,10822491136,1332700000.0,,0.079,0.159,{},{},1332700000.0,872700032,,,8.120725696705936,OCF,Uptrend ↗,Uptrend ↗,8.1x,10.822491136,8.120725696705936
+T,T,AT&T,USA,Communication Services,28.8,USD,204176146432,40284000000.0,,0.036,-0.056,{},{},40284000000.0,21888999424,,,5.0684178937543445,OCF,Flat ➡,Downtrend ↘,5.1x,204.176146432,5.0684178937543445
+ATO,ATO,Atmos Energy,USA,Utilities,177.77,USD,29410080768,2049456000.0,,0.142,0.094,{},{},2049456000.0,1249393024,,,14.350188912569969,OCF,Uptrend ↗,Uptrend ↗,14.4x,29.410080768,14.350188912569969
+ADSK,ADSK,Autodesk,USA,Technology,223.49,USD,47603372032,1607000000.0,,0.18,0.26,{},{},1607000000.0,1111000064,,,29.62250904293715,OCF,Uptrend ↗,Uptrend ↗,29.6x,47.603372032,29.62250904293715
+ADP,ADP,Automatic Data Processing,USA,Technology,209.96,USD,84918059008,4939700000.0,,0.062,0.115,{},{},4939700000.0,4235300096,,,17.19093447132417,OCF,Uptrend ↗,Uptrend ↗,17.2x,84.918059008,17.19093447132417
+AZO,AZO,AutoZone,USA,Consumer Cyclical,3788.71,USD,63016341504,3117337000.0,,0.082,-0.046,{},{},3117337000.0,2464136960,,,20.21479920329435,OCF,Uptrend ↗,Flat ➡,20.2x,63.016341504,20.21479920329435
+AVB,AVB,AvalonBay Communities,USA,Real Estate,175.26,USD,24815929344,1607878000.0,,0.03,-0.408,{},{},1607878000.0,1051300992,,,15.433962865341773,OCF,Flat ➡,Downtrend ↘,15.4x,24.815929344,15.433962865341773
+AVY,AVY,Avery Dennison,USA,Consumer Cyclical,195.55,USD,15115114496,938800000.0,,0.039,-0.006,{},{},938800000.0,688000000,,,16.10046282062207,OCF,Flat ➡,Flat ➡,16.1x,15.115114496,16.10046282062207
+AXON,AXON,Axon Enterprise,USA,Industrials,435.81,USD,34619555840,408312000.0,,0.306,0.0,{},{},408312000.0,257095008,,,84.78701541958111,OCF,Uptrend ↗,Flat ➡,84.8x,34.61955584,84.78701541958111
+BKR,BKR,Baker Hughes,USA,Energy,61.39,USD,60667838464,3810000000.0,,0.003,-0.256,{},{},3810000000.0,2588000000,,,15.92331718215223,OCF,Flat ➡,Downtrend ↘,15.9x,60.667838464,15.92331718215223
+BALL,BALL,Ball Corporation,USA,Consumer Cyclical,66.72,USD,18157774848,115000000.0,,0.162,0.0,{},{},115000000.0,912000000,,,157.89369433043478,OCF,Uptrend ↗,Flat ➡,157.9x,18.157774848,157.89369433043478
+BAC,BAC,Bank of America,USA,Financial Services,52.52,USD,383527092224,-8805000000.0,,0.132,0.209,{},{},-8805000000.0,29055000576,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,383.527092224,
+BAX,BAX,Baxter International,USA,Healthcare,18.71,USD,9617983488,1019000000.0,,0.05,0.0,{},{},1019000000.0,-344000000,,,9.43864915407262,OCF,Flat ➡,Flat ➡,9.4x,9.617983488,9.43864915407262
+BDX,BDX,Becton Dickinson,USA,Healthcare,177.81,USD,64419692544,3431000000.0,,0.016,0.286,{},{},3431000000.0,1756999936,,,18.77577748294958,OCF,Flat ➡,Uptrend ↗,18.8x,64.419692544,18.77577748294958
+BRK-B,BRK-B,Berkshire Hathaway,USA,Financial Services,500.01,USD,1078689005568,30592000000.0,,0.021,0.172,{},{},30592000000.0,67463000064,,,35.26049312133891,OCF,Flat ➡,Uptrend ↗,35.3x,1078.689005568,35.26049312133891
+BBY,BBY,Best Buy,USA,Consumer Cyclical,64.87,USD,13629270016,2098000000.0,,0.024,-0.476,{},{},2098000000.0,645000000,,,6.496315546234509,OCF,Flat ➡,Downtrend ↘,6.5x,13.629270016,6.496315546234509
+TECH,TECH,Bio-Techne,USA,Healthcare,59.54,USD,9315229696,287556000.0,,-0.004,0.091,{},{},287556000.0,81060000,,,32.39448905952232,OCF,Flat ➡,Uptrend ↗,32.4x,9.315229696,32.39448905952232
+BIIB,BIIB,Biogen,USA,Healthcare,195.5,USD,28691292160,2204600000.0,,-0.071,0.0,{},{},2204600000.0,1292899968,,,13.01428475006804,OCF,Downtrend ↘,Flat ➡,13.0x,28.69129216,13.01428475006804
+BLK,BLK,BlackRock,USA,Financial Services,1055.63,USD,163781951488,4956000000.0,,0.234,-0.327,{},{},4956000000.0,5552999936,,,33.047205707828894,OCF,Uptrend ↗,Downtrend ↘,33.0x,163.781951488,33.047205707828894
+BX,BX,Blackstone Inc.,USA,Financial Services,129.77,USD,159570214912,3481662000.0,,0.506,0.425,{},{},3481662000.0,3019214080,,,45.83162148192444,OCF,Uptrend ↗,Uptrend ↗,45.8x,159.570214912,45.83162148192444
+XYZ,XYZ,"Block, Inc.",USA,Technology,49.09,USD,29924478976,1707350000.0,,0.023,0.644,{},{},1707350000.0,3135894016,,,17.52685681084722,OCF,Flat ➡,Uptrend ↗,17.5x,29.924478976,17.52685681084722
+BK,BK,BNY Mellon,USA,Financial Services,114.91,USD,80132390912,687000000.0,,0.078,0.308,{},{},687000000.0,5305999872,,,116.64103480640466,OCF,Uptrend ↗,Uptrend ↗,116.6x,80.132390912,116.64103480640466
+BA,BA,Boeing,USA,Industrials,239.35,USD,187972829184,1065000000.0,,0.571,0.0,{},{},1065000000.0,1888999936,,,176.50030909295774,OCF,Uptrend ↗,Flat ➡,176.5x,187.972829184,176.50030909295774
+BKNG,BKNG,Booking Holdings,USA,Consumer Cyclical,4159.1,USD,134795960320,8323000000.0,,0.127,0.135,{},{},8323000000.0,5043999744,,,16.19559777964676,OCF,Uptrend ↗,Uptrend ↗,16.2x,134.79596032,16.19559777964676
+BSX,BSX,Boston Scientific,USA,Healthcare,74.12,USD,109921427456,3435000000.0,,0.159,0.185,{},{},3435000000.0,2897999872,,,32.000415562154295,OCF,Uptrend ↗,Uptrend ↗,32.0x,109.921427456,32.000415562154295
+BMY,BMY,Bristol Myers Squibb,USA,Healthcare,59.86,USD,121903316992,15190000000.0,,0.013,13.936,{},{},15190000000.0,7054000128,,,8.025234825016458,OCF,Flat ➡,Uptrend ↗,8.0x,121.903316992,8.025234825016458
+AVGO,AVGO,Broadcom,USA,Technology,331.17,USD,1570167586816,27537000000.0,,0.164,1.881,{},{},27537000000.0,23125999616,,,57.02028495536914,OCF,Uptrend ↗,Uptrend ↗,57.0x,1570.167586816,57.02028495536914
+BR,BR,Broadridge Financial Solutions,USA,Technology,170.47,USD,19902152704,1171300000.0,,0.078,1.017,{},{},1171300000.0,1067299968,,,16.99150747374712,OCF,Uptrend ↗,Uptrend ↗,17.0x,19.902152704,16.99150747374712
+BRO,BRO,Brown & Brown,USA,Financial Services,69.53,USD,23738988544,1174000000.0,,0.361,-0.193,{},{},1174000000.0,1054000000,,,20.220603529812607,OCF,Uptrend ↗,Downtrend ↘,20.2x,23.738988544,20.220603529812607
+BF-B,BF-B,Brown–Forman,USA,Consumer Defensive,30.67,USD,14206633984,598000000.0,,-0.054,-0.139,{},{},598000000.0,810000000,,,23.756913016722407,OCF,Downtrend ↘,Downtrend ↘,23.8x,14.206633984,23.756913016722407
+BLDR,BLDR,Builders FirstSource,USA,Industrials,120.57,USD,13332701184,1872692000.0,,-0.069,-0.549,{},{},1872692000.0,593963008,,,7.119537641000228,OCF,Downtrend ↘,Downtrend ↘,7.1x,13.332701184,7.119537641000228
+BG,BG,Bunge Global,USA,Consumer Defensive,121.74,USD,23539773440,1900000000.0,,0.755,-0.888,{},{},1900000000.0,819000000,,,12.389354442105263,OCF,Uptrend ↗,Downtrend ↘,12.4x,23.53977344,12.389354442105263
+BXP,BXP,"BXP, Inc.",USA,Real Estate,59.07,USD,10453982208,1234501000.0,,0.083,0.0,{},{},1234501000.0,276800000,,,8.468184479396939,OCF,Uptrend ↗,Flat ➡,8.5x,10.453982208,8.468184479396939
+CHRW,CHRW,C.H. Robinson,USA,Industrials,167.78,USD,19821056000,509084000.0,,-0.065,-0.086,{},{},509084000.0,587081024,,,38.93474554297523,OCF,Downtrend ↘,Downtrend ↘,38.9x,19.821056,38.93474554297523
+CDNS,CDNS,Cadence Design Systems,USA,Technology,288.33,USD,78567030784,1260551000.0,,0.101,0.207,{},{},1260551000.0,1060961984,,,62.3275304085277,OCF,Uptrend ↗,Uptrend ↗,62.3x,78.567030784,62.3275304085277
+CPT,CPT,Camden Property Trust,USA,Real Estate,107.48,USD,11457625088,774877000.0,,0.022,2.874,{},{},774877000.0,384462016,,,14.786379113072138,OCF,Flat ➡,Uptrend ↗,14.8x,11.457625088,14.786379113072138
+CPB,CPB,Campbell's Company (The),USA,Consumer Defensive,29.02,USD,8651855872,1131000000.0,,-0.034,-0.097,{},{},1131000000.0,578000000,,,7.649739939876215,OCF,Flat ➡,Downtrend ↘,7.6x,8.651855872,7.649739939876215
+COF,COF,Capital One,USA,Financial Services,206.89,USD,131526934528,18159000000.0,,0.516,0.222,{},{},18159000000.0,1816000000,,,7.243071453714411,OCF,Uptrend ↗,Uptrend ↗,7.2x,131.526934528,7.243071453714411
+CAH,CAH,Cardinal Health,USA,Healthcare,215.06,USD,50607063040,2397000000.0,,0.188,0.194,{},{},2397000000.0,1662000000,,,21.112667100542346,OCF,Uptrend ↗,Uptrend ↗,21.1x,50.60706304,21.112667100542346
+CCL,CCL,Carnival,USA,Consumer Cyclical,32.6,USD,45063532544,6218000000.0,,0.066,0.358,{},{},6218000000.0,2760000000,,,7.247271235767128,OCF,Uptrend ↗,Uptrend ↗,7.2x,45.063532544,7.247271235767128
+CARR,CARR,Carrier Global,USA,Industrials,64.89,USD,54237908992,2513000000.0,,-0.06,-0.978,{},{},2513000000.0,1455000064,,,21.582932348587345,OCF,Downtrend ↘,Downtrend ↘,21.6x,54.237908992,21.582932348587345
+CVNA,CVNA,Carvana,USA,Consumer Cyclical,344.14,USD,74610737152,918000000.0,,0.545,0.609,{},{},918000000.0,629000000,,,81.27531280174291,OCF,Uptrend ↗,Uptrend ↗,81.3x,74.610737152,81.27531280174291
+CAT,CAT,Caterpillar Inc.,USA,Industrials,758.29,USD,355242868736,12035000000.0,,0.18,-0.115,{},{},12035000000.0,8883999744,,,29.517479745409222,OCF,Uptrend ↗,Downtrend ↘,29.5x,355.242868736,29.517479745409222
+CBOE,CBOE,Cboe Global Markets,USA,Financial Services,270.6,USD,28316805120,1100600000.0,,0.087,0.604,{},{},1100600000.0,1094800000,,,25.728516372887515,OCF,Uptrend ↗,Uptrend ↗,25.7x,28.31680512,25.728516372887515
+CBRE,CBRE,CBRE Group,USA,Real Estate,136.28,USD,40555970560,1708000000.0,,0.135,0.658,{},{},1708000000.0,1228000000,,,23.744713442622952,OCF,Uptrend ↗,Uptrend ↗,23.7x,40.55597056,23.744713442622952
+CDW,CDW,CDW Corporation,USA,Technology,126.83,USD,16622434304,1277300000.0,,0.063,0.087,{},{},1277300000.0,1066600000,,,13.013727631723166,OCF,Uptrend ↗,Uptrend ↗,13.0x,16.622434304,13.013727631723166
+COR,COR,Cencora,USA,Healthcare,351.06,USD,68291944448,3875120000.0,,0.055,0.148,{},{},3875120000.0,1625216000,,,17.62318184933628,OCF,Uptrend ↗,Uptrend ↗,17.6x,68.291944448,17.62318184933628
+CNC,CNC,Centene Corporation,USA,Healthcare,39.18,USD,19267039232,154000000.0,,0.231,0.0,{},{},154000000.0,-6673999872,,,125.11064436363637,OCF,Uptrend ↗,Flat ➡,125.1x,19.267039232,125.11064436363637
+CNP,CNP,CenterPoint Energy,USA,Utilities,41.66,USD,27198492672,2139000000.0,,0.071,0.506,{},{},2139000000.0,1036000000,,,12.7155178457223,OCF,Uptrend ↗,Uptrend ↗,12.7x,27.198492672,12.7155178457223
+CF,CF,CF Industries,USA,Basic Materials,94.16,USD,15251374080,2271000000.0,,0.211,0.416,{},{},2271000000.0,1379000064,,,6.715708533685601,OCF,Uptrend ↗,Uptrend ↗,6.7x,15.25137408,6.715708533685601
+CRL,CRL,Charles River Laboratories,USA,Healthcare,158.74,USD,7812464128,734577000.0,,-0.005,-0.173,{},{},734577000.0,-83482000,,,10.635323632512316,OCF,Flat ➡,Downtrend ↘,10.6x,7.812464128,10.635323632512316
+SCHW,SCHW,Charles Schwab Corporation,USA,Financial Services,95.08,USD,172591054848,2670000000.0,,0.189,0.418,{},{},2670000000.0,8416999936,,,64.64084451235955,OCF,Uptrend ↗,Uptrend ↗,64.6x,172.591054848,64.64084451235955
+CHTR,CHTR,Charter Communications,USA,Communication Services,238.08,USD,30809782272,16077000000.0,,-0.023,0.024,{},{},16077000000.0,4986999808,,,1.916388771039373,OCF,Flat ➡,Flat ➡,1.9x,30.809782272,1.916388771039373
+CVX,CVX,Chevron Corporation,USA,Energy,182.4,USD,364682084352,31492000000.0,,-0.06,-0.238,{},{},31492000000.0,12298999808,,,11.580150017528261,OCF,Downtrend ↘,Downtrend ↘,11.6x,364.682084352,11.580150017528261
+CMG,CMG,Chipotle Mexican Grill,USA,Consumer Cyclical,35.84,USD,47390445568,2113926000.0,,0.049,0.04,{},{},2113926000.0,1535761024,,,22.418214056688836,OCF,Flat ➡,Flat ➡,22.4x,47.390445568,22.418214056688836
+CB,CB,Chubb Limited,USA,Financial Services,332.51,USD,130859597824,16182000000.0,,0.08,0.28,{},{},16182000000.0,10309999616,,,8.086738216784081,OCF,Uptrend ↗,Uptrend ↗,8.1x,130.859597824,8.086738216784081
+CHD,CHD,Church & Dwight,USA,Consumer Defensive,100.0,USD,24360869888,1156200000.0,,0.039,-0.21,{},{},1156200000.0,736800000,,,21.069771568932712,OCF,Flat ➡,Downtrend ↘,21.1x,24.360869888,21.069771568932712
+CIEN,CIEN,Ciena,USA,Technology,292.96,USD,41323737088,806093000.0,,0.203,-0.493,{},{},806093000.0,123338000,,,51.26423016699066,OCF,Uptrend ↗,Downtrend ↘,51.3x,41.323737088,51.26423016699066
+CI,CI,Cigna,USA,Healthcare,287.61,USD,76828057600,10363000000.0,,0.104,-0.112,{},{},10363000000.0,5957000192,,,7.41368885457879,OCF,Uptrend ↗,Downtrend ↘,7.4x,76.8280576,7.41368885457879
+CINF,CINF,Cincinnati Financial,USA,Financial Services,165.11,USD,25760217088,2649000000.0,,0.218,0.674,{},{},2649000000.0,2392999936,,,9.724506261985654,OCF,Uptrend ↗,Uptrend ↗,9.7x,25.760217088,9.724506261985654
+CTAS,CTAS,Cintas,USA,Industrials,196.1,USD,78806056960,2165905000.0,,0.093,0.11,{},{},2165905000.0,1891880960,,,36.38481695180536,OCF,Uptrend ↗,Uptrend ↗,36.4x,78.80605696,36.38481695180536
+CSCO,CSCO,Cisco,USA,Technology,75.0,USD,296332099584,14193000000.0,,0.075,0.06,{},{},14193000000.0,10328999936,,,20.878750058761362,OCF,Uptrend ↗,Uptrend ↗,20.9x,296.332099584,20.878750058761362
+C,C,Citigroup,USA,Financial Services,111.15,USD,198876938240,-19669000000.0,,0.037,-0.108,{},{},-19669000000.0,13024000000,,,,OCF,Flat ➡,Downtrend ↘,N/A,198.87693824,
+CFG,CFG,Citizens Financial Group,USA,Financial Services,64.78,USD,27822114816,2001000000.0,,0.107,0.359,{},{},2001000000.0,1688000000,,,13.904105355322338,OCF,Uptrend ↗,Uptrend ↗,13.9x,27.822114816,13.904105355322338
+CLX,CLX,Clorox,USA,Consumer Defensive,124.64,USD,15203634176,981000000.0,,-0.008,-0.162,{},{},981000000.0,755000000,,,15.498098038735984,OCF,Flat ➡,Downtrend ↘,15.5x,15.203634176,15.498098038735984
+CME,CME,CME Group,USA,Financial Services,301.64,USD,108443328512,3690500000.0,,0.083,0.35,{},{},3690500000.0,4020999936,,,29.384454277740144,OCF,Uptrend ↗,Uptrend ↗,29.4x,108.443328512,29.384454277740144
+CMS,CMS,CMS Energy,USA,Utilities,74.73,USD,22898835456,2235000000.0,,0.123,0.066,{},{},2235000000.0,1061000000,,,10.245563962416107,OCF,Uptrend ↗,Uptrend ↗,10.2x,22.898835456,10.245563962416107
+KO,KO,Coca-Cola Company (The),USA,Consumer Defensive,79.0,USD,339827097600,6805000000.0,,0.024,0.036,{},{},6805000000.0,13107000320,,,49.93785416605437,OCF,Flat ➡,Flat ➡,49.9x,339.8270976,49.93785416605437
+CTSH,CTSH,Cognizant,USA,Technology,65.83,USD,31772616704,2124000000.0,,0.049,0.216,{},{},2124000000.0,2230000128,,,14.958859088512241,OCF,Flat ➡,Uptrend ↗,15.0x,31.772616704,14.958859088512241
+COIN,COIN,Coinbase,USA,Financial Services,141.09,USD,38045990912,2556844000.0,,0.589,4.306,{},{},2556844000.0,3217709056,,,14.880059523381169,OCF,Uptrend ↗,Uptrend ↗,14.9x,38.045990912,14.880059523381169
+CL,CL,Colgate-Palmolive,USA,Consumer Defensive,96.17,USD,77726588928,4107000000.0,,0.058,0.0,{},{},4107000000.0,2132000000,,,18.92539297005113,OCF,Uptrend ↗,Flat ➡,18.9x,77.726588928,18.92539297005113
+CMCSA,CMCSA,Comcast,USA,Communication Services,31.82,USD,115948724224,33643000000.0,,0.012,-0.525,{},{},33643000000.0,19997999104,,,3.446444259548792,OCF,Flat ➡,Downtrend ↘,3.4x,115.948724224,3.446444259548792
+FIX,FIX,Comfort Systems USA,USA,Industrials,1300.02,USD,45866594304,849057000.0,,0.352,1.017,{},{},849057000.0,837622016,,,54.020630303972524,OCF,Uptrend ↗,Uptrend ↗,54.0x,45.866594304,54.020630303972524
+CAG,CAG,Conagra Brands,USA,Consumer Defensive,19.94,USD,9538688000,1691900000.0,,-0.068,0.0,{},{},1691900000.0,-98000000,,,5.637855665228441,OCF,Downtrend ↘,Flat ➡,5.6x,9.538688,5.637855665228441
+COP,COP,ConocoPhillips,USA,Energy,110.83,USD,136954658816,20124000000.0,,-0.068,-0.385,{},{},20124000000.0,7987999744,,,6.8055386014708805,OCF,Downtrend ↘,Downtrend ↘,6.8x,136.954658816,6.8055386014708805
+ED,ED,Consolidated Edison,USA,Utilities,111.72,USD,40323727360,3614000000.0,,0.107,0.124,{},{},3614000000.0,2036000000,,,11.157644537908135,OCF,Uptrend ↗,Uptrend ↗,11.2x,40.32372736,11.157644537908135
+STZ,STZ,Constellation Brands,USA,Consumer Defensive,162.36,USD,28265881600,3152200000.0,,-0.098,-0.15,{},{},3152200000.0,1109600000,,,8.967033056278154,OCF,Downtrend ↘,Downtrend ↘,9.0x,28.2658816,8.967033056278154
+CEG,CEG,Constellation Energy,USA,Utilities,276.12,USD,100035534848,-2464000000.0,,0.003,-0.223,{},{},-2464000000.0,2739000064,,,,OCF,Flat ➡,Downtrend ↘,N/A,100.035534848,
+COO,COO,Cooper Companies (The),USA,Healthcare,81.7,USD,16242689024,796100000.0,,0.046,-0.282,{},{},796100000.0,374900000,,,20.40282505212913,OCF,Flat ➡,Downtrend ↘,20.4x,16.242689024,20.40282505212913
+CPRT,CPRT,Copart,USA,Industrials,36.72,USD,35545608192,1799750000.0,,0.007,0.108,{},{},1799750000.0,1594077056,,,19.750303204333935,OCF,Flat ➡,Uptrend ↗,19.8x,35.545608192,19.750303204333935
+GLW,GLW,Corning Inc.,USA,Technology,131.5,USD,112742891520,1939000000.0,,0.204,0.764,{},{},1939000000.0,1596000000,,,58.14486411552347,OCF,Uptrend ↗,Uptrend ↗,58.1x,112.74289152,58.14486411552347
+CPAY,CPAY,Corpay,USA,Technology,321.32,USD,22689814528,1940565000.0,,0.207,0.09,{},{},1940565000.0,1069825984,,,11.692375430866784,OCF,Uptrend ↗,Uptrend ↗,11.7x,22.689814528,11.692375430866784
+CTVA,CTVA,Corteva,USA,Basic Materials,74.11,USD,50078494720,2145000000.0,,-0.017,0.0,{},{},2145000000.0,1192999936,,,23.346617585081585,OCF,Flat ➡,Flat ➡,23.3x,50.07849472,23.346617585081585
+CSGP,CSGP,CoStar Group,USA,Real Estate,45.03,USD,19084738560,392600000.0,,0.204,0.0,{},{},392600000.0,20300000,,,48.611152725420276,OCF,Uptrend ↗,Flat ➡,48.6x,19.08473856,48.611152725420276
+COST,COST,Costco,USA,Consumer Defensive,998.86,USD,443451572224,13335000000.0,,0.083,0.114,{},{},13335000000.0,8302000128,,,33.25471107791526,OCF,Uptrend ↗,Uptrend ↗,33.3x,443.451572224,33.25471107791526
+CTRA,CTRA,Coterra,USA,Energy,30.78,USD,23435200512,2795000000.0,,0.349,0.235,{},{},2795000000.0,1646000000,,,8.384687124150268,OCF,Uptrend ↗,Uptrend ↗,8.4x,23.435200512,8.384687124150268
+CRH,CRH,CRH plc,USA,Basic Materials,122.85,USD,82079973376,4989000000.0,,0.053,0.122,{},{},4989000000.0,3407000064,,,16.45218949208258,OCF,Uptrend ↗,Uptrend ↗,16.5x,82.079973376,16.45218949208258
+CRWD,CRWD,CrowdStrike,USA,Technology,411.54,USD,103748591616,1381727000.0,,0.222,0.0,{},{},1381727000.0,-314160992,,,75.08617231623903,OCF,Uptrend ↗,Flat ➡,75.1x,103.748591616,75.08617231623903
+CCI,CCI,Crown Castle,USA,Real Estate,87.81,USD,38239412224,2943000000.0,,-0.35,0.0,{},{},2943000000.0,1103000064,,,12.993344282704722,OCF,Downtrend ↘,Flat ➡,13.0x,38.239412224,12.993344282704722
+CSX,CSX,CSX Corporation,USA,Industrials,40.7,USD,75876073472,5247000000.0,,-0.009,0.012,{},{},5247000000.0,2888999936,,,14.460848765389747,OCF,Flat ➡,Flat ➡,14.5x,75.876073472,14.460848765389747
+CMI,CMI,Cummins,USA,Industrials,588.79,USD,81350434816,3621000000.0,,0.011,0.414,{},{},3621000000.0,2843000064,,,22.466289648163492,OCF,Flat ➡,Uptrend ↗,22.5x,81.350434816,22.466289648163492
+CVS,CVS,CVS Health,USA,Healthcare,77.93,USD,99143409664,10639000000.0,,0.084,0.753,{},{},10639000000.0,1768000000,,,9.318865463295422,OCF,Uptrend ↗,Uptrend ↗,9.3x,99.143409664,9.318865463295422
+DHR,DHR,Danaher Corporation,USA,Healthcare,214.94,USD,151941087232,6688000000.0,,0.046,0.125,{},{},6688000000.0,3600000000,,,22.718464,OCF,Flat ➡,Uptrend ↗,22.7x,151.941087232,22.718464
+DRI,DRI,Darden Restaurants,USA,Consumer Cyclical,212.86,USD,24758546432,1698500000.0,,0.073,0.118,{},{},1698500000.0,1123000064,,,14.576712647630263,OCF,Uptrend ↗,Uptrend ↗,14.6x,24.758546432,14.576712647630263
+DDOG,DDOG,Datadog,USA,Technology,126.13,USD,44230098944,870603000.0,,0.292,-0.03,{},{},870603000.0,107741000,,,50.80398177355235,OCF,Uptrend ↗,Flat ➡,50.8x,44.230098944,50.80398177355235
+DVA,DVA,DaVita,USA,Healthcare,149.97,USD,10025345024,2022038000.0,,0.099,0.065,{},{},2022038000.0,721803008,,,4.958039870665141,OCF,Uptrend ↗,Uptrend ↗,5.0x,10.025345024,4.958039870665141
+DECK,DECK,Deckers Brands,USA,Consumer Cyclical,116.02,USD,16909315072,1044523000.0,,0.071,0.11,{},{},1044523000.0,1039910976,,,16.188552164002132,OCF,Uptrend ↗,Uptrend ↗,16.2x,16.909315072,16.188552164002132
+DE,DE,Deere & Company,USA,Industrials,598.11,USD,162132344832,7459000000.0,,0.126,-0.137,{},{},7459000000.0,5026999808,,,21.736472024668185,OCF,Uptrend ↗,Downtrend ↘,21.7x,162.132344832,21.736472024668185
+DELL,DELL,Dell Technologies,USA,Technology,112.82,USD,75611987968,4521000000.0,,0.108,0.39,{},{},4521000000.0,5209999872,,,16.724615785888076,OCF,Uptrend ↗,Uptrend ↗,16.7x,75.611987968,16.724615785888076
+DAL,DAL,Delta Air Lines,USA,Industrials,69.5,USD,45392584704,8025000000.0,,0.029,0.444,{},{},8025000000.0,5005000192,,,5.656396847850467,OCF,Flat ➡,Uptrend ↗,5.7x,45.392584704,5.656396847850467
+DVN,DVN,Devon Energy,USA,Energy,43.96,USD,27576107008,6600000000.0,,0.071,-0.162,{},{},6600000000.0,2719000064,,,4.1781980315151515,OCF,Uptrend ↗,Downtrend ↘,4.2x,27.576107008,4.1781980315151515
+DXCM,DXCM,Dexcom,USA,Healthcare,65.08,USD,25521465344,989500000.0,,0.216,1.099,{},{},989500000.0,720700032,,,25.792284329459324,OCF,Uptrend ↗,Uptrend ↗,25.8x,25.521465344,25.792284329459324
+FANG,FANG,Diamondback Energy,USA,Energy,167.42,USD,47970115584,6413000000.0,,0.42,0.1,{},{},6413000000.0,4177999872,,,7.480136532668018,OCF,Uptrend ↗,Uptrend ↗,7.5x,47.970115584,7.480136532668018
+DLR,DLR,Digital Realty,USA,Real Estate,180.31,USD,63065223168,2261477000.0,,0.171,-0.532,{},{},2261477000.0,1267864960,,,27.88674090782263,OCF,Uptrend ↗,Downtrend ↘,27.9x,63.065223168,27.88674090782263
+DG,DG,Dollar General,USA,Consumer Defensive,148.56,USD,32700858368,2996064000.0,,0.046,0.438,{},{},2996064000.0,1277228032,,,10.914606085851304,OCF,Flat ➡,Uptrend ↗,10.9x,32.700858368,10.914606085851304
+DLTR,DLTR,Dollar Tree,USA,Consumer Defensive,128.43,USD,26195589120,2862500000.0,,0.094,0.106,{},{},2862500000.0,1113799936,,,9.151297509170305,OCF,Uptrend ↗,Uptrend ↗,9.2x,26.19558912,9.151297509170305
+D,D,Dominion Energy,USA,Utilities,65.12,USD,55606833152,5018000000.0,,0.149,0.062,{},{},5018000000.0,2609999872,,,11.08147332642487,OCF,Uptrend ↗,Uptrend ↗,11.1x,55.606833152,11.08147332642487
+DPZ,DPZ,Domino's,USA,Consumer Cyclical,381.78,USD,12961018880,624897000.0,,0.031,0.301,{},{},624897000.0,589505024,,,20.74104833276524,OCF,Flat ➡,Uptrend ↗,20.7x,12.96101888,20.74104833276524
+DASH,DASH,DoorDash,USA,Consumer Cyclical,161.14,USD,69451104256,2132000000.0,,0.273,0.459,{},{},2132000000.0,863000000,,,32.57556484803002,OCF,Uptrend ↗,Uptrend ↗,32.6x,69.451104256,32.57556484803002
+DOV,DOV,Dover Corporation,USA,Industrials,230.57,USD,31623417856,748379000.0,,0.088,-0.801,{},{},748379000.0,1097428992,,,42.2558861966998,OCF,Uptrend ↗,Downtrend ↘,42.3x,31.623417856,42.2558861966998
+DOW,DOW,Dow Inc.,USA,Basic Materials,32.65,USD,23427489792,1032000000.0,,-0.091,0.0,{},{},1032000000.0,-2633999872,,,22.701056,OCF,Downtrend ↘,Flat ➡,22.7x,23.427489792,22.701056
+DHI,DHI,D. R. Horton,USA,Consumer Cyclical,164.59,USD,47912075264,3420900000.0,,-0.095,-0.222,{},{},3420900000.0,3335099904,,,14.005693023473356,OCF,Downtrend ↘,Downtrend ↘,14.0x,47.912075264,14.005693023473356
+DTE,DTE,DTE Energy,USA,Utilities,140.91,USD,29264613376,3643000000.0,,0.214,-0.124,{},{},3643000000.0,1382000000,,,8.033108255833104,OCF,Uptrend ↗,Downtrend ↘,8.0x,29.264613376,8.033108255833104
+DUK,DUK,Duke Energy,USA,Utilities,126.11,USD,98070863872,12328000000.0,,0.144,-0.014,{},{},12328000000.0,4911000064,,,7.955131722258274,OCF,Uptrend ↗,Flat ➡,8.0x,98.070863872,7.955131722258274
+DD,DD,DuPont,USA,Basic Materials,49.43,USD,20709951488,2321000000.0,,-0.452,0.0,{},{},2321000000.0,57000000,,,8.92285716846187,OCF,Downtrend ↘,Flat ➡,8.9x,20.709951488,8.92285716846187
+ETN,ETN,Eaton Corporation,USA,Industrials,390.33,USD,151955456000,4327000000.0,,0.131,0.188,{},{},4327000000.0,4087000064,,,35.11796995608967,OCF,Uptrend ↗,Uptrend ↗,35.1x,151.955456,35.11796995608967
+EBAY,EBAY,eBay Inc.,USA,Consumer Cyclical,79.41,USD,36290371584,2414000000.0,,0.095,0.054,{},{},2414000000.0,2151000064,,,15.033293945318972,OCF,Uptrend ↗,Uptrend ↗,15.0x,36.290371584,15.033293945318972
+ECL,ECL,Ecolab,USA,Basic Materials,300.69,USD,85283168256,2813900000.0,,0.178,0.0,{},{},2813900000.0,2075600000,,,30.3078177106507,OCF,Uptrend ↗,Flat ➡,30.3x,85.283168256,30.3078177106507
+EIX,EIX,Edison International,USA,Utilities,69.08,USD,26584334336,5014000000.0,,0.106,0.636,{},{},5014000000.0,2951000064,,,5.302021207818109,OCF,Uptrend ↗,Uptrend ↗,5.3x,26.584334336,5.302021207818109
+EW,EW,Edwards Lifesciences,USA,Healthcare,76.44,USD,44877926400,542300000.0,,0.133,-0.761,{},{},542300000.0,1060099968,,,82.75479697584363,OCF,Uptrend ↗,Downtrend ↘,82.8x,44.8779264,82.75479697584363
+EA,EA,Electronic Arts,USA,Communication Services,200.46,USD,50165862400,2079000000.0,,0.01,-0.685,{},{},2079000000.0,680000000,,,24.129803944203942,OCF,Flat ➡,Downtrend ↘,24.1x,50.1658624,24.129803944203942
+ELV,ELV,Elevance Health,USA,Healthcare,336.04,USD,74165600256,4290000000.0,,0.095,0.363,{},{},4290000000.0,5662000128,,,17.28801870769231,OCF,Uptrend ↗,Uptrend ↗,17.3x,74.165600256,17.28801870769231
+EME,EME,Emcor,USA,Industrials,782.93,USD,35048538112,1407894000.0,,0.164,0.133,{},{},1407894000.0,1130370944,,,24.894301781242053,OCF,Uptrend ↗,Uptrend ↗,24.9x,35.048538112,24.894301781242053
+EMR,EMR,Emerson Electric,USA,Industrials,144.98,USD,81522556928,3098000000.0,,0.041,0.049,{},{},3098000000.0,2304999936,,,26.31457615493867,OCF,Flat ➡,Flat ➡,26.3x,81.522556928,26.31457615493867
+ETR,ETR,Entergy,USA,Utilities,101.96,USD,45535019008,4488510000.0,,0.125,0.02,{},{},4488510000.0,1808936960,,,10.144796159081745,OCF,Uptrend ↗,Flat ➡,10.1x,45.535019008,10.144796159081745
+EOG,EOG,EOG Resources,USA,Energy,117.85,USD,64345321472,12143000000.0,,-0.024,-0.085,{},{},12143000000.0,5529999872,,,5.298964133410196,OCF,Flat ➡,Downtrend ↘,5.3x,64.345321472,5.298964133410196
+EPAM,EPAM,EPAM Systems,USA,Technology,163.12,USD,9085280256,559168000.0,,0.194,-0.194,{},{},559168000.0,371623008,,,16.247854412269657,OCF,Uptrend ↗,Downtrend ↘,16.2x,9.085280256,16.247854412269657
+EQT,EQT,EQT Corporation,USA,Energy,57.18,USD,35684372480,2826973000.0,,0.514,0.0,{},{},2826973000.0,1780542976,,,12.622820408967472,OCF,Uptrend ↗,Flat ➡,12.6x,35.68437248,12.622820408967472
+EFX,EFX,Equifax,USA,Industrials,188.18,USD,23032109056,1324500000.0,,0.092,0.03,{},{},1324500000.0,660300032,,,17.389285810494528,OCF,Uptrend ↗,Flat ➡,17.4x,23.032109056,17.389285810494528
+EQIX,EQIX,Equinix,USA,Real Estate,957.87,USD,94115446784,3249000000.0,,0.066,0.229,{},{},3249000000.0,1071000000,,,28.967512091104954,OCF,Uptrend ↗,Uptrend ↗,29.0x,94.115446784,28.967512091104954
+EQR,EQR,Equity Residential,USA,Real Estate,63.05,USD,24814075904,1573607000.0,,0.02,-0.088,{},{},1573607000.0,1118667008,,,15.768915557696426,OCF,Flat ➡,Downtrend ↘,15.8x,24.814075904,15.768915557696426
+ERIE,ERIE,Erie Indemnity,USA,Financial Services,282.94,USD,14794895360,611249000.0,,0.067,0.144,{},{},611249000.0,647984000,,,24.204367385468114,OCF,Uptrend ↗,Uptrend ↗,24.2x,14.79489536,24.204367385468114
+ESS,ESS,Essex Property Trust,USA,Real Estate,251.36,USD,17370597376,1068305000.0,,0.024,-0.687,{},{},1068305000.0,669665984,,,16.259960756525523,OCF,Flat ➡,Downtrend ↘,16.3x,17.370597376,16.259960756525523
+EL,EL,Estée Lauder Companies (The),USA,Consumer Defensive,106.42,USD,38494990336,1272000000.0,,0.056,0.0,{},{},1272000000.0,-178000000,,,30.26335718238994,OCF,Uptrend ↗,Flat ➡,30.3x,38.494990336,30.26335718238994
+EG,EG,Everest Group,USA,Financial Services,336.12,USD,14109664256,4957000000.0,,-0.03,0.0,{},{},4957000000.0,1591000064,,,2.8464119943514223,OCF,Flat ➡,Flat ➡,2.8x,14.109664256,2.8464119943514223
+EVRG,EVRG,Evergy,USA,Utilities,80.69,USD,18575980544,1983700000.0,,-0.001,0.005,{},{},1983700000.0,849500032,,,9.364309393557493,OCF,Flat ➡,Flat ➡,9.4x,18.575980544,9.364309393557493
+ES,ES,Eversource Energy,USA,Utilities,70.32,USD,26383300608,2159737000.0,,0.051,0.0,{},{},2159737000.0,1343586048,,,12.215978430707072,OCF,Uptrend ↗,Flat ➡,12.2x,26.383300608,12.215978430707072
+EXC,EXC,Exelon,USA,Utilities,47.55,USD,48024895488,5569000000.0,,0.09,0.229,{},{},5569000000.0,2820999936,,,8.623612046687017,OCF,Uptrend ↗,Uptrend ↗,8.6x,48.024895488,8.623612046687017
+EXE,EXE,Expand Energy,USA,Energy,103.44,USD,24636274688,1565000000.0,,3.193,0.0,{},{},1565000000.0,867000000,,,15.742028554632588,OCF,Uptrend ↗,Flat ➡,15.7x,24.636274688,15.742028554632588
+EXPE,EXPE,Expedia Group,USA,Consumer Cyclical,227.24,USD,28113129472,3085000000.0,,0.087,0.454,{},{},3085000000.0,1388000000,,,9.112845858022691,OCF,Uptrend ↗,Uptrend ↗,9.1x,28.113129472,9.112845858022691
+EXPD,EXPD,Expeditors International,USA,Industrials,140.56,USD,19076595712,723361000.0,,-0.035,0.006,{},{},723361000.0,845502976,,,26.372165090459674,OCF,Flat ➡,Flat ➡,26.4x,19.076595712,26.372165090459674
+EXR,EXR,Extra Space Storage,USA,Real Estate,144.34,USD,31985952768,1887430000.0,,0.034,-0.142,{},{},1887430000.0,947441984,,,16.946828633644692,OCF,Flat ➡,Downtrend ↘,16.9x,31.985952768,16.946828633644692
+XOM,XOM,ExxonMobil,USA,Energy,149.93,USD,632279597056,55022000000.0,,-0.013,-0.11,{},{},55022000000.0,28843999232,,,11.491396115299334,OCF,Flat ➡,Downtrend ↘,11.5x,632.279597056,11.491396115299334
+FFIV,FFIV,"F5, Inc.",USA,Technology,262.02,USD,14885641216,949666000.0,,0.073,0.099,{},{},949666000.0,705988992,,,15.674606878628907,OCF,Uptrend ↗,Uptrend ↗,15.7x,14.885641216,15.674606878628907
+FDS,FDS,FactSet,USA,Financial Services,201.95,USD,7556956160,726260000.0,,0.068,0.044,{},{},726260000.0,599598016,,,10.40530410596756,OCF,Uptrend ↗,Flat ➡,10.4x,7.55695616,10.40530410596756
+FICO,FICO,Fair Isaac,USA,Technology,1337.64,USD,31731675136,778807000.0,,0.164,0.077,{},{},778807000.0,657790976,,,40.74395214218671,OCF,Uptrend ↗,Uptrend ↗,40.7x,31.731675136,40.74395214218671
+FAST,FAST,Fastenal,USA,Industrials,45.54,USD,52288081920,1295900000.0,,0.111,0.093,{},{},1295900000.0,1258400000,,,40.34885555984258,OCF,Uptrend ↗,Uptrend ↗,40.3x,52.28808192,40.34885555984258
+FRT,FRT,Federal Realty Investment Trust,USA,Real Estate,104.75,USD,9092219904,574563000.0,,0.06,-0.011,{},{},574563000.0,337579008,,,15.824583037891406,OCF,Uptrend ↗,Flat ➡,15.8x,9.092219904,15.824583037891406
+FDX,FDX,FedEx,USA,Industrials,369.46,USD,87176101888,7036000000.0,,0.139,-0.133,{},{},7036000000.0,4330999808,,,12.390008795906764,OCF,Uptrend ↗,Downtrend ↘,12.4x,87.176101888,12.390008795906764
+FIS,FIS,Fidelity National Information Services,USA,Technology,46.95,USD,24525674496,2175000000.0,,0.057,0.22,{},{},2175000000.0,177000000,,,11.276172182068965,OCF,Uptrend ↗,Uptrend ↗,11.3x,24.525674496,11.276172182068965
+FITB,FITB,Fifth Third Bancorp,USA,Financial Services,53.16,USD,47846576128,2824000000.0,,0.115,0.208,{},{},2824000000.0,2376000000,,,16.94283857223796,OCF,Uptrend ↗,Uptrend ↗,16.9x,47.846576128,16.94283857223796
+FSLR,FSLR,First Solar,USA,Technology,220.45,USD,23656079360,1217999000.0,,0.797,0.457,{},{},1217999000.0,1400461952,,,19.422084385947773,OCF,Uptrend ↗,Uptrend ↗,19.4x,23.65607936,19.422084385947773
+FE,FE,FirstEnergy,USA,Utilities,48.84,USD,28213184512,2891000000.0,,0.112,0.045,{},{},2891000000.0,1330000000,,,9.758970775510203,OCF,Uptrend ↗,Flat ➡,9.8x,28.213184512,9.758970775510203
+ALNY,ALNY,Alnylam Pharmaceuticals,USA,Healthcare,308.48,USD,40754470912,-8312000.0,,1.493,0.0,{},{},-8312000.0,43565000,,,,OCF,Uptrend ↗,Flat ➡,N/A,40.754470912,
+ARM,ARM,Arm Holdings,USA,Technology,122.19,USD,129765613568,397000000.0,,0.263,-0.123,{},{},397000000.0,801000000,,,326.8655253602015,OCF,Uptrend ↗,Downtrend ↘,326.9x,129.765613568,326.8655253602015
+ASML,ASML,ASML Holding,USA,Technology,1406.87,USD,546073313280,12658500000.0,,0.049,0.072,{},{},12658500000.0,9609400320,,,43.13886426353833,OCF,Flat ➡,Uptrend ↗,43.1x,546.07331328,43.13886426353833
+TEAM,TEAM,Atlassian,USA,Technology,86.48,USD,22808588288,1460393000.0,,0.233,0.0,{},{},1460393000.0,-189224992,,,15.618116690507282,OCF,Uptrend ↗,Flat ➡,15.6x,22.808588288,15.618116690507282
+CCEP,CCEP,Coca-Cola Europacific Partners,USA,Consumer Defensive,99.05,USD,44429922304,3061000000.0,,0.045,0.15,{},{},3061000000.0,1534000000,,,14.514839040836328,OCF,Flat ➡,Uptrend ↗,14.5x,44.429922304,14.514839040836328
+FER,FER,Ferrovial,USA,Industrials,72.97,USD,52123099136,1293000000.0,,0.047,0.316,{},{},1293000000.0,3347000064,,,40.31175493890178,OCF,Flat ➡,Uptrend ↗,40.3x,52.123099136,40.31175493890178
+FTNT,FTNT,Fortinet,USA,Technology,84.26,USD,64565579776,2258100000.0,,0.148,0.001,{},{},2258100000.0,1853400064,,,28.59287886984633,OCF,Uptrend ↗,Flat ➡,28.6x,64.565579776,28.59287886984633
+GEHC,GEHC,GE HealthCare,USA,Healthcare,78.65,USD,35844718592,1987000000.0,,0.071,-0.177,{},{},1987000000.0,2084000000,,,18.039616805234022,OCF,Uptrend ↗,Downtrend ↘,18.0x,35.844718592,18.039616805234022
+GILD,GILD,Gilead Sciences,USA,Healthcare,151.81,USD,188396191744,10828000000.0,,0.047,0.235,{},{},10828000000.0,8510000128,,,17.398983352789067,OCF,Flat ➡,Uptrend ↗,17.4x,188.396191744,17.398983352789067
+HON,HON,Honeywell,USA,Industrials,239.83,USD,161614168064,6097000000.0,,-0.033,-0.764,{},{},6097000000.0,4834999808,,,26.50716222142037,OCF,Flat ➡,Downtrend ↘,26.5x,161.614168064,26.50716222142037
+IDXX,IDXX,Idexx Laboratories,USA,Healthcare,617.2,USD,49378897920,929001000.0,,0.143,0.176,{},{},929001000.0,1059464000,,,53.15268543306197,OCF,Uptrend ↗,Uptrend ↗,53.2x,49.37889792,53.15268543306197
+INSM,INSM,Insmed Incorporated,USA,Healthcare,146.17,USD,31174182912,-683882000.0,,0.524,0.0,{},{},-683882000.0,-1183837952,,,,OCF,Uptrend ↗,Flat ➡,N/A,31.174182912,
+INTC,INTC,Intel,USA,Technology,46.48,USD,232175894528,9697000000.0,,-0.041,0.0,{},{},9697000000.0,-267000000,,,23.94306430112406,OCF,Flat ➡,Flat ➡,23.9x,232.175894528,23.94306430112406
+INTU,INTU,Intuit,USA,Technology,397.96,USD,110792065024,6207000000.0,,0.41,-0.185,{},{},6207000000.0,4118000128,,,17.849535206057677,OCF,Uptrend ↗,Downtrend ↘,17.8x,110.792065024,17.849535206057677
+ISRG,ISRG,Intuitive Surgical,USA,Healthcare,478.6,USD,169965338624,3030500000.0,,0.188,0.166,{},{},3030500000.0,2856000000,,,56.08491622636529,OCF,Uptrend ↗,Uptrend ↗,56.1x,169.965338624,56.08491622636529
+KDP,KDP,Keurig Dr Pepper,USA,Consumer Defensive,29.91,USD,40635224064,2219000000.0,,0.107,0.083,{},{},2219000000.0,1582000000,,,18.31240381433078,OCF,Uptrend ↗,Uptrend ↗,18.3x,40.635224064,18.31240381433078
+KLAC,KLAC,KLA Corporation,USA,Technology,1450.85,USD,190630559744,4081903000.0,,0.072,0.409,{},{},4081903000.0,4557986816,,,46.70139387045699,OCF,Uptrend ↗,Uptrend ↗,46.7x,190.630559744,46.70139387045699
+KHC,KHC,Kraft Heinz,USA,Consumer Defensive,24.32,USD,28788551680,4184000000.0,,-0.034,-0.692,{},{},4184000000.0,-5846000128,,,6.880628986615679,OCF,Flat ➡,Downtrend ↘,6.9x,28.78855168,6.880628986615679
+LRCX,LRCX,Lam Research,USA,Technology,231.29,USD,290507161600,6173264000.0,,0.221,0.37,{},{},6173264000.0,6213408768,,,47.05892403111223,OCF,Uptrend ↗,Uptrend ↗,47.1x,290.5071616,47.05892403111223
+LIN,LIN,Linde plc,USA,Basic Materials,472.86,USD,221728555008,9423000000.0,,0.058,-0.095,{},{},9423000000.0,6897999872,,,23.53056935243553,OCF,Uptrend ↗,Downtrend ↘,23.5x,221.728555008,23.53056935243553
+MAR,MAR,Marriott International,USA,Consumer Cyclical,355.08,USD,94090715136,3212000000.0,,0.042,0.016,{},{},3212000000.0,2600999936,,,29.293497863013698,OCF,Flat ➡,Flat ➡,29.3x,94.090715136,29.293497863013698
+MRVL,MRVL,Marvell Technology,USA,Technology,78.23,USD,66346864640,1681200000.0,,0.368,0.0,{},{},1681200000.0,2474200064,,,39.46399276707114,OCF,Uptrend ↗,Flat ➡,39.5x,66.34686464,39.46399276707114
+MELI,MELI,Mercado Libre,USA,Consumer Cyclical,2007.0,USD,101749252096,7918000000.0,,0.395,0.061,{},{},7918000000.0,2076999936,,,12.850372833543824,OCF,Uptrend ↗,Uptrend ↗,12.9x,101.749252096,12.850372833543824
+META,META,Meta Platforms,USA,Communication Services,649.81,USD,1643730436096,115800000000.0,,0.238,0.107,{},{},115800000000.0,60458000384,,,14.194563351433507,OCF,Uptrend ↗,Uptrend ↗,14.2x,1643.730436096,14.194563351433507
+MCHP,MCHP,Microchip Technology,USA,Technology,78.92,USD,42706411520,898100000.0,,0.156,0.0,{},{},898100000.0,-154400000,,,47.55195581783766,OCF,Uptrend ↗,Flat ➡,47.6x,42.70641152,47.55195581783766
+MU,MU,Micron Technology,USA,Technology,413.97,USD,465927077888,17525000000.0,,0.567,1.754,{},{},17525000000.0,11909000192,,,26.586423845249644,OCF,Uptrend ↗,Uptrend ↗,26.6x,465.927077888,26.586423845249644
+MSFT,MSFT,Microsoft,USA,Technology,401.84,USD,2986626777088,136162000000.0,,0.167,0.598,{},{},136162000000.0,119262003200,,,21.934363310527168,OCF,Uptrend ↗,Uptrend ↗,21.9x,2986.626777088,21.934363310527168
+MSTR,MSTR,MicroStrategy,USA,Technology,123.0,USD,40868954112,-53032000.0,,0.019,0.0,{},{},-53032000.0,-4229519872,,,,OCF,Flat ➡,Flat ➡,N/A,40.868954112,
+MDLZ,MDLZ,Mondelez International,USA,Consumer Defensive,61.86,USD,79821578240,4514000000.0,,0.093,-0.604,{},{},4514000000.0,2451000064,,,17.683114364200264,OCF,Uptrend ↗,Downtrend ↘,17.7x,79.82157824,17.683114364200264
+MPWR,MPWR,Monolithic Power Systems,USA,Technology,1155.93,USD,56304197632,788410000.0,,0.208,-0.884,{},{},788410000.0,615926976,,,71.41486996867113,OCF,Uptrend ↗,Downtrend ↘,71.4x,56.304197632,71.41486996867113
+MNST,MNST,Monster Beverage,USA,Consumer Defensive,81.17,USD,79304810496,1928533000.0,,0.168,0.395,{},{},1928533000.0,1726952960,,,41.12183224036094,OCF,Uptrend ↗,Uptrend ↗,41.1x,79.304810496,41.12183224036094
+NFLX,NFLX,"Netflix, Inc.",USA,Communication Services,75.86,USD,321789755392,10149273000.0,,0.176,0.327,{},{},10149273000.0,10981200896,,,31.705695116487654,OCF,Uptrend ↗,Uptrend ↗,31.7x,321.789755392,31.705695116487654
+NVDA,NVDA,Nvidia,USA,Technology,186.94,USD,4551428538368,64089000000.0,,0.625,0.667,{},{},64089000000.0,99198001152,,,71.01731246185773,OCF,Uptrend ↗,Uptrend ↗,71.0x,4551.428538368,71.01731246185773
+NXPI,NXPI,NXP Semiconductors,USA,Technology,242.19,USD,61059633152,2782000000.0,,0.072,-0.068,{},{},2782000000.0,2020999936,,,21.948106812365204,OCF,Uptrend ↗,Downtrend ↘,21.9x,61.059633152,21.948106812365204
+ORLY,ORLY,O'Reilly Automotive,USA,Consumer Cyclical,95.21,USD,80367149056,3049576000.0,,0.078,0.12,{},{},3049576000.0,2538209024,,,26.35354851166195,OCF,Uptrend ↗,Uptrend ↗,26.4x,80.367149056,26.35354851166195
+ODFL,ODFL,Old Dominion Freight Line,USA,Industrials,185.51,USD,38988292096,1659283000.0,,-0.057,-0.112,{},{},1659283000.0,1023702976,,,23.497071985911987,OCF,Downtrend ↘,Downtrend ↘,23.5x,38.988292096,23.497071985911987
+PCAR,PCAR,Paccar,USA,Industrials,124.84,USD,65590935552,4640900000.0,,-0.137,-0.359,{},{},4640900000.0,2375800064,,,14.133236129199078,OCF,Downtrend ↘,Downtrend ↘,14.1x,65.590935552,14.133236129199078
+PLTR,PLTR,Palantir Technologies,USA,Technology,129.13,USD,307773145088,1153865000.0,,0.7,6.812,{},{},1153865000.0,1625032960,,,266.7323691142378,OCF,Uptrend ↗,Uptrend ↗,266.7x,307.773145088,266.7323691142378
+PANW,PANW,Palo Alto Networks,USA,Technology,162.81,USD,113478565888,3716000000.0,,0.157,-0.041,{},{},3716000000.0,1116899968,,,30.537827203444564,OCF,Uptrend ↗,Flat ➡,30.5x,113.478565888,30.537827203444564
+PAYX,PAYX,Paychex,USA,Technology,92.47,USD,33193721856,1900900000.0,,0.183,-0.035,{},{},1900900000.0,1595699968,,,17.462108399179336,OCF,Uptrend ↗,Flat ➡,17.5x,33.193721856,17.462108399179336
+PYPL,PYPL,PayPal,USA,Financial Services,39.08,USD,36565278720,6416000000.0,,0.037,0.394,{},{},6416000000.0,5232999936,,,5.69907710723192,OCF,Flat ➡,Uptrend ↗,5.7x,36.56527872,5.69907710723192
+PDD,PDD,PDD Holdings,USA,Consumer Cyclical,100.22,USD,142276968448,121929292000.0,,0.09,0.165,{},{},121929292000.0,102270107648,,,1.1668809530034834,OCF,Uptrend ↗,Uptrend ↗,1.2x,142.276968448,1.1668809530034834
+PEP,PEP,PepsiCo,USA,Consumer Defensive,167.2,USD,228619272192,12087000000.0,,0.056,0.675,{},{},12087000000.0,8240000000,,,18.914476064532142,OCF,Uptrend ↗,Uptrend ↗,18.9x,228.619272192,18.914476064532142
+QCOM,QCOM,Qualcomm,USA,Technology,138.47,USD,147892207616,14012000000.0,,0.05,-0.018,{},{},14012000000.0,5365000192,,,10.554682244932915,OCF,Flat ➡,Flat ➡,10.6x,147.892207616,10.554682244932915
+REGN,REGN,Regeneron Pharmaceuticals,USA,Healthcare,783.65,USD,82847326208,4978900000.0,,0.025,-0.026,{},{},4978900000.0,4504900096,,,16.63968471108076,OCF,Flat ➡,Flat ➡,16.6x,82.847326208,16.63968471108076
+ROP,ROP,Roper Technologies,USA,Technology,319.82,USD,34424602624,2393200000.0,,0.097,-0.074,{},{},2393200000.0,1536300032,,,14.384340056827678,OCF,Uptrend ↗,Downtrend ↘,14.4x,34.424602624,14.384340056827678
+ROST,ROST,Ross Stores,USA,Consumer Cyclical,194.85,USD,63370342400,2356988000.0,,0.104,0.068,{},{},2356988000.0,2085963008,,,26.886154023694647,OCF,Uptrend ↗,Uptrend ↗,26.9x,63.3703424,26.886154023694647
+STX,STX,Seagate Technology,USA,Technology,431.17,USD,94026571776,1083000000.0,,0.215,0.677,{},{},1083000000.0,1970000000,,,86.82047255401662,OCF,Uptrend ↗,Uptrend ↗,86.8x,94.026571776,86.82047255401662
+SHOP,SHOP,Shopify,USA,Technology,110.66,USD,144420569088,1616000000.0,,0.306,-0.423,{},{},1616000000.0,1231000064,,,89.36916403960396,OCF,Uptrend ↗,Downtrend ↘,89.4x,144.420569088,89.36916403960396
+SBUX,SBUX,Starbucks,USA,Consumer Cyclical,96.76,USD,110238670848,4747500000.0,,0.055,-0.625,{},{},4747500000.0,1368899968,,,23.22036247456556,OCF,Uptrend ↗,Downtrend ↘,23.2x,110.238670848,23.22036247456556
+SNPS,SNPS,Synopsys,USA,Technology,423.35,USD,80994566144,1518608000.0,,0.378,-0.665,{},{},1518608000.0,1336120064,,,53.334742174412355,OCF,Uptrend ↗,Downtrend ↘,53.3x,80.994566144,53.334742174412355
+TMUS,TMUS,T-Mobile US,USA,Communication Services,214.68,USD,240120987648,22293000000.0,,0.113,-0.267,{},{},22293000000.0,11870000128,,,10.771138368456466,OCF,Uptrend ↗,Downtrend ↘,10.8x,240.120987648,10.771138368456466
+TTWO,TTWO,Take-Two Interactive,USA,Communication Services,190.36,USD,35249999872,-45200000.0,,0.249,0.0,{},{},-45200000.0,-3964900096,,,,OCF,Uptrend ↗,Flat ➡,N/A,35.249999872,
+TSLA,TSLA,"Tesla, Inc.",USA,Consumer Cyclical,417.07,USD,1565026811904,14747000000.0,,-0.031,-0.606,{},{},14747000000.0,3793999872,,,106.12509743703804,OCF,Flat ➡,Downtrend ↘,106.1x,1565.026811904,106.12509743703804
+TXN,TXN,Texas Instruments,USA,Technology,223.0,USD,202622943232,7153000000.0,,0.104,-0.032,{},{},7153000000.0,4973000192,,,28.326987729903536,OCF,Uptrend ↗,Flat ➡,28.3x,202.622943232,28.326987729903536
+TRI,TRI,Thomson Reuters,USA,Industrials,85.89,USD,38221049856,2457000000.0,,0.052,-0.426,{},{},2457000000.0,1479000064,,,15.555982847374848,OCF,Uptrend ↗,Downtrend ↘,15.6x,38.221049856,15.555982847374848
+VRSK,VRSK,Verisk Analytics,USA,Industrials,179.0,USD,25008979968,1144000000.0,,0.059,0.045,{},{},1144000000.0,914700032,,,21.860996475524477,OCF,Uptrend ↗,Flat ➡,21.9x,25.008979968,21.860996475524477
+VRTX,VRTX,Vertex Pharmaceuticals,USA,Healthcare,465.02,USD,119226777600,-492600000.0,,0.11,0.047,{},{},-492600000.0,3675099904,,,,OCF,Uptrend ↗,Flat ➡,N/A,119.2267776,
+WMT,WMT,Walmart,USA,Consumer Defensive,133.64,USD,1065491824640,36443000000.0,,0.058,0.352,{},{},36443000000.0,22909999104,,,29.23721495595862,OCF,Uptrend ↗,Uptrend ↗,29.2x,1065.49182464,29.23721495595862
+WBD,WBD,Warner Bros. Discovery,USA,Communication Services,28.11,USD,69698371584,5375000000.0,,-0.06,0.0,{},{},5375000000.0,489000000,,,12.967138899348837,OCF,Downtrend ↘,Flat ➡,13.0x,69.698371584,12.967138899348837
+WDC,WDC,Western Digital,USA,Technology,284.1,USD,97133592576,1691000000.0,,0.0,0.0,{},{},1691000000.0,3945999872,,,57.441509506800706,OCF,Flat ➡,Flat ➡,57.4x,97.133592576,57.441509506800706
+WDAY,WDAY,"Workday, Inc.",USA,Technology,144.04,USD,38458679296,2461000000.0,,0.126,0.306,{},{},2461000000.0,642000000,,,15.627256926452661,OCF,Uptrend ↗,Uptrend ↗,15.6x,38.458679296,15.627256926452661
+XEL,XEL,Xcel Energy,USA,Utilities,78.98,USD,46719811584,4641000000.0,,0.141,0.177,{},{},4641000000.0,2018000000,,,10.06675535100194,OCF,Uptrend ↗,Uptrend ↗,10.1x,46.719811584,10.06675535100194

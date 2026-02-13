@@ -33,27 +33,38 @@ def calculate_pcf(row: pd.Series) -> float | None:
     ttm_ocf = safe_float(row.get("ttm_ocf", np.nan))
     ttm_ffo_proxy = safe_float(row.get("ttm_ffo_proxy", np.nan))
 
+    market_cap = safe_float(row.get("market_cap", 0))
+    if market_cap <= 0:
+        return None
+
+    sector = str(row.get("sector", "")).lower()
+    ttm_ocf = safe_float(row.get("ttm_ocf", np.nan))
+    ttm_ffo_proxy = safe_float(row.get("ttm_ffo_proxy", np.nan))
+
     # 1) 리츠/부동산 → FFO 우선
     cash_flow = np.nan
     cf_method = "OCF"
     if "real estate" in sector or "reit" in sector:
+        # FFO Proxy Logic (Net Income + Depreciation) if FFO missing
+        if ttm_ffo_proxy <= 0:
+             ni = safe_float(row.get("ttm_net_income", 0))
+             dep = safe_float(row.get("ttm_depreciation", 0))
+             if ni != 0 or dep > 0: # If we have at least some data
+                 ttm_ffo_proxy = ni + dep
+        
         if ttm_ffo_proxy > 0:
             cash_flow = ttm_ffo_proxy
             cf_method = "FFO"
 
     # 2) FFO 못 구하면 OCF
     if np.isnan(cash_flow):
-        if ttm_ocf != 0: # safe_float returns 0.0 for NaN. But if original was 0?
-                         # Wait, if original was 0, it is 0.
-                         # If original was NaN, it is 0.
-                         # OCF can be negative.
-                         # If OCF is 0, we can't divide.
+        if ttm_ocf != 0: 
             cash_flow = ttm_ocf
             cf_method = "OCF"
 
-    # 3) 현금흐름이 없거나 음수
-    # safe_float(nan) is 0.
-    if cash_flow <= 0:
+    # 3) 현금흐름이 0이거나 데이터 없음 (None 반환)
+    # 음수(Negative)는 허용하여 '적자' 상태로 반환 (시각화에서 Grey 처리)
+    if np.isnan(cash_flow) or cash_flow == 0:
         return None
 
     # 4) P/CF 계산
