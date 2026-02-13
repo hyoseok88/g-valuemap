@@ -11,7 +11,7 @@ import pandas as pd
 
 from data_fetcher import (
     get_kospi200, get_sp500, get_nasdaq100, get_nikkei225, get_eurostoxx50,
-    fetch_stock_data,
+    fetch_stock_data, fetch_single_stock
 )
 from valuation import process_dataframe
 from visualization import build_treemap, get_summary_stats
@@ -114,12 +114,35 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
+with st.expander("📖 처음 오셨나요? 사용 가이드 보기", expanded=True):
+    st.markdown("""
+    #### 👋 환영합니다! 이렇게 활용하세요:
+    
+    1. **시장 선택**: 상단 탭에서 🇰🇷한국, 🇺🇸미국, 🇯🇵일본, 🇪🇺유럽을 선택하세요.
+    2. **색상 의미**: 
+        - 🟢 **초록색**: 돈 잘 버는데 주가가 싼 기업 (**저평가**)
+        - 🔴 **빨간색**: 이익 대비 주가가 비싼 기업 (**고평가**)
+        - ⬜ **회색**: 적자 기업 (현금흐름 마이너스)
+    3. **크기 조절**: 왼쪽 사이드바 **'타일 크기 기준'**에서:
+        - **'저평가순'**을 선택하면 **알짜배기 기업**이 큼지막하게 보입니다!
+    4. **검색**: 특정 종목이 궁금하면 왼쪽 사이드바 **'🔍 종목 검색'**을 이용하세요.
+    """)
+
+
 # ============================================================
 # 사이드바
 # ============================================================
 with st.sidebar:
     st.markdown("### ⚙️ 설정")
-    limit = st.slider("지수당 종목 수", 10, 200, 30, 10,
+    
+    # 검색 기능
+    search_query = st.text_input("🔍 종목 검색", placeholder="티커/코드 (예: 005930, AAPL)", help="한국(6자리), 일본(4자리), 미국(티커)")
+    if search_query:
+        st.write("") # Spacer
+
+    st.markdown("---")
+    
+    limit = st.slider("지수당 종목 수", 10, 300, 30, 10,
                        help="각 지수에서 시총 상위 N개 종목. 높을수록 로딩 느림.")
 
     size_mode = st.radio(
@@ -348,6 +371,67 @@ def render_strong_picks(df: pd.DataFrame):
     st.markdown("</div>", unsafe_allow_html=True)
 
 
+def render_search_result(df: pd.DataFrame):
+    """검색 결과 단일 종목 표시."""
+    if df.empty:
+        st.warning("❌ 검색 결과가 없습니다. (티커 확인: 005930, AAPL 등)")
+        return
+
+    r = df.iloc[0]
+    pcf = r.get("pcf", None)
+    
+    # 등급 판정
+    grade = "⚪분석불가"
+    color = "#888"
+    if pd.notna(pcf) and pcf > 0:
+        if pcf <= 10: 
+            grade = "🟢저평가 (Strong Buy)"
+            color = "#1a9641"
+        elif pcf <= 15: 
+            grade = "🔵중립 (Hold)"
+            color = "#2166ac"
+        elif pcf <= 20: 
+            grade = "🟠약간고평가"
+            color = "#e6a03c"
+        else: 
+            grade = "🔴고평가"
+            color = "#a50026"
+
+    st.markdown(f"""
+    <div style="
+        background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+        border: 1px solid {color}88;
+        border-radius: 12px; padding: 20px; margin-bottom: 20px;
+    ">
+        <h3 style="margin:0; color:{color}; display:flex; align-items:center; gap:10px;">
+            🔍 {r.get('ticker_display')} {r.get('name')}
+            <span style="font-size:1rem; background:{color}33; padding:4px 10px; border-radius:8px;">{grade}</span>
+        </h3>
+        <div style="display:flex; gap:20px; margin-top:15px; flex-wrap:wrap;">
+            <div style="background:#ffffff08; padding:10px 15px; border-radius:8px;">
+                <div style="font-size:0.8rem; color:#888;">주가 (Price)</div>
+                <div style="font-size:1.2rem; font-weight:bold;">{r.get('price', 0):,.0f} {r.get('currency','')}</div>
+            </div>
+            <div style="background:#ffffff08; padding:10px 15px; border-radius:8px;">
+                <div style="font-size:0.8rem; color:#888;">P/CF 비율</div>
+                <div style="font-size:1.2rem; font-weight:bold; color:{color};">{r.get('pcf_display','N/A')}</div>
+            </div>
+            <div style="background:#ffffff08; padding:10px 15px; border-radius:8px;">
+                <div style="font-size:0.8rem; color:#888;">매출 성장성</div>
+                <div style="font-size:1.1rem;">📈 {r.get('revenue_trend','N/A')}</div>
+            </div>
+            <div style="background:#ffffff08; padding:10px 15px; border-radius:8px;">
+                <div style="font-size:0.8rem; color:#888;">현금흐름 추세</div>
+                <div style="font-size:1.1rem;">📈 {r.get('cf_trend','N/A')}</div>
+            </div>
+        </div>
+        <div style="margin-top:10px; font-size:0.8rem; color:#666;">
+            *성장성은 최근 5년 또는 YoY 기준
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+
 def _render_portfolio_proposal(df: pd.DataFrame, label: str):
     """추천 포트폴리오 제안 섹션."""
     if st.button(f"💼 {label} 추천 포트폴리오 생성", key=f"port_btn_{label}"):
@@ -480,6 +564,20 @@ def render_usa_tab():
 # ============================================================
 # 탭 구성
 # ============================================================
+
+# 검색 결과가 있으면 맨 위에 표시
+if search_query:
+    st.markdown("### 🔎 검색 결과")
+    with st.spinner(f"'{search_query}' 데이터 수집 및 분석 중..."):
+        search_df = fetch_single_stock(search_query)
+        if not search_df.empty:
+            search_df = process_dataframe(search_df)
+            render_search_result(search_df)
+        else:
+            st.error(f"❌ '{search_query}' 종목을 찾을 수 없습니다. (티커를 확인해주세요)")
+    st.markdown("---")
+
+
 tab_kr, tab_us, tab_jp, tab_eu = st.tabs([
     "🇰🇷 한국 (KOSPI 200)",
     "🇺🇸 미국 (S&P 500 + Nasdaq)",

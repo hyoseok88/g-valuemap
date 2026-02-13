@@ -131,12 +131,32 @@ def process_dataframe(df: pd.DataFrame) -> pd.DataFrame:
     # CF 방법
     df["cf_method"] = df.apply(get_cf_method, axis=1)
 
-    # 추세 분석
-    df["revenue_trend"] = df["revenue_history"].apply(
-        lambda h: calculate_trend(h) if isinstance(h, dict) else "N/A"
+    # 추세 분석 (History 우선, 없으면 YoY Growth 사용)
+    def determine_trend(history, growth_rate):
+        # 1. History 기반 추세
+        trend = calculate_trend(history) if isinstance(history, dict) and history else "N/A"
+        if trend != "N/A":
+            return trend
+        
+        # 2. Growth Rate 기반 추세 (History 없는 경우)
+        # 5% 이상 성장 시 Uptrend
+        if pd.isna(growth_rate):
+            return "N/A"
+        
+        if growth_rate > 0.05:
+            return "Uptrend ↗"
+        elif growth_rate < -0.05:
+            return "Downtrend ↘"
+        else:
+            return "Flat ➡"
+
+    df["revenue_trend"] = df.apply(
+        lambda r: determine_trend(r.get("revenue_history"), r.get("revenue_growth")), 
+        axis=1
     )
-    df["cf_trend"] = df["cf_history"].apply(
-        lambda h: calculate_trend(h) if isinstance(h, dict) else "N/A"
+    df["cf_trend"] = df.apply(
+        lambda r: determine_trend(r.get("cf_history"), r.get("earnings_growth")), 
+        axis=1
     )
 
     # 표시용 컬럼
