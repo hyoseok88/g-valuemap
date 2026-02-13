@@ -8,6 +8,8 @@ G-Valuemap: Global Market Valuation TreeMap (v2)
 
 import streamlit as st
 import pandas as pd
+import os
+import ast
 
 from data_fetcher import (
     get_kospi200, get_sp500, get_nasdaq100, get_nikkei225, get_eurostoxx50,
@@ -156,6 +158,10 @@ with st.sidebar:
                            help="현금흐름이 마이너스인 종목을 트리맵에서 제외")
 
     st.markdown("---")
+    
+    if st.button("🔄 실시간 데이터 새로고침 (Live)"):
+         st.cache_data.clear()
+         st.rerun()
     st.markdown("### 🎨 P/CF 밸류에이션 기준")
     st.markdown("""
     <div style="padding:8px 4px;">
@@ -234,84 +240,74 @@ def _fetch_fresh(market: str, lim: int, progress_callback=None) -> pd.DataFrame:
     return df
 
 
-def load_with_progress(market: str, label: str, emoji: str, lim: int):
-    """
-    디스크 캐시 기반 로딩:
-    1. 캐시 있으면 즉시 반환 (이전 데이터 표시)
-    2. 캐시 만료(24h) → 갱신 진행 → 완료 후 rerun
-    3. 캐시 없으면 신규 수집 (프로그레스 표시)
-    """
-    cached_df, cached_ts = load_cached(market, lim)
-
-    # ---- 캐시 있고 아직 유효하면 즉시 반환 ----
-    if cached_df is not None and not is_stale(market, lim):
-        age_str = get_cache_age_str(cached_ts)
-        st.caption(f"📦 캐시 데이터 ({age_str}) — 다음 갱신까지 유효")
-        return cached_df
-
-    # ---- 캐시 있지만 만료 → 이전 데이터 먼저 표시, 갱신 알림 ----
-    if cached_df is not None and is_stale(market, lim):
-        # session_state로 갱신 중복 방지
-        refresh_key = f"refreshing_{market}_{lim}"
-        done_key = f"refresh_done_{market}_{lim}"
-
-        if st.session_state.get(done_key):
-            # 갱신 완료됨 → 새 데이터 반환
-            st.session_state.pop(done_key, None)
-            new_df, new_ts = load_cached(market, lim)
-            if new_df is not None:
-                age_str = get_cache_age_str(new_ts)
-                st.caption(f"✅ 데이터 갱신 완료 ({age_str})")
-                return new_df
-            return cached_df
-
-        if not st.session_state.get(refresh_key):
-            # 이전 데이터 보여주면서 갱신 시작
-            age_str = get_cache_age_str(cached_ts)
-            st.caption(f"📦 이전 데이터 표시 중 ({age_str}) — 백그라운드 갱신 대기")
-
-            # 갱신 버튼
-            if st.button(f"🔄 {label} 최신 데이터로 갱신", key=f"refresh_btn_{market}"):
-                st.session_state[refresh_key] = True
-                st.rerun()
-
-            return cached_df
-        else:
-            # 갱신 진행 중
-            progress = st.progress(0, text=f"{emoji} {label} 데이터 갱신 중...")
-
-            def update_progress(pct, msg):
-                progress.progress(min(int(pct * 100), 100), text=f"{emoji} {msg}")
-
-            try:
-                df = _fetch_fresh(market, lim, progress_callback=update_progress)
-                progress.progress(100, text=f"✅ {label} 갱신 완료!")
-                st.session_state.pop(refresh_key, None)
-                st.session_state[done_key] = True
-                import time as _t; _t.sleep(0.5)
-                st.rerun()
-            except Exception as e:
-                progress.empty()
-                st.error(f"❌ 갱신 실패: {e}")
-                st.session_state.pop(refresh_key, None)
-                return cached_df
-
-    # ---- 캐시 없음 → 첫 수집 (프로그레스 표시) ----
-    progress = st.progress(0, text=f"{emoji} {label} 데이터 최초 수집 중...")
-
-    def update_progress(pct, msg):
-        progress.progress(min(int(pct * 100), 100), text=f"{emoji} {msg}")
-
+@st.cache_data(ttl=3600*24)
+def load_from_seed(market_key: str) -> pd.DataFrame:
+    """seeds 폴더의 CSV 파일 로드."""
+    filename_map = {
+        "Korea": "korea.csv",
+        "KOSPI": "korea.csv",
+        "USA_SP500": "usa.csv",
+        "USA_NASDAQ": "usa.csv",
+        "Japan": "japan.csv",
+        "Nikkei": "japan.csv",
+        "Europe": "europe.csv",
+        "Euro": "europe.csv"
+    }
+    
+    # map key to filename
+    fname = filename_map.get(market_key)
+    if not fname and market_key.startswith("USA"):
+         fname = "usa.csv"
+         
+    if not fname:
+        return pd.DataFrame()
+        
+    path = os.path.join("seeds", fname)
+    if not os.path.exists(path):
+        return pd.DataFrame()
+        
     try:
-        df = _fetch_fresh(market, lim, progress_callback=update_progress)
-        progress.progress(100, text=f"✅ {label} 수집 완료!")
-        import time as _t; _t.sleep(0.3)
-        progress.empty()
+        df = pd.read_csv(path)
+        # 문자열로 저장된 dict 복원
+        for col in ["revenue_history", "cf_history"]:
+             if col in df.columns:
+                 df[col] = df[col].apply(lambda x: ast.literal_eval(x) if isinstance(x, str) else {})
         return df
     except Exception as e:
-        progress.empty()
-        st.error(f"❌ {label} 로드 실패: {e}")
         return pd.DataFrame()
+
+
+def load_with_progress(market_key: str, label: str, emoji: str, limit: int) -> pd.DataFrame:
+    """데이터 로드 (Seed -> Disk Cache -> Live Fetch)."""
+    
+    # 1. Seed Data 우선 확인
+    df_seed = load_from_seed(market_key)
+    if not df_seed.empty:
+        # Seed 데이터가 있으면(로컬 CSV), limit만큼 잘라서 반환
+        # (만약 limit > 200 이라도 seed가 있으면 그냥 seed 최대치 반환)
+        if limit < len(df_seed):
+             return df_seed.head(limit)
+        return df_seed
+
+    # 2. Disk Cache 확인 (Seed 없을 때만)
+    cached_df, cached_ts = load_cached(market_key, limit) # load_cached returns tuple (df, ts)
+    if cached_df is not None and not cached_df.empty and len(cached_df) >= limit * 0.5:
+        return cached_df.head(limit)
+
+    # 3. Live Fetch
+    status_text = st.empty()
+    bar = st.progress(0.0)
+    
+    def update_progress(p, msg):
+        bar.progress(p)
+        status_text.text(f"{emoji} {msg}")
+
+    df = _fetch_fresh(market_key, limit, update_progress)
+    
+    bar.empty()
+    status_text.empty()
+    
+    return df
 
 
 def render_strong_picks(df: pd.DataFrame):

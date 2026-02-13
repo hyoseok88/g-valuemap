@@ -1,0 +1,5 @@
+ticker_yf,ticker_display,name,market,sector,price,currency,market_cap,ocf,fcf,revenue_growth,earnings_growth,revenue_history,cf_history,ttm_ocf,ttm_net_income,ttm_depreciation,ttm_ffo_proxy,pcf,cf_method,revenue_trend,cf_trend,pcf_display,market_cap_b,pcf_color
+7203.T,7203.T,Toyota,Japan,Consumer Cyclical,3761.0,JPY,49018566606848,,,0.086,-0.423,{},{},,3695587885056,,,,OCF,Uptrend ↗,Downtrend ↘,N/A,49018.566606848,
+6758.T,6758.T,Sony,Japan,Technology,3596.0,JPY,21444176117760,,,0.005,0.0,{},{},,1246386978816,,,,OCF,Flat ➡,Flat ➡,N/A,21444.17611776,
+9984.T,9984.T,SoftBank,Japan,Communication Services,4506.0,JPY,25677321469952,,,0.084,1.177,{},{},,3053666959360,,,,OCF,Uptrend ↗,Uptrend ↗,N/A,25677.321469952,
+6861.T,6861.T,Keyence,Japan,Technology,56370.0,JPY,13671145144320,,,0.0,0.0,{},{},,418058010624,,,,OCF,Flat ➡,Flat ➡,N/A,13671.14514432,

@@ -264,7 +264,7 @@ def fetch_stock_data(stock_list: list[dict], progress_callback=None) -> pd.DataF
         return pd.DataFrame()
     
     tickers = [s["ticker_yf"] for s in stock_list]
-    batch_size = 20
+    batch_size = 10 # 20 -> 10 Reduced batch size
     results = []
     total = len(tickers)
     start_time_all = time.time()
@@ -273,7 +273,8 @@ def fetch_stock_data(stock_list: list[dict], progress_callback=None) -> pd.DataF
         chunk_tkrs = tickers[i : i + batch_size]
         chunk_meta = stock_list[i : i + batch_size]
         
-        with ThreadPoolExecutor(max_workers=5) as executor:
+        # Max workers reduced to avoid rate limiting
+        with ThreadPoolExecutor(max_workers=2) as executor:
             futures = {executor.submit(_fetch_one, item): item for item in chunk_meta}
             for future in futures:
                 res = future.result()
@@ -290,7 +291,7 @@ def fetch_stock_data(stock_list: list[dict], progress_callback=None) -> pd.DataF
             current_name = chunk_meta[-1]['name']
             progress_callback(processed / total, f"({processed}/{total}) {current_name} 등 수집 중... (남은 시간: 약 {eta_str})")
         
-        time.sleep(0.5) 
+        time.sleep(1.0) # 0.5 -> 1.0 Increased sleep 
 
     return pd.DataFrame(results)
 
