@@ -11,7 +11,9 @@ import pandas as pd
 import numpy as np
 import yfinance as yf
 import FinanceDataReader as fdr
+import FinanceDataReader as fdr
 from concurrent.futures import ThreadPoolExecutor
+import re
 
 
 def _get_wiki_table(url: str, table_idx: int = 0) -> pd.DataFrame:
@@ -204,6 +206,7 @@ def fetch_single_stock(query: str) -> pd.DataFrame:
     if not query:
         return pd.DataFrame()
         
+    query = resolve_ticker_from_name(query)
     q = query.strip().upper()
     candidates = [q]
     
@@ -215,13 +218,41 @@ def fetch_single_stock(query: str) -> pd.DataFrame:
 
     for sym in candidates:
         try:
-            df = fetch_stock_data([{"ticker_yf": sym, "ticker_display": sym, "name": sym, "market": "Global"}])
+            # detailed=True를 설정하여 OCF 누락 시 DataFrame까지 조회하도록 함
+            df = fetch_stock_data([{"ticker_yf": sym, "ticker_display": sym, "name": sym, "market": "Global", "detailed": True}])
             if not df.empty and "price" in df.columns and df["price"].iloc[0] > 0:
                 return df
         except:
             continue
             
     return pd.DataFrame()
+
+
+    return pd.DataFrame()
+
+
+def resolve_ticker_from_name(query: str) -> str:
+    """한글 종목명인 경우 KRX 리스트에서 종목코드를 찾습니다."""
+    # 영어/숫자만 있으면 티커로 간주
+    if re.match(r'^[A-Za-z0-9\.\-]+$', query):
+        return query
+        
+    try:
+        # 한글이 포함된 경우 KRX 종목 찾기
+        df_krx = fdr.StockListing('KRX')
+        # 정확히 일치하는 종목 찾기
+        matched = df_krx[df_krx['Name'] == query]
+        if not matched.empty:
+            return matched.iloc[0]['Code']
+            
+        # 포함되는 종목 찾기 (첫 번째)
+        matched = df_krx[df_krx['Name'].str.contains(query, na=False)]
+        if not matched.empty:
+            return matched.iloc[0]['Code']
+    except Exception:
+        pass
+        
+    return query
 
 
 # ============================================================
@@ -286,6 +317,22 @@ def _fetch_one(meta: dict) -> dict:
         # 현금흐름
         ocf = info.get("operatingCashFlow")
         fcf = info.get("freeCashFlow")
+        
+        # OCF Fallback (상세 모드일 때만)
+        if (ocf is None) and meta.get("detailed", False):
+            try:
+                cf_df = t.cash_flow
+                if not cf_df.empty:
+                    # 행 이름이 조금씩 다를 수 있음
+                    for row_name in ["Total Cash From Operating Activities", "Operating Cash Flow"]:
+                         if row_name in cf_df.index:
+                             val = cf_df.loc[row_name].iloc[0]
+                             if val:
+                                 ocf = val
+                                 break
+            except Exception:
+                pass
+        
         
         # 성장성 지표 (Trend 대체용)
         rev_growth = info.get("revenueGrowth", 0) # YoY
