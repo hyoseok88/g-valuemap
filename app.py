@@ -12,7 +12,7 @@ import os
 import ast
 
 from data_fetcher import (
-    get_kospi200, get_sp500, get_nasdaq100, get_nikkei225, get_eurostoxx50,
+    get_kospi200, get_sp500, get_nasdaq100, get_nikkei225, get_eurostoxx50, get_csi300,
     fetch_stock_data, fetch_single_stock, get_history
 )
 from valuation import process_dataframe
@@ -218,6 +218,7 @@ FETCHERS = {
     "USA_NASDAQ": get_nasdaq100,
     "Japan": get_nikkei225,
     "Europe": get_eurostoxx50,
+    "China": get_csi300,
 }
 
 
@@ -690,17 +691,16 @@ if search_query:
     st.markdown("---")
 
 
-tab_kr, tab_us, tab_jp, tab_eu = st.tabs([
+tab_kr, tab_us, tab_jp, tab_eu, tab_cn = st.tabs([
     "🇰🇷 한국 (KOSPI 200)",
     "🇺🇸 미국 (S&P 500 + Nasdaq)",
     "🇯🇵 일본 (Nikkei 225)",
     "🇪🇺 유럽 (Euro Stoxx 50)",
+    "🇨🇳 중국 (CSI 300)",
 ])
 
 with tab_kr:
     render_tab("Korea", "KOSPI 200", "🇰🇷")
-
-
 
 with tab_us:
     render_usa_tab()
@@ -710,6 +710,9 @@ with tab_jp:
 
 with tab_eu:
     render_tab("Europe", "Euro Stoxx 50", "🇪🇺")
+
+with tab_cn:
+    render_tab("China", "CSI 300", "🇨🇳")
 
 # ============================================================
 # 푸터

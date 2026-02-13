@@ -14,6 +14,7 @@ import FinanceDataReader as fdr
 import FinanceDataReader as fdr
 from concurrent.futures import ThreadPoolExecutor
 import re
+import io
 
 
 def _get_wiki_table(url: str, table_idx: int = 0) -> pd.DataFrame:
@@ -24,7 +25,18 @@ def _get_wiki_table(url: str, table_idx: int = 0) -> pd.DataFrame:
         }
         resp = requests.get(url, headers=headers, timeout=10)
         resp.raise_for_status()
-        dfs = pd.read_html(resp.text)
+        dfs = pd.read_html(io.StringIO(resp.text))
+        
+        # 만약 table_idx가 -1이면 모든 테이블 중 가장 적합한 것을 찾음
+        if table_idx == -1:
+            for df in dfs:
+                cols = [str(c).lower() for c in df.columns]
+                has_ticker = any(any(k in c for k in ['symbol', 'ticker', 'code', 'ticker symbol']) for c in cols)
+                has_name = any(any(k in c for k in ['company', 'name', 'constituent', 'constituent name']) for c in cols)
+                if has_ticker and has_name:
+                    return df
+            return dfs[0] if dfs else pd.DataFrame()
+
         if len(dfs) > table_idx:
             return dfs[table_idx]
     except Exception as e:
@@ -39,7 +51,6 @@ def _get_wiki_table(url: str, table_idx: int = 0) -> pd.DataFrame:
 def get_kospi200(limit: int = 30) -> list[dict]:
     """KOSPI 200 (fdr 사용, 실패시 폴백)."""
     try:
-        # 1. fdr 시도
         df = fdr.StockListing("KOSPI") 
         if df is None or df.empty:
             raise Exception("fdr returned empty")
@@ -82,18 +93,7 @@ def _get_kospi200_fallback(limit: int = 30) -> list[dict]:
         ("005930.KS","삼성전자"), ("000660.KS","SK하이닉스"), ("373220.KS","LG엔솔"),
         ("207940.KS","삼성바이오"), ("005380.KS","현대차"), ("005935.KS","삼성전자우"),
         ("000270.KS","기아"), ("006400.KS","삼성SDI"), ("051910.KS","LG화학"),
-        ("035420.KS","NAVER"), ("005490.KS","POSCO홀딩스"), ("035720.KS","카카오"),
-        ("068270.KS","셀트리온"), ("028260.KS","삼성물산"), ("012330.KS","현대모비스"),
-        ("105560.KS","KB금융"), ("055550.KS","신한지주"), ("096770.KS","SK이노베이션"),
-        ("032830.KS","삼성생명"), ("015760.KS","한국전력"), ("034730.KS","SK"),
-        ("003550.KS","LG"), ("017670.KS","SK텔레콤"), ("086790.KS","하나금융지주"),
-        ("316140.KS","우리금융지주"), ("018260.KS","삼성에스디에스"), ("000810.KS","삼성화재"),
-        ("329180.KS","HD현대중공업"), ("010130.KS","고려아연"), ("009150.KS","삼성전기"),
-        ("010950.KS","S-Oil"), ("011200.KS","HMM"), ("003490.KS","대한항공"),
-        ("034020.KS","두산에너빌리티"), ("323410.KS","카카오뱅크"), ("036570.KS","엔씨소프트"),
-        ("259960.KS","크래프톤"), ("352820.KS","하이브"), ("011070.KS","LG이노텍"),
-        ("024110.KS","기업은행"), ("090430.KS","아모레퍼시픽"), ("009540.KS","HD한국조선해양"),
-        ("251270.KS","넷마블"), ("010140.KS","삼성중공업"), ("086280.KS","현대글로비스")
+        ("035420.KS","NAVER"), ("005490.KS","POSCO홀딩스"), ("035720.KS","카카오")
     ]
     return [{"ticker_yf": t, "ticker_display": t.split(".")[0], "name": n, "market": "Korea"} for t, n in major[:limit]]
 
@@ -103,42 +103,34 @@ def get_sp500(limit: int = 30) -> list[dict]:
         url = "https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"
         df = _get_wiki_table(url, 0)
         
-        ticker_col = "Symbol" if "Symbol" in df.columns else df.columns[0]
-        name_col = "Security" if "Security" in df.columns else df.columns[1]
-        
-        tickers = df[ticker_col].tolist()
-        names = df[name_col].tolist()
+        ticker_col = next((c for c in df.columns if 'symbol' in str(c).lower() or 'ticker' in str(c).lower()), df.columns[0])
+        name_col = next((c for c in df.columns if 'security' in str(c).lower() or 'company' in str(c).lower()), df.columns[1])
         
         results = []
-        for t, n in zip(tickers, names):
-            t = str(t).replace(".", "-")
+        for _, row in df.iterrows():
+            t = str(row[ticker_col]).replace(".", "-")
+            n = str(row[name_col])
             results.append({
                 "ticker_yf": t, "ticker_display": t, "name": n, "market": "USA"
             })
         return results[:limit]
     except Exception:
-        return [{"ticker_yf": "AAPL", "ticker_display": "AAPL", "name": "Apple", "market": "USA"}]
+        major = [("AAPL","Apple"), ("MSFT","Microsoft"), ("GOOGL","Google"), ("AMZN","Amazon"), ("NVDA","Nvidia")]
+        return [{"ticker_yf": t, "ticker_display": t, "name": n, "market": "USA"} for t, n in major[:limit]]
 
 
 def get_nasdaq100(limit: int = 30) -> list[dict]:
     try:
         url = "https://en.wikipedia.org/wiki/Nasdaq-100"
-        df = _get_wiki_table(url, 4)
-        if df.empty or "Ticker" not in df.columns:
-             df = _get_wiki_table(url, 3)
+        df = _get_wiki_table(url, -1)
         
-        ticker_col = "Ticker" if "Ticker" in df.columns else "Symbol"
-        name_col = "Company" if "Company" in df.columns else "Security"
-        
-        if ticker_col not in df.columns:
-             return get_sp500(limit)
-             
-        tickers = df[ticker_col].tolist()
-        names = df[name_col].tolist()
+        ticker_col = next((c for c in df.columns if 'ticker' in str(c).lower() or 'symbol' in str(c).lower()), None)
+        name_col = next((c for c in df.columns if 'company' in str(c).lower() or 'security' in str(c).lower()), None)
         
         results = []
-        for t, n in zip(tickers, names):
-            t = str(t).replace(".", "-")
+        for _, row in df.iterrows():
+            t = str(row[ticker_col]).replace(".", "-")
+            n = str(row[name_col])
             results.append({
                 "ticker_yf": t, "ticker_display": t, "name": n, "market": "USA"
             })
@@ -150,16 +142,11 @@ def get_nasdaq100(limit: int = 30) -> list[dict]:
 def get_nikkei225(limit: int = 30) -> list[dict]:
     try:
         url = "https://en.wikipedia.org/wiki/Nikkei_225"
-        df = _get_wiki_table(url, 3)
-        if "Symbol" not in df.columns and "Ticker" not in df.columns:
-            df = _get_wiki_table(url, 4)
-            
-        ticker_col = "Symbol" if "Symbol" in df.columns else ("Ticker" if "Ticker" in df.columns else None)
-        name_col = "Company" if "Company" in df.columns else "Constituent"
+        df = _get_wiki_table(url, -1)
         
-        if not ticker_col:
-            raise Exception("Column not found")
-
+        ticker_col = next((c for c in df.columns if 'symbol' in str(c).lower() or 'ticker' in str(c).lower()), None)
+        name_col = next((c for c in df.columns if 'company' in str(c).lower() or 'constituent' in str(c).lower()), None)
+        
         results = []
         for _, row in df.iterrows():
             t = str(row[ticker_col])
@@ -170,24 +157,21 @@ def get_nikkei225(limit: int = 30) -> list[dict]:
                 "ticker_yf": t, "ticker_display": t, "name": n, "market": "Japan"
             })
         return results[:limit]
-
     except Exception:
-        major = [("7203.T","Toyota"), ("6758.T","Sony"), ("9984.T","SoftBank"), ("6861.T","Keyence")]
-        return [{"ticker_yf": t, "ticker_display": t, "name": n, "market": "Japan"} for t, n in major]
+        major = [
+            ("7203.T","Toyota"), ("6758.T","Sony"), ("9984.T","SoftBank"), ("6861.T","Keyence"),
+            ("8035.T","Tokyo Electron"), ("6098.T","Recruit"), ("9432.T","NTT"), ("4502.T","Takeda")
+        ]
+        return [{"ticker_yf": t, "ticker_display": t, "name": n, "market": "Japan"} for t, n in major[:limit]]
 
 
 def get_eurostoxx50(limit: int = 30) -> list[dict]:
     try:
         url = "https://en.wikipedia.org/wiki/EURO_STOXX_50"
-        df = _get_wiki_table(url, 3)
-        if "Ticker" not in df.columns:
-             df = _get_wiki_table(url, 4)
-
-        ticker_col = "Ticker" if "Ticker" in df.columns else "Symbol"
-        name_col = "Name" if "Name" in df.columns else "Company"
+        df = _get_wiki_table(url, -1)
         
-        if ticker_col not in df.columns:
-            raise Exception("Column not found")
+        ticker_col = next((c for c in df.columns if 'ticker' in str(c).lower() or 'symbol' in str(c).lower()), None)
+        name_col = next((c for c in df.columns if 'name' in str(c).lower() or 'company' in str(c).lower()), None)
             
         results = []
         for _, row in df.iterrows():
@@ -198,8 +182,36 @@ def get_eurostoxx50(limit: int = 30) -> list[dict]:
             })
         return results[:limit]
     except Exception:
-        major = [("ASML.AS","ASML"), ("MC.PA","LVMH"), ("SAP.DE","SAP"), ("SIE.DE","Siemens")]
-        return [{"ticker_yf": t, "ticker_display": d, "name": d, "market": "Europe"} for t, d in major]
+        major = [
+            ("ASML.AS","ASML"), ("MC.PA","LVMH"), ("SAP.DE","SAP"), ("SIE.DE","Siemens"),
+            ("TTE.PA","TotalEnergies"), ("SAN.MC","Santander"), ("LIN.DE","Linde"), ("OR.PA","L'Oreal")
+        ]
+        return [{"ticker_yf": t, "ticker_display": d, "name": d, "market": "Europe"} for t, d in major[:limit]]
+
+
+def get_csi300(limit: int = 30) -> list[dict]:
+    try:
+        url = "https://en.wikipedia.org/wiki/CSI_300_Index"
+        df = _get_wiki_table(url, -1)
+        
+        ticker_col = next((c for c in df.columns if 'ticker' in str(c).lower() or 'code' in str(c).lower()), None)
+        name_col = next((c for c in df.columns if 'stock' in str(c).lower() or 'company' in str(c).lower()), None)
+        
+        results = []
+        for _, row in df.iterrows():
+            t = str(row[ticker_col]).strip()
+            if len(t) == 6:
+                if t.startswith('6'): t = f"{t}.SS"
+                else: t = f"{t}.SZ"
+            n = str(row[name_col])
+            results.append({
+                "ticker_yf": t, "ticker_display": t, "name": n, "market": "China"
+            })
+        return results[:limit]
+    except Exception:
+        major = [("600519.SS","Kweichow Moutai"), ("000858.SZ","Wuliangye"), ("601318.SS","Ping An Insurance")]
+        return [{"ticker_yf": t, "ticker_display": t, "name": n, "market": "China"} for t, n in major[:limit]]
+
 
 
 def fetch_single_stock(query: str) -> pd.DataFrame:

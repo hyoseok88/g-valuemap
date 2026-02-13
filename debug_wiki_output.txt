@@ -1,0 +1,13 @@
+
+--- Searching https://en.wikipedia.org/wiki/Nikkei_225 ---
+Found 16 tables.
+Table 4 contains terms: ['Sony', 'Toyota', 'Keyence']
+Cols: ['vte Nikkei 225 companies of Japan', 'vte Nikkei 225 companies of Japan.1']
+                   vte Nikkei 225 companies of Japan                vte Nikkei 225 companies of Japan.1
+0  7&i Advantest ¨¡ON AGC Ajinomoto Alps ANA Amada...  7&i Advantest ¨¡ON AGC Ajinomoto Alps ANA Amada...
+
+--- Searching https://en.wikipedia.org/wiki/EURO_STOXX_50 ---
+Found 9 tables.
+Table 3 contains terms: ['ASML', 'LVMH', 'SAP', 'Siemens']
+Cols: ['Ticker', 'Main listing', 'Name', 'Corporate form', 'Registered office', 'Sector', 'Founded']
+Error: 'cp949' codec can't encode character '\xa0' in position 91: illegal multibyte sequence
