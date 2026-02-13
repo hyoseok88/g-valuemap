@@ -319,8 +319,8 @@ def _fetch_one(meta: dict) -> dict:
         ocf = info.get("operatingCashFlow")
         fcf = info.get("freeCashFlow")
         
-        # OCF Fallback (상세 모드일 때만)
-        if (ocf is None) and meta.get("detailed", False):
+        # OCF Fallback (상세 모드 아니어도 OCF 없으면 시도)
+        if (ocf is None):
             try:
                 cf_df = t.cash_flow
                 if not cf_df.empty:
