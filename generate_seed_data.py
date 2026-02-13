@@ -70,7 +70,8 @@ def main():
     save_market_data("Japan", df.get_nikkei225, "japan.csv", limit=200)
 
     # 4. Europe
-    save_market_data("Europe", df.get_eurostoxx50, "europe.csv", limit=50) # Euro Stoxx is 50
+    # Euro Stoxx 50 is literally 50 stocks, but we can try for 50 
+    save_market_data("Europe", df.get_eurostoxx50, "europe.csv", limit=100)
 
     print("\n✅ All seed data generated in 'seeds/' folder.")
 
